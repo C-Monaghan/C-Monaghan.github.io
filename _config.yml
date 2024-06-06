@@ -32,16 +32,16 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : # ""
+  googlescholar    : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0000-0001-9012-3060"
   semantic         : # URL
-  pubmed           : # ""
+  pubmed           : # URL
   researchgate     : "https://www.researchgate.net/profile/Cormac-Monaghan"
 
 
   # Social media
-  bluesky          : # Username "bsky.app"
+  bluesky          : # Username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
