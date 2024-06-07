@@ -59,8 +59,9 @@
       {% if post.citation %}
         {{ post.citation }}
       {% endif %}
-      {% if post.venue %}<p class="archive__item-excerpt" itemprop="description">{{post.type}}, {{ post.venue }},  {{post.location}} </p>{% endif %}
-      <br>
+      {% if post.venue %}
+        <p class="archive__item-excerpt" itemprop="description">{{ post.venue }},  {{post.location}} </p>
+      {% endif %}
       {% if post.link %}
         <a href="{{ post.link }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
       {% endif %}
