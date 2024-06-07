@@ -5,4 +5,5 @@ permalink: /conferences/2023-09-28-IGS
 venue: "Irish Gerontological Society 70th Annual and Scientific Meeting"
 date: 2023-09-28
 location: "Galmont Hotel, Galway, Ireland"
+link: https://academic.oup.com/ageing/article/52/Supplement_3/afad156.066/7273259
 ---
