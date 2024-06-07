@@ -12,5 +12,5 @@ author_profile: true
 {% endif %}
 
 {% for post in site.conferences reversed %}
-  {% include archive-single-conferences.html %}
+  {% include archive-single-conference.html %}
 {% endfor %}
