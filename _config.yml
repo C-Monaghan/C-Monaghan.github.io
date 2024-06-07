@@ -12,7 +12,7 @@ title                    : "Cormac Monaghan"
 title_separator          : "-"
 name                     : &name "Cormac Monaghan"
 description              : &description "PhD Researcher"
-url                      : https://c-monaghan.github.io/
+url                      : https://c-monaghan.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "C-Monaghan/C-Monaghan.github.io"
 
@@ -265,15 +265,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
   # _talks
   - scope:
       path: ""
