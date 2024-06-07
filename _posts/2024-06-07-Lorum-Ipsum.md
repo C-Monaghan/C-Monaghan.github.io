@@ -8,8 +8,6 @@ tags:
   - text
 ---
 
-## What is Lorem Ipsum
-
 Lorem Ipsum is placeholder text commonly used in the printing and typesetting industry. It has served as the industry's standard dummy text since the 1500s, originating from an unknown printer who rearranged a galley of type to create a type specimen book. Despite the passage of five centuries and the advent of electronic typesetting, Lorem Ipsum has remained largely unchanged. Its popularity surged in the 1960s with the introduction of Letraset sheets featuring Lorem Ipsum passages, and it continues to be used today in desktop publishing software such as Aldus PageMaker, which includes versions of Lorem Ipsum.
 <!--more-->
 It is well-known that a reader can be distracted by the readable content of a page when examining its layout. The advantage of using Lorem Ipsum is that it has a roughly normal distribution of letters, making it appear like standard English, unlike repeating phrases such as 'Content here, content here'. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default placeholder text, and searching for 'lorem ipsum' will reveal numerous websites still under development. Over the years, various versions of Lorem Ipsum have emerged, sometimes unintentionally and sometimes deliberately, incorporating elements of humor and other modifications.
