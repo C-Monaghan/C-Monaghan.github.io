@@ -4,18 +4,39 @@ project:
 
 website:
   title: "Cormac Monaghan"
+  favicon: ./files/favicon.png
   navbar:
+    title: false
+    logo: ./files/favicon.png
     left:
+    # Home Page
       - href: index.qmd
         text: Home
-      - about.qmd
+      
+      # Publications
       - href: publication.qmd
         text: Publications
+        
+      # Blog Posts
+      - href: posts.qmd
+        text: Blog
+    right:
+      - href: ./files/CV.pdf
+        text: CV
+        target: _blank
+      - icon: github
+        href: https://github.com/C-Monaghan
+        target: _blank
+  page-footer: 
+    background: light
+    left: Copyright 2024, Cormac Monaghan
+    right: This website was built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/C-Monaghan/C-Monaghan.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: 
+      - cosmo
+      - styles.scss
     toc: true
     page-layout: full
 

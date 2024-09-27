@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Cormac Monaghan",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome! I am a data scientist with a focus on applying advanced statistical analysis and causal inference techniques to the study of procrastination, particularly within older adult populations. My research aims to uncover the underlying patterns, causal relationships, and consequences of procrastination behaviors, ultimately providing insights that could inform interventions and improve quality of life.\nI am currently pursuing my PhD with the SFI Center for Research Training in Foundations in Data Science. This program is a large-scale collaborative initiative between the University of Limerick (UL), Maynooth University (MU) and University College Dublin (UCD) which aims to train a cohort of 130+ PhD students with world-class foundational understanding in Applied Mathematics, Statistics and Machine Learning. My research is being conducted in the Maynooth University Hamilton Institute."
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,68 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "Agent Based Models\n\n\nIntroduction to Agent-Based Modelling for Public Health Research workshop\n\n\n\nCormac Monaghan\n\n\nJul 10, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publication.html",
+    "href": "publication.html",
+    "title": "Publications",
+    "section": "",
+    "text": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults\n\n\n\n\n\n\nmemory\n\n\njournal article\n\n\n\n\n\n\n\n\n\nAndrew P. Allen, Caoilainn Doyle, Caragh Marie Doyle, Cormac Monaghan, Noel Fitzpatrick, Richard A. P. Roche\n\n\n\n\n\n\n\n\n\n\n\n\nProcrastination, depressive symptomatology, and loneliness in later life\n\n\n\n\n\n\nprocrastination\n\n\nstructural equation modelling\n\n\njournal article\n\n\n\n\n\n\n\n\n\nCormac Monaghan, Ione Avila-Palencia, S. Duke Han, Joanna McHugh Power\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/2024-05-02-SEM/index.html",
+    "href": "publications/2024-05-02-SEM/index.html",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "",
+    "text": "Monaghan, C., Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging & Mental Health, 28(9), 1270–1277."
+  },
+  {
+    "objectID": "publications/2024-05-02-SEM/index.html#citation-apa-7",
+    "href": "publications/2024-05-02-SEM/index.html#citation-apa-7",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "",
+    "text": "Monaghan, C., Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging & Mental Health, 28(9), 1270–1277."
+  },
+  {
+    "objectID": "publications/2024-05-02-SEM/index.html#abstract",
+    "href": "publications/2024-05-02-SEM/index.html#abstract",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "Abstract",
+    "text": "Abstract\nProcrastination is an almost universal behaviour and yet little research to date has focused on procrastination among older adults. The purpose of this study was to explore the potential association between age and procrastination, and the potential mediating roles of depressive symptomatology and loneliness.Structural equation modelling was applied to data from 1309 participants (aged 29–92) from two waves United States Health and Retirement Study (2016–2020). Within the model, sex, education, marital status, and job status were added as covariates. There was no statistically significant direct effect between age and procrastination (\\(\\beta\\) = 0.06, p = 0.106). However, an indirect effect was present via depressive symptomatology (\\(\\beta\\) = −0.40, p &lt; 0.001). No mediating effect of loneliness was observed (\\(\\beta\\) = − 0.01, p = 0.371). Subsequent analysis revealed that the symptoms, fatigue, loneliness, and lack of motivation significantly predicted procrastination. While age was not directly associated with procrastination, increasing age was associated with a decreased likelihood of depressive symptomatology, which was in turn associated with an increased likelihood of procrastination. Such findings indicates that age demonstrates no association with procrastination because of the suppressing effect of depressive symptomatology."
+  },
+  {
+    "objectID": "publications/2022-01-01-Reminiscence/index.html",
+    "href": "publications/2022-01-01-Reminiscence/index.html",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "",
+    "text": "Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults. In: Mayer, CH., Fouché, P.J., Van Niekerk, R. (eds) Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts . Sociocultural Psychology of the Lifecourse . Palgrave Macmillan, Cham"
+  },
+  {
+    "objectID": "publications/2022-01-01-Reminiscence/index.html#citation-apa-7",
+    "href": "publications/2022-01-01-Reminiscence/index.html#citation-apa-7",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "",
+    "text": "Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults. In: Mayer, CH., Fouché, P.J., Van Niekerk, R. (eds) Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts . Sociocultural Psychology of the Lifecourse . Palgrave Macmillan, Cham"
+  },
+  {
+    "objectID": "publications/2022-01-01-Reminiscence/index.html#abstract",
+    "href": "publications/2022-01-01-Reminiscence/index.html#abstract",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "Abstract",
+    "text": "Abstract\nOral reminiscence about autobiographical memory may serve a number of discursive functions for older adults. In this article we use a discursive psychological approach to analyse reminiscence discussions with four older Irish adults. A number of functions of reminiscence are evident in the discussion, including narrative, offering/seeking guidance, and building rapport with others. However, other putative functions of reminiscence, such as death preparation or obsessive/escapist, were less evident at an explicit level. Furthermore, the function of maintaining a sense of self is perhaps oversimplified, as changes in sense of self were confronted across different life periods within participants’ autobiographical memories. Reminiscence segued between first person, interpersonal and broader societal accounts, and employed counterfactual scenarios as well as direct descriptions of memory. The current methodology and findings indicate the complexity of autobiographical memory and how it is employed, and have relevance for discursive analysis of biographical materials from famous individuals from the past. The application of discursive psychological analysis to autobiographical texts will allow for understanding of how remarkable individuals have attempted to position themselves “for posterity”."
   }
 ]

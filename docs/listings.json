@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": []
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2024-09-27-AMB/index.html"
+    ]
+  },
+  {
+    "listing": "/publication.html",
+    "items": [
+      "/publications/2022-01-01-Reminiscence/index.html",
+      "/publications/2024-05-02-SEM/index.html"
+    ]
+  }
+]
