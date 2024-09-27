@@ -1,5 +1,17 @@
 ---
-title: "C-Monaghan.github.io"
+title: "Cormac Monaghan"
+image: media/profile.jpg
+toc: false
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 17em
+  links: 
+    - text: LinkedIn
+      href: https://www.linkedin.com/in/cormac-monaghan/
+    - icon: github
+      text: GitHub
+      href: https://github.com/C-Monaghan
 ---
 
 This is a Quarto website.
