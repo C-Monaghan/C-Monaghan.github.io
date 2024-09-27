@@ -1,0 +1,67 @@
+---
+title: "Agent Based Models"
+description: "Introduction to Agent-Based Modelling for Public Health Research workshop"
+author: 
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+    orcid: 0000-0001-9012-3060
+    affiliation: SFI PhD Researcher @ The Hamilton Institute, Maynooth University
+    affiliation-url: https://www.maynoothuniversity.ie/hamilton
+date: 2024-07-10
+citation: 
+  url: https://c-monaghan.github.io/posts/2024-07-10-ABM/
+image: ABMs.png
+draft: true
+---
+
+Recently, I attended the "Introduction to Agent-Based Modelling for Public Health Research" workshop, organised by the [National Centre for Research Methods](https://www.ncrm.ac.uk/) and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software [NetLogo](https://github.com/NetLogo/NetLogo). This post provides an overview of what agent-based modelling is.Recently, I attended the "Introduction to Agent-Based Modelling for Public Health Research" workshop, organised by the [National Centre for Research Methods](https://www.ncrm.ac.uk/) and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software [NetLogo](https://github.com/NetLogo/NetLogo). This post provides an overview of what agent-based modelling is.
+
+## Agent Based Models
+
+### Overview
+
+Agent-based models are computer simulations used to study the interactions between individuals, entities, environments, and time. These stochastic models are built from the bottom up, meaning individual agents (oftentimes representing people) are assigned specific attributes. The agents are programmed to behave and interact with other agents and their environment in predetermined ways, producing emergent effects that differ from the effects observed at the individual level.
+
+![](./ABMs.png){width="100%"} Agent-based models differ from the traditional regression-based methods in several key ways. For starters, regression-based methods focus on dependent and independent variables. Researchers often ask themselves *What variables do I need to consider in my model?*. In contrast, agent-based models shift the focus to **dynamic processes**, prompting the question *What processes do I need to consider?*.
+
+### Regression-Based Methods
+
+In regression-based methods, the primary goal is to identify and quantify the relationships between variables. For example, a researcher might want to understand the relationship between smoking and lung cancer. Using regression analysis, the researcher would collect data on smoking (independent variable) and lung cancer incidence (dependent variable), then apply statistical techniques to determine the strength and significance of the association.
+
+-   **Research Question**: How does smoking affect the risk of lung cancer?
+-   **Independent Variable**: Number of cigarettes smoked per day.
+-   **Dependent Variable**: Incidence of lung cancer.
+-   **Outcome**: A statistical measure (e.g., odds ratio) that quantifies the increased risk of lung cancer associated with smoking.
+
+### Agent Based Methods
+
+Agent based models, on the other hand, shift the focus to **dynamic processes**. These models focus on simulating the interactions between individual agents and their environment. Instead of looking solely at variable relationships, agent based models explore how processes and behaviors lead to emergent phenomena at the system level. This approach is particularly useful for studying complex systems where individual actions and interactions create outcomes that are not easily predictable from the behavior of individual agents alone.
+
+-   **Research Question**: How does an infectious disease spread through a population?
+-   **Processes to Consider**: Individual movement patterns, infection transmission rates, social interactions, and public health interventions.
+-   **Simulation**: Each agent represents a person who can move, interact, become infected, and recover or succumb to the disease. The model simulates how these processes unfold over time, providing insights into potential outbreak scenarios and intervention impacts.
+
+By focusing on dynamic processes, ABMs allow researchers to capture the complexity of real-world systems. They provide a way to explore "what-if" scenarios and understand the potential effects of various interventions.
+
+## NetLogo
+
+During the workshop we developed and employed agent based models using the NetLogo software. Netlogo is a versatile, multi-agent programmable modeling environment widely used for simulating natural and social phenomena. It allows users to create and explore complex systems through agent-based models, which consist of numerous individual entities, known as "agents," that interact within a defined environment according to specific rules.
+
+### Key Features
+
+1.  **Agents**: The core of NetLogo models are agents, which can be of different types:
+
+    -   **Turtles**: The primary agents that move around the world.
+    -   **Patches**: The grid cells that make up the world; they don't move but can change state.
+    -   **Links**: Connections between turtles that can represent relationships or flows.
+    -   **Observer**: A special agent that monitors and controls the simulation.
+
+2.  **Environment**: NetLogo's world is typically a two-dimensional grid of patches where turtles move and interact. The environment can be customized to simulate various real-world scenarios, from ecosystems to traffic systems.
+
+3.  **Programming Language**: NetLogo uses a Logo-based programming language that for building both simple and complex models.
+
+## Further Reading
+
+-   [Agent-based modelling for social research](https://www.ncrm.ac.uk/resources/online/ABM_index.php)
+-   [Agent-Based Modelling for the Self Learner](https://research.criticalconnections.com.au/abmbook/)
+-   [NetLogo Dictionary](https://ccl.northwestern.edu/netlogo/docs/dictionary.html)

@@ -1,0 +1,55 @@
+/*-- scss:defaults --*/
+
+// Colors
+$dark-blue: #2979ab;
+$light-blue: #e3f2fd;
+$white: #ffffff;
+$gray: #757575;
+$black: #000000;
+$hover-blue: darken($dark-blue, 10%);
+$background-color: $light-blue;
+$text-color: $gray;
+
+// Fonts
+$base-font: 'Roboto', sans-serif;
+$heading-font: 'Montserrat', sans-serif;
+
+// Base document styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $base-font;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: $dark-blue;
+}
+
+a {
+  color: $dark-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-blue;
+    text-decoration: underline;
+  }
+}
+
+// Buttons
+button {
+  background-color: $dark-blue;
+  color: $white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-blue;
+  }
+}
+
+/*-- scss:rules --*/

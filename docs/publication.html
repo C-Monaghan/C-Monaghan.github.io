@@ -30,6 +30,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="././files/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -39,6 +42,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,20 +71,77 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Cormac Monaghan</span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="././files/favicon.png" alt="" class="navbar-logo">
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -93,12 +155,23 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./publication.html" aria-current="page"> 
 <span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="././files/CV.pdf" target="_blank"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/C-Monaghan" target="_blank"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -108,38 +181,115 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title">Publications</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(2)</span></div><div class="category" data-category="journal article">journal article <span class="quarto-category-count">(2)</span></div><div class="category" data-category="memory">memory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="procrastination">procrastination <span class="quarto-category-count">(1)</span></div><div class="category" data-category="structural equation modelling">structural equation modelling <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Publications</h1>
+
+
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="memory,journal article" data-listing-file-modified-sort="1727475875848" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
+<div class="thumbnail">
+<p><a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external"></a></p><a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external"></a></p>
 </div>
-
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-
-
-
-</main> <!-- /main -->
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external">What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('memory'); return false;">
+memory
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('journal article'); return false;">
+journal article
+</div>
+</div>
+<div class="listing-description">
+<a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external">Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What We Talk About When We Talk About the Past: Discursive Psychological Analysis…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external"></a></p><a href="./publications/2022-01-01-Reminiscence/index.html" class="no-external">
+<div class="listing-author">
+Andrew P. Allen, Caoilainn Doyle, Caragh Marie Doyle, Cormac Monaghan, Noel Fitzpatrick, Richard A. P. Roche
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="procrastination,structural equation modelling,journal article" data-listing-file-modified-sort="1727476861999" data-listing-reading-time-sort="2" data-listing-word-count-sort="215">
+<div class="thumbnail">
+<p><a href="./publications/2024-05-02-SEM/index.html" class="no-external"></a></p><a href="./publications/2024-05-02-SEM/index.html" class="no-external">
+<p><img loading="lazy" src="./publications/2024-05-02-SEM/SEM.png" class="thumbnail-image"></p>
+</a><p><a href="./publications/2024-05-02-SEM/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./publications/2024-05-02-SEM/index.html" class="no-external">Procrastination, depressive symptomatology, and loneliness in later life</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./publications/2024-05-02-SEM/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('procrastination'); return false;">
+procrastination
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('structural equation modelling'); return false;">
+structural equation modelling
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('journal article'); return false;">
+journal article
+</div>
+</div>
+<div class="listing-description">
+<a href="./publications/2024-05-02-SEM/index.html" class="no-external">Monaghan, C., Avila-Palencia, I., Han, S. D., &amp; McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging &amp; Mental Health…</a>
+</div>
+</div>
+<div class="metadata">
+<p><a href="./publications/2024-05-02-SEM/index.html" class="no-external"></a></p><a href="./publications/2024-05-02-SEM/index.html" class="no-external">
+<div class="listing-author">
+Cormac Monaghan, Ione Avila-Palencia, S. Duke Han, Joanna McHugh Power
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -561,6 +711,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2024, Cormac Monaghan</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>This website was built with <a href="https://github.com/C-Monaghan/C-Monaghan.github.io" target="_blank"><i class="fa-brands fa-github" title="GitHub octocat logo" aria-label="github"></i></a>, <a href="https://www.r-project.org/about.html" target="_blank"><i class="fa-brands fa-r-project" title="R Project" aria-label="r-project"></i></a> and <a href="https://quarto.org/" target="_blank">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 
