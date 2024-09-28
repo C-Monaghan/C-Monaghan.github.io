@@ -19,11 +19,21 @@ author:
   - name: "Richard A. P. Roche"
     affiliation: "Department of Psychology, Maynooth University, Ireland"
 year: "2022"
-publication: " Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts"
+publication_date: "2022-01-01"
+publication: "Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts"
+doi: "https://doi.org/10.1007/978-3-030-81238-6_15"
 toc: false
 categories:
   - memory
   - journal article
+citation: 
+  type: article-journal
+  issued: 
+    year: 2022
+    month: 01
+    day: 01
+  container-title: "Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts"
+  doi: "10.1007/978-3-030-81238-6_15"
 ---
 
 ## Citation (APA 7)

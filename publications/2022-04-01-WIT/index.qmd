@@ -1,0 +1,19 @@
+---
+title: "Academic procrastination and perfectionism - the mediating role of temporal thought"
+type: "conference"
+author:
+    - name: "Cormac Monaghan"
+      url: "https://c-monaghan.github.io/"
+      orcid: "0000-0001-9012-3060"
+      affiliation: 
+      - "Department of Psychology, Maynooth University, Ireland"
+    - name: "Deirdre Desmond"
+      affiliation:
+        - "Department of Psychology, Maynooth University, Ireland"
+year: "2022"
+doi: "https://doi.org/10.13140/RG.2.2.19926.32329"
+toc: false
+categories:
+  - procrastination
+  - conference
+---

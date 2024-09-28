@@ -20,11 +20,9 @@ author:
     affiliation: 
       - "Department of Psychology, Maynooth University, Ireland"
 year: "2024"
-publication_date: "2024-05-02"
 publication: "Ageing and Mental Health"
 doi: "https://doi.org/10.1080/13607863.2024.2345781"
 toc: false
-image: SEM.png
 categories:
   - procrastination
   - structural equation modelling
@@ -35,6 +33,17 @@ keywords:
   - mediation
   - voluntary delay
   - mental health
+github: "https://github.com/C-Monaghan/Procrastination_Predictors"
+citation: 
+  type: article-journal
+  issued:
+    year: 2024
+    month: 05
+    day: 02
+  volume: 28
+  issue: 9
+  container-title: "Ageing and Mental Health"
+  doi: "10.1080/13607863.2024.2345781"
 ---
 
 ## Citation (APA 7)
