@@ -7,8 +7,6 @@ author:
     orcid: "0000-0001-9012-3060"
     affiliation: "Hamilton Institute, Maynooth University, Ireland"
 date: "2024-07-10"
-citation: 
-  url: https://c-monaghan.github.io/posts/2024-07-10-ABM/
 image: ABMs.png
 ---
 

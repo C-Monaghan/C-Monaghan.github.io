@@ -14,9 +14,12 @@ format:
 categories:
   - TidyTuesday
   - data visualisation
+image: ./chess_positions.png
 execute: 
   eval: false
 ---
+
+![](./chess_positions.png){width=100%}
 
 ```{r setting-up, output = FALSE}
 rm(list = ls())
