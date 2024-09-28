@@ -1,0 +1,257 @@
+---
+title: "Visualising positional moves in chess"
+description: "Analysis of #TidyTuesday's chess dataset"
+date: "2024-09-28"
+toc: true
+format:
+  html:
+    page-layout: full
+    html-math-method: katex
+    code-tools: true
+    self-contained: true
+    code-fold: true
+    code-summary: "Show the code"
+categories:
+  - TidyTuesday
+  - data visualisation
+draft: true
+---
+
+```{r setting-up, output = FALSE}
+rm(list = ls())
+
+set.seed(321) # For reproducibility
+
+# Loading packages -------------------------------------------------------------
+library(dplyr)            # Data manipulation
+library(tidyr)            # Data pivoting
+library(ggplot2)          # Visualisation
+library(furrr)            # Parallel processing 
+library(kableExtra)       # Creating tables
+library(rchess)           # Working with chess objects
+library(ggeasy)           # Makes theming plots easier
+
+# Reading in data --------------------------------------------------------------
+data <- tidytuesdayR::tt_load(2024, week = 40)
+data <- data$chess
+```
+
+This document analyzes a dataset of chess games from [Lichess](https://lichess.org/) provided by [#TidyTuesday](https://github.com/rfordatascience/tidytuesday). It contains over 20,000 games, including information such as player ratings, move sequences, and other metrics. The main focus of this analysis will be on the **specific moves played during each game**.
+
+# Chess Data
+
+The dataset includes the move sequences made by each player, represented as a string of moves. Below is a preview of the first two rows of the dataset.
+
+```{r data-moves}
+data %>%
+  select(game_id, moves) %>%
+  mutate(game_id = seq(1:nrow(data))) %>%
+  rename(ID = game_id, Moves = moves) %>%
+  head(n = 2) %>%
+  kbl(align = "c") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+Each row displays the move sequence for a game, starting with White's move. For example, the **Slav Defense** (1. d4 d5 2. c4 c6) or the **Nimzowitsch Defense** (1. d4 Nc6 2. e4 e5). Chess moves are typically recorded using [Portable Game Notation (PGN)](https://www.chess.com/terms/chess-pgn), which makes it easy to replicate games.
+
+## PGN Conversion
+
+To facilitate further analysis, we will convert the raw move strings into the PGN format, using a custom `convert_to_pgn()` function that I wrote.
+
+```{r convert-to-pgn}
+# Convert moves into PGN format ------------------------------------------------
+convert_to_pgn <- function(moves, game_id) {
+  
+  # Split the moves string into a list of individual moves
+  move_list <- strsplit(moves, " ")[[1]]
+  
+  # Initialize an empty string for the PGN format
+  pgn <- ""
+  
+  # Loop through the moves two at a time (each move is a pair: white and black)
+  for (i in seq(1, length(move_list), by = 2)) {
+    
+    move_number <- (i + 1) / 2 # Move number calculation
+    
+    # Add both white's and black's moves, if available
+    if (i < length(move_list)) {
+      pgn <- paste0(pgn, move_number, ". ", move_list[i], " ", move_list[i+1], " ")
+    } else {  # In case the game ends on white's move (no black move)
+      pgn <- paste0(pgn, move_number, ". ", move_list[i])
+    }
+  }
+
+  # Returning pgn string
+  return(pgn)
+}
+
+# Converting moves into pgn format
+chess_games <- data %>%
+  select(game_id, moves) %>%
+  mutate(
+    game_id = seq(1:nrow(data)),
+    moves = mapply(convert_to_pgn, moves, game_id))
+
+# Displaying converted dataset
+chess_games %>%
+  rename(ID = game_id, Moves = moves) %>%
+  head(n = 2) %>%
+  kbl(align = "c") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Extracting game history
+Now that the data is in PGN format, we can use the ``history_detail()`` from the ``rhcess`` package to extract the game history. However, because the dataset contains over 20,000 rows, processing every game sequentially would be time-consuming. To speed up this process, we will implement parallel processing using the ``furrr`` package.
+
+```{r game-history}
+# Function to extract game history
+process_moves <- function(p) {
+  chss <- Chess$new()          # Initialize a new chess object
+  chss$load_pgn(p)             # Load the PGN notation into the chess object
+  chss$history_detail()        # Extract detailed history of the game
+}
+
+plan(multisession, workers = parallel::detectCores() - 1)
+
+# Parallel processing: Convert PGN format to game history
+chess_games <- chess_games %>%
+  mutate(data = future_map(moves, process_moves)) %>%
+  select(-moves) %>%
+  unnest(cols = c(data))
+
+# Displaying processed dataset
+chess_games %>%
+  rename(ID = game_id) %>%
+  kbl(align = "c") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+# Positional Movements
+## Creating a chess board
+First, we will create a chessboard visualization using ``ggplot``. We can do this using the ``.chessboard()`` function, again from the ``rchess`` package. This function generates the grid and coordinates for each square which can piped into ggplot.
+
+```{r chess-board, warning=FALSE}
+# Creating a chess board -------------------------------------------------------
+board <- rchess:::.chessboarddata() %>%
+  tibble() %>%
+  select(cell, col, row, x, y, cc)
+
+# Plotting
+board %>%
+  ggplot() +
+  geom_tile(aes(x, y, fill = cc)) +
+  scale_fill_manual(values =  c("burlywood3", "burlywood4")) + # Traditional board colours
+  theme_void() +
+  theme(axis.text = element_blank(), axis.ticks = element_blank()) +
+  easy_remove_legend()
+
+```
+
+## Adding board movements
+Next, we will join the chessboard data with the game data to calculate the origin and destination of each piece movement. This allows us to visualize the trajectories of pieces as they move across the board.
+
+```{r board-movements}
+# Join board data with game data to get move origin and destination 
+chess_games_paths <- chess_games %>%
+  left_join(board %>% rename(from = cell, x.from = x, y.from = y), by = "from") %>%
+  left_join(board %>%
+              rename(to = cell, x.to = x, y.to = y) %>% 
+              select(-cc, -col, -row), # Exclude unnecessary columns
+            by = "to") %>%
+  mutate(x_gt_y = abs(x.to - x.from) > abs(y.to - y.from), # Check if x movement is greater than y
+         xy_sign = sign((x.to - x.from)*(y.to - y.from)) == 1, # Check if X and Y move in the same direction
+         x_gt_y_equal_xy_sign = x_gt_y == xy_sign) # Check if both conditions hold
+
+# Previewing
+chess_games_paths %>%
+  select(piece, from, to, x.from, y.from, x.to, y.to) %>%
+  head(n = 6) %>%
+  kbl(align = "c") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Getting positional movements (white)
+Next, we focus on the **major white pieces** and analyze their movements. Given the large dataset, we will randomly sample 25,000 moves to avoid overcrowded plots and improve readability.
+
+```{r white-movements}
+# Major white pieces
+white_pieces <- c(
+  "a1 Rook", "b1 Knight", "c1 Bishop", "White Queen", 
+  "White King", "f1 Bishop", "g1 Knight", "h1 Rook")
+
+# Filter paths to only include major pieces
+# Using every move from the dataset produces a messy overcrowded plot
+# So instead we will sample 25000 random moves
+chess_games_paths_white <- chess_games_paths %>% 
+  filter(piece %in% white_pieces) %>%
+  sample_n(25000)
+
+# Previewing
+chess_games_paths_white %>%
+  select(piece, from, to, x.from, y.from, x.to, y.to) %>%
+  head(n = 6) %>%
+  kbl(align = "c") %>%
+  kable_styling(
+    full_width = FALSE,
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Plotting piece movements
+Now that we have filtered the moves for major white pieces, we can visualize their paths on the chessboard.
+
+```{r piece-movement}
+chess_games_paths_white %>%
+  ggplot() +
+  
+  # Adding board data
+  geom_tile(data = board, aes(x, y, fill = cc)) +
+  
+  # Adding piece movement
+  geom_curve(
+    data = paths_pieces %>% filter(x_gt_y_equal_xy_sign),
+    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),
+    position = position_jitter(width = 0.2, height = 0.2),
+    curvature = 0.50, angle = -45, alpha = 0.02, color = "white", 
+    linewidth = 1.02) +
+  geom_curve(
+    data = paths_pieces %>% filter(!x_gt_y_equal_xy_sign),
+    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),
+    position = position_jitter(width = 0.2, height = 0.2),
+    curvature = -0.50, angle = 45, alpha = 0.02, color = "white", 
+    linewidth = 1.02) +
+  
+  # Customizing
+  labs(title = "Positional movements of major chess pieces", x = "", y = "") +
+  scale_fill_manual(values =  c("burlywood3", "burlywood4")) +
+  coord_equal() +
+  facet_wrap(~ factor(piece, c(white_pieces)), ncol = 4) +
+  theme_void() +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 15, 
+                              face = "bold", margin = margin(0, 0, 15, 0)),
+    strip.text = element_text(size = 9, face = "bold", margin = margin(0, 0, 2, 0)),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+  ) +
+  ggeasy::easy_remove_legend() +
+  ggeasy::easy_remove_gridlines()
+
+```
+
+# Session Info
+
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" >Session Information</button><div id="collapseOne" class="accordion-collapse collapse"><div>
+
+```{r}
+sessionInfo()
+```
+
+</div></div>
