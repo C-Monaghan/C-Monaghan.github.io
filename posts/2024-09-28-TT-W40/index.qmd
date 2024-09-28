@@ -14,7 +14,8 @@ format:
 categories:
   - TidyTuesday
   - data visualisation
-draft: true
+execute: 
+  eval: false
 ---
 
 ```{r setting-up, output = FALSE}
