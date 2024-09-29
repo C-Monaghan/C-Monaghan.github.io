@@ -17,10 +17,10 @@ toc-location: right
 
 ## Journal articles
 
-:::{#articles}
+::: {#articles}
 :::
 
 ## Conference Presentations
 
-:::{#conferences}
+::: {#conferences}
 :::

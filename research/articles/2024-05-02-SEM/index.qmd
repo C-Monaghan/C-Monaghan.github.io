@@ -29,13 +29,13 @@ categories:
 pub-info:
   reference: >-
     <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. <em>Aging & Mental Health, 28</em>(9), 1270–1277. <a href=https://doi.org/10.1080/13607863.2024.2345781><code>10.1080/13607863.2024.2345781</code></a>
-links:
-  - name: Final version
-    url: https://doi.org/10.1080/13607863.2024.2345781
-    icon: fa-solid fa-scroll
-  - name: Code
-    url: https://github.com/C-Monaghan/Procrastination_Predictors
-    icon: fa-brands fa-github
+  links:
+    - name: Final version
+      url: https://doi.org/10.1080/13607863.2024.2345781
+      icon: fa-solid fa-scroll
+    - name: Code
+      url: https://github.com/C-Monaghan/Procrastination_Predictors
+      icon: fa-brands fa-github
 toc: true
 ---
 

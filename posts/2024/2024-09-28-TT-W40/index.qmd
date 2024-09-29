@@ -10,12 +10,11 @@ categories:
   - TidyTuesday
   - data visualisation
 image: ./chess_positions.png
-execute: 
-  eval: false
 editor: source
+eval: false
 ---
 
-![](./chess_positions.png){width="100%"}
+![](./chess_positions.png){.lightbox width="100%"}
 
 ```{r setting-up, output = FALSE}
 rm(list = ls())

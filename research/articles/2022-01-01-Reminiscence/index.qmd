@@ -18,7 +18,7 @@ author:
     affiliation:  GradCAM, Technological University Dublin, Ireland
   - name: Richard A. P. Roche
     affiliation: Department of Psychology, Maynooth University, Ireland
-doi: https://doi.org/10.1007/978-3-030-81238-6_15
+doi: 10.1007/978-3-030-81238-6_15
 categories:
   - memory
   - journal article
@@ -32,7 +32,6 @@ pub-info:
 Oral reminiscence about autobiographical memory may serve a number of discursive functions for older adults. In this article we use a discursive psychological approach to analyse reminiscence discussions with four older Irish adults. A number of functions of reminiscence are evident in the discussion, including narrative, offering/seeking guidance, and building rapport with others. However, other putative functions of reminiscence, such as death preparation or obsessive/escapist, were less evident at an explicit level. Furthermore, the function of maintaining a sense of self is perhaps oversimplified, as changes in sense of self were confronted across different life periods within participants’ autobiographical memories. Reminiscence segued between first person, interpersonal and broader societal accounts, and employed counterfactual scenarios as well as direct descriptions of memory. The current methodology and findings indicate the complexity of autobiographical memory and how it is employed, and have relevance for discursive analysis of biographical materials from famous individuals from the past. The application of discursive psychological analysis to autobiographical texts will allow for understanding of how remarkable individuals have attempted to position themselves “for posterity”.
 
 ## Citation
-
 
 ``` bibtex
 @article{allen2021,

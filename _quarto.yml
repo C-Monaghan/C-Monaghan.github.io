@@ -8,6 +8,8 @@ website:
   repo-url: "https://github.com/C-Monaghan/C-Monaghan.github.io"
   
   navbar:
+    pinned: true
+    
     title: false
     logo: ./files/favicon.png
     left:
@@ -27,6 +29,11 @@ website:
       # Blog
       - href: posts/index.qmd
         text: Blog
+        
+      # PhD Resources
+      - href: resources/index.qmd
+        text: PhD Resources
+        
     right:
     # Socials
       - icon: envelope
