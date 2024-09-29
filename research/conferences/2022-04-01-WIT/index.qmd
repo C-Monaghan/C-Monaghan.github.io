@@ -1,0 +1,29 @@
+---
+title: "Academic procrastination and perfectionism - the mediating role of temporal thought"
+date: 2022-04-01
+author:
+    - name: Cormac Monaghan
+      url: https://c-monaghan.github.io/
+      orcid: 0000-0001-9012-3060
+      affiliation: 
+      - Department of Psychology, Maynooth University, Ireland
+    - name: Deirdre Desmond
+      affiliation:
+        - Department of Psychology, Maynooth University, Ireland
+doi: 10.13140/RG.2.2.19926.32329
+categories:
+  - procrastination
+  - perfectionism
+  - conference
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a> & Deirdre Desmond. <em>Academic procrastination and perfectionism - the mediating role of temporal thought</em> [Poster Session]. Annual Student Psychology Conference 2022. Waterford Institute of Technology, Ireland. <a href=https://doi.org.10.13140/RG.2.2.19926.32329><code>10.13140/RG.2.2.19926.32329</code></a>
+---
+
+## Abstract
+
+Academic procrastination is a common problem experienced by many students and is associated with poorer academic performance. Research has shown that the dimensions of perfectionism: perfectionistic strivings and perfectionistic concerns are linked to academic procrastination. However, the underlying mechanisms of these relationships are less understood. The purpose of this study was to investigate this by exploring how the negative repetitive thought processes of rumination and worry may mediate these relationships.
+
+## Important figures
+
+![Figure 1: Indirect effects of negative repetitive thought on perfectionistic strivings and academic procrastination. Note. Statistical significance: \* p \< .05; \*\* p \< .01; \*\*\* p \< .001; 95% CI = 95% Confidence Interval](./Figure_1.png)

@@ -5,32 +5,52 @@ project:
 website:
   title: "Cormac Monaghan"
   favicon: ./files/favicon.png
+  repo-url: "https://github.com/C-Monaghan/C-Monaghan.github.io"
+  
   navbar:
     title: false
     logo: ./files/favicon.png
     left:
     # Home Page
       - href: index.qmd
-        text: Home
-      
-      # Publications
-      - href: publication.qmd
-        text: Publications
+        text: About
         
-      # Blog Posts
-      - href: posts.qmd
-        text: Blog
-    right:
+    # CV
       - href: ./files/CV.pdf
         text: CV
+        target: _blank
+      
+      # Research
+      - href: research/index.qmd
+        text: Research
+        
+      # Blog
+      - href: posts/index.qmd
+        text: Blog
+    right:
+    # Socials
+      - icon: envelope
+        href: mailto:cormacmonaghan@protonmail.com
+      - icon: linkedin
+        href: https://www.linkedin.com/in/cormac-monaghan/
+        target: _blank
+      - text: "{{< fa brands orcid >}}"
+        href: https://orcid.org/0000-0001-9012-3060
         target: _blank
       - icon: github
         href: https://github.com/C-Monaghan
         target: _blank
+      - icon: twitter-x
+        href: https://twitter.com/CormacMonaghan1
+        target: _blank
   page-footer: 
     background: light
-    left: Copyright 2024, Cormac Monaghan
-    right: This website was built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/C-Monaghan/C-Monaghan.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+    left: |
+      <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>
+    center: |
+      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [0000-0001-9012-3060](https://orcid.org/0000-0001-9012-3060)</span>
+    right: |
+      <span class="faux-block">This website was built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/C-Monaghan/C-Monaghan.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}</span>
 
 format:
   html:
