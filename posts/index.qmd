@@ -1,0 +1,17 @@
+---
+title: "Blog"
+author: ""
+description: ""
+listing: 
+  - id: posts_2024
+    contents: "2024/*/index.qmd"
+    sort: "date desc"
+    # template: "../html/posts/listing.ejs"
+    categories: true
+page-layout: full
+toc-title: Year
+toc-location: right
+code-tools: false
+comments: false
+citation: false
+---

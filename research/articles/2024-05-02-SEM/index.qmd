@@ -1,0 +1,67 @@
+---
+title: "Procrastination, depressive symptomatology, and loneliness in later life"
+date: 2024-05-01
+author:
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+    orcid: 0000-0001-9012-3060
+    github: https://github.com/C-Monaghan/Procrastination_Predictors
+    affiliation: 
+      - Hamilton Institute, Maynooth University, Ireland
+      - Department of Psychology, Maynooth University, Ireland
+  - name: Ione Avila-Palencia
+    orcid: 0000-0002-4353-2256
+    affiliation: 
+      - Centre for Public Health, Queens University, Ireland
+  - name: S. Duke Han
+    orcid: 0000-0003-2453-9230
+    affiliation: 
+      - Department of Psychology, University of Southern California, CA, USA
+  - name: Joanna McHugh Power
+    orcid: 0000-0002-7387-3107
+    affiliation: 
+      - Department of Psychology, Maynooth University, Ireland
+doi: "10.1080/13607863.2024.2345781"
+categories:
+  - procrastination
+  - structural equation modelling
+  - journal article
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. <em>Aging & Mental Health, 28</em>(9), 1270–1277. <a href=https://doi.org/10.1080/13607863.2024.2345781><code>10.1080/13607863.2024.2345781</code></a>
+links:
+  - name: Final version
+    url: https://doi.org/10.1080/13607863.2024.2345781
+    icon: fa-solid fa-scroll
+  - name: Code
+    url: https://github.com/C-Monaghan/Procrastination_Predictors
+    icon: fa-brands fa-github
+toc: true
+---
+
+## Important links
+
+-   [Published Paper](https://doi.org/10.1080/13607863.2024.2345781){target="_blank"}
+-   [GitHub Repository](https://github.com/C-Monaghan/Procrastination_Predictors){target="_blank"}
+
+## Abstract
+
+Procrastination is an almost universal behaviour and yet little research to date has focused on procrastination among older adults. The purpose of this study was to explore the potential association between age and procrastination, and the potential mediating roles of depressive symptomatology and loneliness.Structural equation modelling was applied to data from 1309 participants (aged 29–92) from two waves United States Health and Retirement Study (2016–2020). Within the model, sex, education, marital status, and job status were added as covariates. There was no statistically significant direct effect between age and procrastination ($\beta$ = 0.06, p = 0.106). However, an indirect effect was present via depressive symptomatology ($\beta$ = −0.40, p \< 0.001). No mediating effect of loneliness was observed ($\beta$ = − 0.01, p = 0.371). Subsequent analysis revealed that the symptoms, fatigue, loneliness, and lack of motivation significantly predicted procrastination. While age was not directly associated with procrastination, increasing age was associated with a decreased likelihood of depressive symptomatology, which was in turn associated with an increased likelihood of procrastination. Such findings indicates that age demonstrates no association with procrastination because of the suppressing effect of depressive symptomatology.
+
+## Important figures
+
+![In the following structural equation model, we have employed a set of measured constructs (D1 - D8, P1 - P12, and L1 - L3) each of which corresponds to specific survey questions designed to gauge the underlying latent construct (depressive symptomatology (D), procrastination (P), and loneliness (L)). The numerical values (beta values) represent the strength and direction of the relationship between the variables. Statistically significant pathways are represented as \*\* p \< .01; \*\*\* p \< .001. The total effect of age on procrastination is (β = 0.010, p = 0.782).](./SEM.png)
+
+## Citation
+
+``` bibtex
+@article{monaghan2024,
+  title={Procrastination, depressive symptomatology, and loneliness in later life},
+  author={Monaghan, Cormac and Avila-Palencia, Ione and Han, S Duke and McHugh Power, Joanna},
+  journal={Aging \& Mental Health},
+  pages={1--8},
+  year={2024},
+  publisher={Taylor \& Francis},
+  doi={10.1080/13607863.2024.2345781}
+}
+```

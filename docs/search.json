@@ -25,7 +25,7 @@
     "href": "posts.html",
     "title": "My Blog",
     "section": "",
-    "text": "Visualising positional moves in chess\n\n\n\nTidyTuesday\n\n\ndata visualisation\n\n\n\nAnalysis of #TidyTuesday’s chess dataset\n\n\n\nCormac Monaghan\n\n\nSep 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgent Based Models\n\n\nIntroduction to Agent-Based Modelling for Public Health Research workshop\n\n\n\nCormac Monaghan\n\n\nJul 10, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Blog\n\n\nCormac Monaghan’s blog\n\n\n\nCormac Monaghan\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVisualising positional moves in chess\n\n\n\nTidyTuesday\n\n\ndata visualisation\n\n\n\nAnalysis of #TidyTuesday’s chess dataset\n\n\n\nCormac Monaghan\n\n\nSep 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAgent Based Models\n\n\nIntroduction to Agent-Based Modelling for Public Health Research workshop\n\n\n\nCormac Monaghan\n\n\nJul 10, 2024\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "publication.html",
@@ -201,5 +201,250 @@
     "title": "Visualising positional moves in chess",
     "section": "Plotting piece movements",
     "text": "Plotting piece movements\nNow that we have filtered the moves for major white pieces, we can visualize their paths on the chessboard.\n\n\nShow the code\nchess_games_paths_white %&gt;%\n  ggplot() +\n  \n  # Adding board data\n  geom_tile(data = board, aes(x, y, fill = cc)) +\n  \n  # Adding piece movement\n  geom_curve(\n    data = paths_pieces %&gt;% filter(x_gt_y_equal_xy_sign),\n    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),\n    position = position_jitter(width = 0.2, height = 0.2),\n    curvature = 0.50, angle = -45, alpha = 0.02, color = \"white\", \n    linewidth = 1.02) +\n  geom_curve(\n    data = paths_pieces %&gt;% filter(!x_gt_y_equal_xy_sign),\n    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),\n    position = position_jitter(width = 0.2, height = 0.2),\n    curvature = -0.50, angle = 45, alpha = 0.02, color = \"white\", \n    linewidth = 1.02) +\n  \n  # Customizing\n  labs(title = \"Positional movements of major chess pieces\", x = \"\", y = \"\") +\n  scale_fill_manual(values =  c(\"burlywood3\", \"burlywood4\")) +\n  coord_equal() +\n  facet_wrap(~ factor(piece, c(white_pieces)), ncol = 4) +\n  theme_void() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 15, \n                              face = \"bold\", margin = margin(0, 0, 15, 0)),\n    strip.text = element_text(size = 9, face = \"bold\", margin = margin(0, 0, 2, 0)),\n    axis.text = element_blank(),\n    axis.ticks = element_blank(),\n  ) +\n  ggeasy::easy_remove_legend() +\n  ggeasy::easy_remove_gridlines()"
+  },
+  {
+    "objectID": "scripts/appendix.html",
+    "href": "scripts/appendix.html",
+    "title": "Cormac Monaghan",
+    "section": "",
+    "text": "Expand for Session Info\n\n\n\n\n\n\n\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.4.1 (2024-06-14 ucrt)\n os       Windows 11 x64 (build 22631)\n system   x86_64, mingw32\n ui       RTerm\n language (EN)\n collate  English_Ireland.utf8\n ctype    English_Ireland.utf8\n tz       Europe/Dublin\n date     2024-09-29\n pandoc   3.2 @ C:/Coding/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)\n quarto   1.5.57\n\n─ Packages ───────────────────────────────────────────────────────────────────\n package     * version date (UTC) lib source\n sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.4.1)\n\n [1] C:/Coding/R-4.4.1/library\n\n──────────────────────────────────────────────────────────────────────────────"
+  },
+  {
+    "objectID": "scripts/appendix.html#appendix",
+    "href": "scripts/appendix.html#appendix",
+    "title": "Cormac Monaghan",
+    "section": "",
+    "text": "Expand for Session Info\n\n\n\n\n\n\n\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.4.1 (2024-06-14 ucrt)\n os       Windows 11 x64 (build 22631)\n system   x86_64, mingw32\n ui       RTerm\n language (EN)\n collate  English_Ireland.utf8\n ctype    English_Ireland.utf8\n tz       Europe/Dublin\n date     2024-09-29\n pandoc   3.2 @ C:/Coding/RStudio/resources/app/bin/quarto/bin/tools/ (via rmarkdown)\n quarto   1.5.57\n\n─ Packages ───────────────────────────────────────────────────────────────────\n package     * version date (UTC) lib source\n sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.4.1)\n\n [1] C:/Coding/R-4.4.1/library\n\n──────────────────────────────────────────────────────────────────────────────"
+  },
+  {
+    "objectID": "research/articles/2022-01-01-Reminiscence/index.html",
+    "href": "research/articles/2022-01-01-Reminiscence/index.html",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "",
+    "text": "Oral reminiscence about autobiographical memory may serve a number of discursive functions for older adults. In this article we use a discursive psychological approach to analyse reminiscence discussions with four older Irish adults. A number of functions of reminiscence are evident in the discussion, including narrative, offering/seeking guidance, and building rapport with others. However, other putative functions of reminiscence, such as death preparation or obsessive/escapist, were less evident at an explicit level. Furthermore, the function of maintaining a sense of self is perhaps oversimplified, as changes in sense of self were confronted across different life periods within participants’ autobiographical memories. Reminiscence segued between first person, interpersonal and broader societal accounts, and employed counterfactual scenarios as well as direct descriptions of memory. The current methodology and findings indicate the complexity of autobiographical memory and how it is employed, and have relevance for discursive analysis of biographical materials from famous individuals from the past. The application of discursive psychological analysis to autobiographical texts will allow for understanding of how remarkable individuals have attempted to position themselves “for posterity”."
+  },
+  {
+    "objectID": "research/articles/2022-01-01-Reminiscence/index.html#citation-apa-7",
+    "href": "research/articles/2022-01-01-Reminiscence/index.html#citation-apa-7",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "",
+    "text": "Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults. In: Mayer, CH., Fouché, P.J., Van Niekerk, R. (eds) Psychobiographical Illustrations on Meaning and Identity in Sociocultural Contexts . Sociocultural Psychology of the Lifecourse . Palgrave Macmillan, Cham"
+  },
+  {
+    "objectID": "research/articles/2022-01-01-Reminiscence/index.html#abstract",
+    "href": "research/articles/2022-01-01-Reminiscence/index.html#abstract",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "",
+    "text": "Oral reminiscence about autobiographical memory may serve a number of discursive functions for older adults. In this article we use a discursive psychological approach to analyse reminiscence discussions with four older Irish adults. A number of functions of reminiscence are evident in the discussion, including narrative, offering/seeking guidance, and building rapport with others. However, other putative functions of reminiscence, such as death preparation or obsessive/escapist, were less evident at an explicit level. Furthermore, the function of maintaining a sense of self is perhaps oversimplified, as changes in sense of self were confronted across different life periods within participants’ autobiographical memories. Reminiscence segued between first person, interpersonal and broader societal accounts, and employed counterfactual scenarios as well as direct descriptions of memory. The current methodology and findings indicate the complexity of autobiographical memory and how it is employed, and have relevance for discursive analysis of biographical materials from famous individuals from the past. The application of discursive psychological analysis to autobiographical texts will allow for understanding of how remarkable individuals have attempted to position themselves “for posterity”."
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html",
+    "href": "research/articles/2024-05-02-SEM/index.html",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "",
+    "text": "Published Paper\nGitHub Repository"
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html#citation-apa-7",
+    "href": "research/articles/2024-05-02-SEM/index.html#citation-apa-7",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "",
+    "text": "Monaghan, C., Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging & Mental Health, 28(9), 1270–1277."
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html#abstract",
+    "href": "research/articles/2024-05-02-SEM/index.html#abstract",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "Abstract",
+    "text": "Abstract\nProcrastination is an almost universal behaviour and yet little research to date has focused on procrastination among older adults. The purpose of this study was to explore the potential association between age and procrastination, and the potential mediating roles of depressive symptomatology and loneliness.Structural equation modelling was applied to data from 1309 participants (aged 29–92) from two waves United States Health and Retirement Study (2016–2020). Within the model, sex, education, marital status, and job status were added as covariates. There was no statistically significant direct effect between age and procrastination (\\(\\beta\\) = 0.06, p = 0.106). However, an indirect effect was present via depressive symptomatology (\\(\\beta\\) = −0.40, p &lt; 0.001). No mediating effect of loneliness was observed (\\(\\beta\\) = − 0.01, p = 0.371). Subsequent analysis revealed that the symptoms, fatigue, loneliness, and lack of motivation significantly predicted procrastination. While age was not directly associated with procrastination, increasing age was associated with a decreased likelihood of depressive symptomatology, which was in turn associated with an increased likelihood of procrastination. Such findings indicates that age demonstrates no association with procrastination because of the suppressing effect of depressive symptomatology."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "Research",
+    "section": "",
+    "text": "Monaghan, C., Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging & Mental Health, 28(9), 1270–1277. 10.1080/13607863.2024.2345781\n            \n\n            \n            \n                \n                    \n                            procrastination\n                        \n                    \n                    \n                            structural equation modelling\n                        \n                    \n                    \n                            journal article\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults. Psychobiographical illustrations on meaning and identity in sociocultural contexts, 327-344. 10.1007/978-3-030-81238-6_15\n            \n\n            \n            \n                \n                    \n                            memory\n                        \n                    \n                    \n                            journal article\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html",
+    "title": "Visualising positional moves in chess",
+    "section": "",
+    "text": "Show the code\nrm(list = ls())\n\nset.seed(321) # For reproducibility\n\n# Loading packages -------------------------------------------------------------\nlibrary(dplyr)            # Data manipulation\nlibrary(tidyr)            # Data pivoting\nlibrary(ggplot2)          # Visualisation\nlibrary(furrr)            # Parallel processing \nlibrary(kableExtra)       # Creating tables\nlibrary(rchess)           # Working with chess objects\nlibrary(ggeasy)           # Makes theming plots easier\n\n# Reading in data --------------------------------------------------------------\ndata &lt;- tidytuesdayR::tt_load(2024, week = 40)\ndata &lt;- data$chess\nThis document analyzes a dataset of chess games from Lichess provided by #TidyTuesday. It contains over 20,000 games, including information such as player ratings, move sequences, and other metrics. The main focus of this analysis will be on the specific moves played during each game."
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#pgn-conversion",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#pgn-conversion",
+    "title": "Visualising positional moves in chess",
+    "section": "PGN Conversion",
+    "text": "PGN Conversion\nTo facilitate further analysis, we will convert the raw move strings into the PGN format, using a custom convert_to_pgn() function that I wrote.\n\n\nShow the code\n# Convert moves into PGN format ------------------------------------------------\nconvert_to_pgn &lt;- function(moves, game_id) {\n  \n  # Split the moves string into a list of individual moves\n  move_list &lt;- strsplit(moves, \" \")[[1]]\n  \n  # Initialize an empty string for the PGN format\n  pgn &lt;- \"\"\n  \n  # Loop through the moves two at a time (each move is a pair: white and black)\n  for (i in seq(1, length(move_list), by = 2)) {\n    \n    move_number &lt;- (i + 1) / 2 # Move number calculation\n    \n    # Add both white's and black's moves, if available\n    if (i &lt; length(move_list)) {\n      pgn &lt;- paste0(pgn, move_number, \". \", move_list[i], \" \", move_list[i+1], \" \")\n    } else {  # In case the game ends on white's move (no black move)\n      pgn &lt;- paste0(pgn, move_number, \". \", move_list[i])\n    }\n  }\n\n  # Returning pgn string\n  return(pgn)\n}\n\n# Converting moves into pgn format\nchess_games &lt;- data %&gt;%\n  select(game_id, moves) %&gt;%\n  mutate(\n    game_id = seq(1:nrow(data)),\n    moves = mapply(convert_to_pgn, moves, game_id))\n\n# Displaying converted dataset\nchess_games %&gt;%\n  rename(ID = game_id, Moves = moves) %&gt;%\n  head(n = 2) %&gt;%\n  kbl(align = \"c\") %&gt;%\n  kable_styling(\n    full_width = FALSE,\n    bootstrap_options = c(\"striped\", \"hover\", \"condensed\", \"responsive\"))"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#extracting-game-history",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#extracting-game-history",
+    "title": "Visualising positional moves in chess",
+    "section": "Extracting game history",
+    "text": "Extracting game history\nNow that the data is in PGN format, we can use the history_detail() from the rhcess package to extract the game history. However, because the dataset contains over 20,000 rows, processing every game sequentially would be time-consuming. To speed up this process, we will implement parallel processing using the furrr package.\n\n\nShow the code\n# Function to extract game history\nprocess_moves &lt;- function(p) {\n  chss &lt;- Chess$new()          # Initialize a new chess object\n  chss$load_pgn(p)             # Load the PGN notation into the chess object\n  chss$history_detail()        # Extract detailed history of the game\n}\n\nplan(multisession, workers = parallel::detectCores() - 1)\n\n# Parallel processing: Convert PGN format to game history\nchess_games &lt;- chess_games %&gt;%\n  mutate(data = future_map(moves, process_moves)) %&gt;%\n  select(-moves) %&gt;%\n  unnest(cols = c(data))\n\n# Displaying processed dataset\nchess_games %&gt;%\n  rename(ID = game_id) %&gt;%\n  kbl(align = \"c\") %&gt;%\n  kable_styling(\n    full_width = FALSE,\n    bootstrap_options = c(\"striped\", \"hover\", \"condensed\", \"responsive\"))"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#creating-a-chess-board",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#creating-a-chess-board",
+    "title": "Visualising positional moves in chess",
+    "section": "Creating a chess board",
+    "text": "Creating a chess board\nFirst, we will create a chessboard visualization using ggplot. We can do this using the .chessboard() function, again from the rchess package. This function generates the grid and coordinates for each square which can piped into ggplot.\n\n\nShow the code\n# Creating a chess board -------------------------------------------------------\nboard &lt;- rchess:::.chessboarddata() %&gt;%\n  tibble() %&gt;%\n  select(cell, col, row, x, y, cc)\n\n# Plotting\nboard %&gt;%\n  ggplot() +\n  geom_tile(aes(x, y, fill = cc)) +\n  scale_fill_manual(values =  c(\"burlywood3\", \"burlywood4\")) + # Traditional board colours\n  theme_void() +\n  theme(axis.text = element_blank(), axis.ticks = element_blank()) +\n  easy_remove_legend()"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#adding-board-movements",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#adding-board-movements",
+    "title": "Visualising positional moves in chess",
+    "section": "Adding board movements",
+    "text": "Adding board movements\nNext, we will join the chessboard data with the game data to calculate the origin and destination of each piece movement. This allows us to visualize the trajectories of pieces as they move across the board.\n\n\nShow the code\n# Join board data with game data to get move origin and destination \nchess_games_paths &lt;- chess_games %&gt;%\n  left_join(board %&gt;% rename(from = cell, x.from = x, y.from = y), by = \"from\") %&gt;%\n  left_join(board %&gt;%\n              rename(to = cell, x.to = x, y.to = y) %&gt;% \n              select(-cc, -col, -row), # Exclude unnecessary columns\n            by = \"to\") %&gt;%\n  mutate(x_gt_y = abs(x.to - x.from) &gt; abs(y.to - y.from), # Check if x movement is greater than y\n         xy_sign = sign((x.to - x.from)*(y.to - y.from)) == 1, # Check if X and Y move in the same direction\n         x_gt_y_equal_xy_sign = x_gt_y == xy_sign) # Check if both conditions hold\n\n# Previewing\nchess_games_paths %&gt;%\n  select(piece, from, to, x.from, y.from, x.to, y.to) %&gt;%\n  head(n = 6) %&gt;%\n  kbl(align = \"c\") %&gt;%\n  kable_styling(\n    full_width = FALSE,\n    bootstrap_options = c(\"striped\", \"hover\", \"condensed\", \"responsive\"))"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#getting-positional-movements-white",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#getting-positional-movements-white",
+    "title": "Visualising positional moves in chess",
+    "section": "Getting positional movements (white)",
+    "text": "Getting positional movements (white)\nNext, we focus on the major white pieces and analyze their movements. Given the large dataset, we will randomly sample 25,000 moves to avoid overcrowded plots and improve readability.\n\n\nShow the code\n# Major white pieces\nwhite_pieces &lt;- c(\n  \"a1 Rook\", \"b1 Knight\", \"c1 Bishop\", \"White Queen\", \n  \"White King\", \"f1 Bishop\", \"g1 Knight\", \"h1 Rook\")\n\n# Filter paths to only include major pieces\n# Using every move from the dataset produces a messy overcrowded plot\n# So instead we will sample 25000 random moves\nchess_games_paths_white &lt;- chess_games_paths %&gt;% \n  filter(piece %in% white_pieces) %&gt;%\n  sample_n(25000)\n\n# Previewing\nchess_games_paths_white %&gt;%\n  select(piece, from, to, x.from, y.from, x.to, y.to) %&gt;%\n  head(n = 6) %&gt;%\n  kbl(align = \"c\") %&gt;%\n  kable_styling(\n    full_width = FALSE,\n    bootstrap_options = c(\"striped\", \"hover\", \"condensed\", \"responsive\"))"
+  },
+  {
+    "objectID": "posts/2024/2024-09-28-TT-W40/index.html#plotting-piece-movements",
+    "href": "posts/2024/2024-09-28-TT-W40/index.html#plotting-piece-movements",
+    "title": "Visualising positional moves in chess",
+    "section": "Plotting piece movements",
+    "text": "Plotting piece movements\nNow that we have filtered the moves for major white pieces, we can visualize their paths on the chessboard.\n\n\nShow the code\nchess_games_paths_white %&gt;%\n  ggplot() +\n  \n  # Adding board data\n  geom_tile(data = board, aes(x, y, fill = cc)) +\n  \n  # Adding piece movement\n  geom_curve(\n    data = paths_pieces %&gt;% filter(x_gt_y_equal_xy_sign),\n    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),\n    position = position_jitter(width = 0.2, height = 0.2),\n    curvature = 0.50, angle = -45, alpha = 0.02, color = \"white\", \n    linewidth = 1.02) +\n  geom_curve(\n    data = paths_pieces %&gt;% filter(!x_gt_y_equal_xy_sign),\n    aes(x = x.from, y = y.from, xend = x.to, yend = y.to),\n    position = position_jitter(width = 0.2, height = 0.2),\n    curvature = -0.50, angle = 45, alpha = 0.02, color = \"white\", \n    linewidth = 1.02) +\n  \n  # Customizing\n  labs(title = \"Positional movements of major chess pieces\", x = \"\", y = \"\") +\n  scale_fill_manual(values =  c(\"burlywood3\", \"burlywood4\")) +\n  coord_equal() +\n  facet_wrap(~ factor(piece, c(white_pieces)), ncol = 4) +\n  theme_void() +\n  theme(\n    plot.title = element_text(hjust = 0.5, size = 15, \n                              face = \"bold\", margin = margin(0, 0, 15, 0)),\n    strip.text = element_text(size = 9, face = \"bold\", margin = margin(0, 0, 2, 0)),\n    axis.text = element_blank(),\n    axis.ticks = element_blank(),\n  ) +\n  ggeasy::easy_remove_legend() +\n  ggeasy::easy_remove_gridlines()"
+  },
+  {
+    "objectID": "posts/2024/2024-09-27-AMB/index.html",
+    "href": "posts/2024/2024-09-27-AMB/index.html",
+    "title": "Agent Based Models",
+    "section": "",
+    "text": "Recently, I attended the “Introduction to Agent-Based Modelling for Public Health Research” workshop, organised by the National Centre for Research Methods and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software NetLogo. This post provides an overview of what agent-based modelling is.Recently, I attended the “Introduction to Agent-Based Modelling for Public Health Research” workshop, organised by the National Centre for Research Methods and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software NetLogo. This post provides an overview of what agent-based modelling is."
+  },
+  {
+    "objectID": "posts/2024/2024-09-27-AMB/index.html#agent-based-models",
+    "href": "posts/2024/2024-09-27-AMB/index.html#agent-based-models",
+    "title": "Agent Based Models",
+    "section": "Agent Based Models",
+    "text": "Agent Based Models\n\nOverview\nAgent-based models are computer simulations used to study the interactions between individuals, entities, environments, and time. These stochastic models are built from the bottom up, meaning individual agents (oftentimes representing people) are assigned specific attributes. The agents are programmed to behave and interact with other agents and their environment in predetermined ways, producing emergent effects that differ from the effects observed at the individual level.\n Agent-based models differ from the traditional regression-based methods in several key ways. For starters, regression-based methods focus on dependent and independent variables. Researchers often ask themselves What variables do I need to consider in my model?. In contrast, agent-based models shift the focus to dynamic processes, prompting the question What processes do I need to consider?.\n\n\nRegression-Based Methods\nIn regression-based methods, the primary goal is to identify and quantify the relationships between variables. For example, a researcher might want to understand the relationship between smoking and lung cancer. Using regression analysis, the researcher would collect data on smoking (independent variable) and lung cancer incidence (dependent variable), then apply statistical techniques to determine the strength and significance of the association.\n\nResearch Question: How does smoking affect the risk of lung cancer?\nIndependent Variable: Number of cigarettes smoked per day.\nDependent Variable: Incidence of lung cancer.\nOutcome: A statistical measure (e.g., odds ratio) that quantifies the increased risk of lung cancer associated with smoking.\n\n\n\nAgent Based Methods\nAgent based models, on the other hand, shift the focus to dynamic processes. These models focus on simulating the interactions between individual agents and their environment. Instead of looking solely at variable relationships, agent based models explore how processes and behaviors lead to emergent phenomena at the system level. This approach is particularly useful for studying complex systems where individual actions and interactions create outcomes that are not easily predictable from the behavior of individual agents alone.\n\nResearch Question: How does an infectious disease spread through a population?\nProcesses to Consider: Individual movement patterns, infection transmission rates, social interactions, and public health interventions.\nSimulation: Each agent represents a person who can move, interact, become infected, and recover or succumb to the disease. The model simulates how these processes unfold over time, providing insights into potential outbreak scenarios and intervention impacts.\n\nBy focusing on dynamic processes, ABMs allow researchers to capture the complexity of real-world systems. They provide a way to explore “what-if” scenarios and understand the potential effects of various interventions."
+  },
+  {
+    "objectID": "posts/2024/2024-09-27-AMB/index.html#netlogo",
+    "href": "posts/2024/2024-09-27-AMB/index.html#netlogo",
+    "title": "Agent Based Models",
+    "section": "NetLogo",
+    "text": "NetLogo\nDuring the workshop we developed and employed agent based models using the NetLogo software. Netlogo is a versatile, multi-agent programmable modeling environment widely used for simulating natural and social phenomena. It allows users to create and explore complex systems through agent-based models, which consist of numerous individual entities, known as “agents,” that interact within a defined environment according to specific rules.\n\nKey Features\n\nAgents: The core of NetLogo models are agents, which can be of different types:\n\nTurtles: The primary agents that move around the world.\nPatches: The grid cells that make up the world; they don’t move but can change state.\nLinks: Connections between turtles that can represent relationships or flows.\nObserver: A special agent that monitors and controls the simulation.\n\nEnvironment: NetLogo’s world is typically a two-dimensional grid of patches where turtles move and interact. The environment can be customized to simulate various real-world scenarios, from ecosystems to traffic systems.\nProgramming Language: NetLogo uses a Logo-based programming language that for building both simple and complex models."
+  },
+  {
+    "objectID": "posts/2024/2024-09-27-AMB/index.html#further-reading",
+    "href": "posts/2024/2024-09-27-AMB/index.html#further-reading",
+    "title": "Agent Based Models",
+    "section": "Further Reading",
+    "text": "Further Reading\n\nAgent-based modelling for social research\nAgent-Based Modelling for the Self Learner\nNetLogo Dictionary"
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Visualising positional moves in chess\n\n\n\n\n\n\nTidyTuesday\n\n\ndata visualisation\n\n\n\nAnalysis of #TidyTuesday’s chess dataset\n\n\n\n\n\nSeptember 28, 2024\n\n\nCormac Monaghan\n\n\n\n\n\n\n\n\n\n\n\n\nAgent Based Models\n\n\n\n\n\nIntroduction to Agent-Based Modelling for Public Health Research workshop\n\n\n\n\n\nJuly 10, 2024\n\n\nCormac Monaghan\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html#important-links",
+    "href": "research/articles/2024-05-02-SEM/index.html#important-links",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "",
+    "text": "Published Paper\nGitHub Repository"
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html#citation",
+    "href": "research/articles/2024-05-02-SEM/index.html#citation",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "Citation",
+    "text": "Citation\n@article{monaghan2024,\n  title={Procrastination, depressive symptomatology, and loneliness in later life},\n  author={Monaghan, Cormac and Avila-Palencia, Ione and Han, S Duke and McHugh Power, Joanna},\n  journal={Aging \\& Mental Health},\n  pages={1--8},\n  year={2024},\n  publisher={Taylor \\& Francis},\n  doi={10.1080/13607863.2024.2345781}\n}"
+  },
+  {
+    "objectID": "research/articles/2024-05-02-SEM/index.html#important-figures",
+    "href": "research/articles/2024-05-02-SEM/index.html#important-figures",
+    "title": "Procrastination, depressive symptomatology, and loneliness in later life",
+    "section": "Important figures",
+    "text": "Important figures\n\n\n\nIn the following structural equation model, we have employed a set of measured constructs (D1 - D8, P1 - P12, and L1 - L3) each of which corresponds to specific survey questions designed to gauge the underlying latent construct (depressive symptomatology (D), procrastination (P), and loneliness (L)). The numerical values (beta values) represent the strength and direction of the relationship between the variables. Statistically significant pathways are represented as ** p &lt; .01; *** p &lt; .001. The total effect of age on procrastination is (β = 0.010, p = 0.782)."
+  },
+  {
+    "objectID": "research/articles/2022-01-01-Reminiscence/index.html#citation",
+    "href": "research/articles/2022-01-01-Reminiscence/index.html#citation",
+    "title": "What We Talk About When We Talk About the Past: Discursive Psychological Analysis of Autobiographical Reminiscence in Older Irish Adults",
+    "section": "Citation",
+    "text": "Citation\n@article{allen2021,\n  title={What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults},\n  author={Allen, Andrew P and Doyle, Caoilainn and Doyle, Caragh Marie and Monaghan, Cormac and Fitzpatrick, Noel and Roche, Richard AP},\n  journal={Psychobiographical illustrations on meaning and identity in sociocultural contexts},\n  pages={327--344},\n  year={2021},\n  publisher={Springer},\n  doi={10.1007/978-3-030-81238-6_15}\n}"
+  },
+  {
+    "objectID": "research/conferences/2022-04-01-WIT/index.html",
+    "href": "research/conferences/2022-04-01-WIT/index.html",
+    "title": "Academic procrastination and perfectionism - the mediating role of temporal thought",
+    "section": "",
+    "text": "Academic procrastination is a common problem experienced by many students and is associated with poorer academic performance. Research has shown that the dimensions of perfectionism: perfectionistic strivings and perfectionistic concerns are linked to academic procrastination. However, the underlying mechanisms of these relationships are less understood. The purpose of this study was to investigate this by exploring how the negative repetitive thought processes of rumination and worry may mediate these relationships."
+  },
+  {
+    "objectID": "research/conferences/2022-04-01-WIT/index.html#abstract",
+    "href": "research/conferences/2022-04-01-WIT/index.html#abstract",
+    "title": "Academic procrastination and perfectionism - the mediating role of temporal thought",
+    "section": "",
+    "text": "Academic procrastination is a common problem experienced by many students and is associated with poorer academic performance. Research has shown that the dimensions of perfectionism: perfectionistic strivings and perfectionistic concerns are linked to academic procrastination. However, the underlying mechanisms of these relationships are less understood. The purpose of this study was to investigate this by exploring how the negative repetitive thought processes of rumination and worry may mediate these relationships."
+  },
+  {
+    "objectID": "research/conferences/2022-04-01-WIT/index.html#important-figures",
+    "href": "research/conferences/2022-04-01-WIT/index.html#important-figures",
+    "title": "Academic procrastination and perfectionism - the mediating role of temporal thought",
+    "section": "Important figures",
+    "text": "Important figures\n\n\n\nFigure 1: Indirect effects of negative repetitive thought on perfectionistic strivings and academic procrastination. Note. Statistical significance: * p &lt; .05; ** p &lt; .01; *** p &lt; .001; 95% CI = 95% Confidence Interval"
+  },
+  {
+    "objectID": "research/conferences/2022-04-01-WIT/index.html#important-links",
+    "href": "research/conferences/2022-04-01-WIT/index.html#important-links",
+    "title": "Academic procrastination and perfectionism - the mediating role of temporal thought",
+    "section": "",
+    "text": "Conference poster"
+  },
+  {
+    "objectID": "research/conferences/2023-09-13-IGS/index.html",
+    "href": "research/conferences/2023-09-13-IGS/index.html",
+    "title": "Age, procrastination, depressive symptomatology, and loneliness: a structural equation modelling approach",
+    "section": "",
+    "text": "Conference poster"
+  },
+  {
+    "objectID": "research/conferences/2023-09-13-IGS/index.html#important-links",
+    "href": "research/conferences/2023-09-13-IGS/index.html#important-links",
+    "title": "Age, procrastination, depressive symptomatology, and loneliness: a structural equation modelling approach",
+    "section": "",
+    "text": "Conference poster"
+  },
+  {
+    "objectID": "research/conferences/2024-09-06-EHPS/index.html",
+    "href": "research/conferences/2024-09-06-EHPS/index.html",
+    "title": "Procrastination as a risk factor for poor health in older adults",
+    "section": "",
+    "text": "Conference poster\nBook of abstracts"
+  },
+  {
+    "objectID": "research/conferences/2024-09-06-EHPS/index.html#important-links",
+    "href": "research/conferences/2024-09-06-EHPS/index.html#important-links",
+    "title": "Procrastination as a risk factor for poor health in older adults",
+    "section": "",
+    "text": "Conference poster\nBook of abstracts"
+  },
+  {
+    "objectID": "research/index.html#journal-articles",
+    "href": "research/index.html#journal-articles",
+    "title": "Research",
+    "section": "",
+    "text": "Monaghan, C., Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. Aging & Mental Health, 28(9), 1270–1277. 10.1080/13607863.2024.2345781\n            \n\n            \n            \n                \n                    \n                            procrastination\n                        \n                    \n                    \n                            structural equation modelling\n                        \n                    \n                    \n                            journal article\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                Allen, A.P., Doyle, C., Doyle, C.M., Monaghan, C., Fitzpatrick, N., Roche, R.A.P. (2021). What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults. Psychobiographical illustrations on meaning and identity in sociocultural contexts, 327-344. 10.1007/978-3-030-81238-6_15\n            \n\n            \n            \n                \n                    \n                            memory\n                        \n                    \n                    \n                            journal article\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "research/index.html#conference-presentations",
+    "href": "research/index.html#conference-presentations",
+    "title": "Research",
+    "section": "Conference Presentations",
+    "text": "Conference Presentations\n\n\n\n    \n        \n            \n                Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). Procrastination as a risk factor for poor health in older adults [Poster session]. 38th Annual Conference of the European Health Psychology Society. Cascais, Portugal.\n            \n\n            \n            \n                \n                    \n                            procrastination\n                        \n                    \n                    \n                            conference\n                        \n                    \n                    \n                            health\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                Monaghan, C., & Power, J. M. (2023). Age, procrastination, depressive symptomatology, and loneliness: a structural equation modelling approach. Age and Ageing, 52(Supplement_3), afad156-066. 10.1093/ageing/afad156.066\n            \n\n            \n            \n                \n                    \n                            procrastination\n                        \n                    \n                    \n                            structural equation modelling\n                        \n                    \n                    \n                            conference\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n        \n            \n                Monaghan, C. & Deirdre Desmond. Academic procrastination and perfectionism - the mediating role of temporal thought [Poster Session]. Annual Student Psychology Conference 2022. Waterford Institute of Technology, Ireland. 10.13140/RG.2.2.19926.32329\n            \n\n            \n            \n                \n                    \n                            procrastination\n                        \n                    \n                    \n                            perfectionism\n                        \n                    \n                    \n                            conference\n                        \n                    \n            \n            \n\n            \n            \n            \n            \n                \n                    \n                        \n                             Full details »\n                        \n                    \n                    \n                \n            \n        \n        \n\n\n\nNo matching items"
   }
 ]
