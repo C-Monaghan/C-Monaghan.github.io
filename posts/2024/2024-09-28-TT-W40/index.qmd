@@ -9,7 +9,7 @@ format:
 categories:
   - "#TidyTuesday"
   - data visualisation
-image: "../thumbnails/tt_2024_40_thumb.png"
+image: "../thumbnails/tt_2024_w40_thumb.png"
 execute: 
   warning: false
 editor: source
@@ -314,7 +314,7 @@ ggsave(
 # Thumbnail  
 magick::image_read(here::here(path, folder, "tt_2024_w40.png")) |> 
   magick::image_resize(geometry = "800") |> 
-  magick::image_write(here::here(path, "thumbnails/tt_2024_40_thumb.png"))
+  magick::image_write(here::here(path, "thumbnails/tt_2024_w40_thumb.png"))
 
 ```
 
