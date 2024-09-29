@@ -9,7 +9,7 @@ format:
 categories:
   - "#TidyTuesday"
   - data visualisation
-image: "tt_2024_40_thumb.png"
+image: "../thumbnails/tt_2024_40_thumb.png"
 execute: 
   warning: false
 editor: source
