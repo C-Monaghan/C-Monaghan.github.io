@@ -1,6 +1,6 @@
 ---
-title: "Procrastination as a risk factor for poor health in older adults"
-date: 2024-09-06
+title: "Modelling the Non-linear Associations between Age and Health: Implications for Care"
+date: 2024-10-04
 author: 
   - name: Cormac Monaghan
     url: https://c-monaghan.github.io/
@@ -18,14 +18,17 @@ author:
     affiliation: 
       - Department of Psychology, Maynooth University, Ireland
 categories:
-  - procrastination
+  - ageing
   - health
   - generalised additive models
   - conference
 pub-info:
   reference: >-
-   <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). <em>Procrastination as a risk factor for poor health in older adults</em> [Poster Session]. 38th Annual Conference of the European Health Psychology Society. Cascais, Portugal.
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). Modelling the Non-linear Associations between Age and Health: Implications for Care, <em>Age and Ageing</em>, Volume 53, Issue Supplement_4, September 2024, afae178.084 <a href="https://doi.org/10.1093/ageing/afae178.084"><code>10.1093/ageing/afae178.084</code></a>
   links:
+    - name: Supplement article
+      url: https://doi.org/10.1093/ageing/afae178.084
+      icon: fa-solid fa-book
     - name: Poster
       url: Poster.pdf
       local: true
@@ -34,5 +37,5 @@ pub-info:
 
 ## Important links
 
--   [Conference poster](./Poster.pdf){target="_blank"}
--   [Book of abstracts](https://2024.ehps.net/wp-content/uploads/2024/09/ehps-2024_abstracts-Page-numbers.pdf){target="_blank"}
+- [Conference poster](./Poster.pdf){target="_blank"}
+- [Supplement article](https://doi.org/10.1093/ageing/afae178.084){target="_blank"}

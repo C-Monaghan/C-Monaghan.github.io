@@ -21,6 +21,9 @@ pub-info:
   reference: >-
     <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, & Power, J. M. (2023). Age, procrastination, depressive symptomatology, and loneliness: a structural equation modelling approach. <em>Age and Ageing, 52</em>(Supplement_3), afad156-066. <a href=https://doi.org/10.1093/ageing/afad156.066><code>10.1093/ageing/afad156.066</code></a>
   links:
+    - name: Supplement article
+      url: https://doi.org/10.1093/ageing/afad156.066
+      icon: fa-solid fa-book
     - name: Poster
       url: Poster.pdf
       local: true
@@ -29,4 +32,5 @@ pub-info:
 
 ## Important links
 
--   [Conference poster](./Poster.pdf){target="_blank"}
+- [Conference poster](./Poster.pdf){target="_blank"}
+- [Supplement article](https://doi.org/10.1093/ageing/afad156.066){target="_blank"}
