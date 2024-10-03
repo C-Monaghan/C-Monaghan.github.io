@@ -27,7 +27,7 @@ pub-info:
    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). <em>Procrastination as a risk factor for poor health in older adults</em> [Poster Session]. 38th Annual Conference of the European Health Psychology Society. Cascais, Portugal.
   links:
     - name: Poster
-      url: Poster.pdf
+      url: ./files/EHPS_2024.pdf
       local: true
       icon: fa-solid fa-file-image
 ---

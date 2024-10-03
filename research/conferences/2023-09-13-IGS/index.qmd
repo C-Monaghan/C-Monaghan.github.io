@@ -25,12 +25,12 @@ pub-info:
       url: https://doi.org/10.1093/ageing/afad156.066
       icon: fa-solid fa-book
     - name: Poster
-      url: Poster.pdf
+      url: ./files/IGS_2023.pdf
       local: true
       icon: fa-solid fa-file-image
 ---
 
 ## Important links
 
-- [Conference poster](./Poster.pdf){target="_blank"}
-- [Supplement article](https://doi.org/10.1093/ageing/afad156.066){target="_blank"}
+-   [Conference poster](./Poster.pdf){target="_blank"}
+-   [Supplement article](https://doi.org/10.1093/ageing/afad156.066){target="_blank"}

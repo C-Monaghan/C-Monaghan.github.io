@@ -4,14 +4,14 @@ project:
 
 website:
   title: "Cormac Monaghan"
-  favicon: ./files/favicon.png
+  favicon: ./files/images/favicon.png
   repo-url: "https://github.com/C-Monaghan/C-Monaghan.github.io"
   
   navbar:
     pinned: true
     
     title: false
-    logo: ./files/favicon.png
+    logo: ./files/images/favicon.png
     left:
     # Home Page
       - href: index.qmd

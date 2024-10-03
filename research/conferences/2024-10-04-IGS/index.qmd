@@ -30,9 +30,9 @@ pub-info:
       url: https://doi.org/10.1093/ageing/afae178.084
       icon: fa-solid fa-book
     - name: Poster
-      url: Poster.pdf
-      local: true
+      url: ./files/IGS_2024.pdf
       icon: fa-solid fa-file-image
+      local: true
 ---
 
 ## Important links
