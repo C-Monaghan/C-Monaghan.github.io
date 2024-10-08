@@ -10,6 +10,8 @@ categories:
   - "#TidyTuesday"
   - data visualisation
 image: "../thumbnails/tt_2024_w40_thumb.png"
+citation: 
+  url: "https://c-monaghan.github.io/posts/2024/2024-09-28-TT-W40/"
 execute: 
   warning: false
 editor: source
