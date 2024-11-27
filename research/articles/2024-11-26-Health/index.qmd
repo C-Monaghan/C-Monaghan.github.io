@@ -1,0 +1,60 @@
+---
+title: "Procrastination and preventive health-care in the older U.S. population" 
+date: 2024-11-26 
+author:   
+  - name: Cormac Monaghan     
+    url: https://c-monaghan.github.io/     
+    orcid: 0000-0001-9012-3060     
+    github: https://github.com/C-Monaghan/Procrastination_Health
+    affiliation:        
+      - Hamilton Institute, Maynooth University, Ireland       
+      - Department of Psychology, Maynooth University, Ireland
+  - name: Rafael de Andrade Moral
+    orcid: 0000-0002-0875-3563
+    affiliation:
+      - Department of Mathematics and Statistics, Maynooth University Ireland
+  - name: Joanna McHugh Power     
+    orcid: 0000-0002-7387-3107     
+    affiliation:        
+      - Department of Psychology, Maynooth University, Ireland 
+doi: "10.1016/j.ypmed.2024.108185" 
+categories:   
+  - procrastination
+  - health
+  - preventitive behaviour   
+  - generalised additive models   
+  - journal article 
+pub-info:   
+  reference: >-     
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine</em>. <a href=https://doi.org/10.1016/j.ypmed.2024.108185><code>10.1016/j.ypmed.2024.108185</code></a>   
+  links:     
+    - name: Final version       
+      url: https://doi.org/10.1016/j.ypmed.2024.108185      
+      icon: fa-solid fa-scroll
+    - name: Code
+      url: https://github.com/C-Monaghan/Procrastination_Health
+      icon: fa-brands fa-github
+toc: true
+---
+
+## Important links
+
+-   [Published Paper](https://doi.org/10.1016/j.ypmed.2024.108185){target="_blank"}
+-   [GitHub Repository](https://github.com/C-Monaghan/Procrastination_Health){target="_blank"}
+
+## Abstract
+
+Maintaining health preventive behaviours in later life reduces the risk of non-communicable diseases. However, these behaviours often require effort and discipline to adopt and may be prone to procrastination. This study examined whether procrastination affected engagement in health preventive behaviours among older adults. We applied generalised additive models to data from the 2020 wave of the United States Health and Retirement Study. Our analytic sample consisted of adults aged 50+ $(n = 1338; \bar{x} = 68.24; \text{range} = 50–95)$. Our analysis focused on six health preventive behaviours: prostate exams, mammograms, cholesterol screenings, pap smears, flu shots, and dental visits. Procrastination was associated with less frequent engagement in mammograms and cholesterol screenings among women, though it had no significant association with pap smears or flu shots. Additionally, procrastination interacted with depression reducing the likelihood of prostate exams in men and dental visits in both men and women, such that individuals with high procrastination and low depression were associated with less frequent engagement in both preventive health behaviours. Procrastination may be a behavioral risk factor for maintaining optimal health in older adults. Given that procrastination is a potentially modifiable behaviour, interventions aimed at reducing procrastination, such as simplifying tasks or providing default appointment, could improve engagement in critical health preventive behaviours.
+
+## Citation
+
+``` bibtex
+@article{monaghan2024,   
+  title={Procrastination and preventive health-care in the older U.S. population},   
+  author={Monaghan, de Andrade Moral, Rafael and Power, Joanna McHugh},   
+  journal={Preventitive Medicine},
+  year={2024},   
+  publisher={Elsevier},   
+  doi={10.1016/j.ypmed.2024.108185}
+  }
+```
