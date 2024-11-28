@@ -32,5 +32,11 @@
       "/research/conferences/2023-09-13-IGS/index.html",
       "/research/conferences/2022-04-01-WIT/index.html"
     ]
+  },
+  {
+    "listing": "/software/index.html",
+    "items": [
+      "/software/packages/2024-11-20-LWC2022/index.html"
+    ]
   }
 ]

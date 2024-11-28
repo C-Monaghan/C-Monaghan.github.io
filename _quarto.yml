@@ -26,6 +26,9 @@ website:
       - href: research/index.qmd
         text: Research
         
+      - href: software/index.qmd
+        text: Software
+        
       # Blog
       - href: posts/index.qmd
         text: Blog

@@ -1,0 +1,32 @@
+```{=html}
+<div class="research project-list">
+<ul class="list">
+    <% for (const item of items) { %>
+        <li class="project" <%=metadataAttrs(item) %>>
+            <div class="project-content listing-pub-info">
+                <p><%= item['pub-info'].reference %></p>
+            </div>
+
+            <% if(item.categories) { %>
+            <div class="project-categories">
+                <% for (const cat of item.categories) { %>
+                    <div class="project-category"><a href="#category=<%= cat %>">
+                            <%= cat %>
+                        </a></div>
+                    <% } %>
+            </div>
+            <% } %>
+
+            <% // Loop through the haiku lines and prepend a / to all but the first %>
+            <% if (item.haiku) { %>
+            <div class="haiku">
+            <% for (var i=0; i <= item.haiku.length - 1; i++) { %>
+                <% if (i > 0) { %> / <% } %><%= item.haiku[i] %>
+            <% } %>
+            </div>
+            <% } %>
+        </li>
+        <% } %>
+</ul>
+</div>
+```
