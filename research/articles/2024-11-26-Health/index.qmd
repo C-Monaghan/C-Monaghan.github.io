@@ -26,7 +26,7 @@ categories:
   - journal article 
 pub-info:   
   reference: >-     
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine</em>. <a href=https://doi.org/10.1016/j.ypmed.2024.108185><code>10.1016/j.ypmed.2024.108185</code></a>   
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine</em>. 108185. <a href=https://doi.org/10.1016/j.ypmed.2024.108185><code>10.1016/j.ypmed.2024.108185</code></a>   
   links:     
     - name: Final version       
       url: https://doi.org/10.1016/j.ypmed.2024.108185      
@@ -45,6 +45,20 @@ toc: true
 ## Abstract
 
 Maintaining health preventive behaviours in later life reduces the risk of non-communicable diseases. However, these behaviours often require effort and discipline to adopt and may be prone to procrastination. This study examined whether procrastination affected engagement in health preventive behaviours among older adults. We applied generalised additive models to data from the 2020 wave of the United States Health and Retirement Study. Our analytic sample consisted of adults aged 50+ $(n = 1338; \bar{x} = 68.24; \text{range} = 50–95)$. Our analysis focused on six health preventive behaviours: prostate exams, mammograms, cholesterol screenings, pap smears, flu shots, and dental visits. Procrastination was associated with less frequent engagement in mammograms and cholesterol screenings among women, though it had no significant association with pap smears or flu shots. Additionally, procrastination interacted with depression reducing the likelihood of prostate exams in men and dental visits in both men and women, such that individuals with high procrastination and low depression were associated with less frequent engagement in both preventive health behaviours. Procrastination may be a behavioral risk factor for maintaining optimal health in older adults. Given that procrastination is a potentially modifiable behaviour, interventions aimed at reducing procrastination, such as simplifying tasks or providing default appointment, could improve engagement in critical health preventive behaviours.
+
+## Important figures
+
+**Figure 1**
+
+*Heat maps of predicted probabilities for health preventive behaviours estimated using tensor product smooths. United States, 2020.*
+
+![Transparency was added to each heat map based on the squared inverse standard error of each model. Hence, areas of higher transparency indicate greater uncertainty due to larger standard errors and fewer data points within that region. Data points are jittered for better visualization. $\hat{p}$ = estimated probability from model.](./Figure_1.png)
+
+**Figure 2**
+
+*Generalised additive model plots for procrastination and health preventive utilization United States, 2020.*
+
+![The blue lines represent predicted probabilities obtained from the generalised additive model fits, whereas the grey ribbon represents the 95 % confidence interval for the true probability of presenting that particular health preventive behaviour. Data points are jittered for better visualization. Health preventive behaviours marked in red indicate significance at the 5 % level](./Figure_2.png)
 
 ## Citation
 
