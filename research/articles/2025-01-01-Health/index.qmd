@@ -1,6 +1,6 @@
 ---
 title: "Procrastination and preventive health-care in the older U.S. population" 
-date: 2024-11-26 
+date: 2025-01-01 
 author:   
   - name: Cormac Monaghan     
     url: https://c-monaghan.github.io/     
@@ -26,7 +26,7 @@ categories:
   - journal article 
 pub-info:   
   reference: >-     
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine</em>. 108185. <a href=https://doi.org/10.1016/j.ypmed.2024.108185><code>10.1016/j.ypmed.2024.108185</code></a>   
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2025). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine, 190,</em> 108185. <a href=https://doi.org/10.1016/j.ypmed.2024.108185><code>10.1016/j.ypmed.2024.108185</code></a>   
   links:     
     - name: Final version       
       url: https://doi.org/10.1016/j.ypmed.2024.108185      
@@ -63,11 +63,11 @@ Maintaining health preventive behaviours in later life reduces the risk of non-c
 ## Citation
 
 ``` bibtex
-@article{monaghan2024,   
+@article{monaghan2025,   
   title={Procrastination and preventive health-care in the older U.S. population},   
   author={Monaghan, de Andrade Moral, Rafael and Power, Joanna McHugh},   
   journal={Preventitive Medicine},
-  year={2024},   
+  year={2025},   
   publisher={Elsevier},   
   doi={10.1016/j.ypmed.2024.108185}
   }
