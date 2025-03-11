@@ -8,6 +8,11 @@ listing:
     sort: "date desc"
     template: "../html/posts/listing.ejs"
     categories: true
+  - id: posts_2025
+    contents: "2025/*/index.qmd"
+    sort: "date desc"
+    template: "../html/posts/listing.ejs"
+    categories: true
 page-layout: full
 toc-title: Year
 toc-location: right
