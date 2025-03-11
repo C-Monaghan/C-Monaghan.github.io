@@ -3,13 +3,13 @@ title: "Blog"
 author: ""
 description: ""
 listing: 
-  - id: posts_2024
-    contents: "2024/*/index.qmd"
+  - id: posts_2025
+    contents: "2025/*/index.qmd"
     sort: "date desc"
     template: "../html/posts/listing.ejs"
     categories: true
-  - id: posts_2025
-    contents: "2025/*/index.qmd"
+  - id: posts_2024
+    contents: "2024/*/index.qmd"
     sort: "date desc"
     template: "../html/posts/listing.ejs"
     categories: true
