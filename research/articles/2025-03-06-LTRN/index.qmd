@@ -40,15 +40,15 @@ toc: true
 
 ## Important Links
 
-- [Published Paper](https://alone.ie/library/loneliness-research-in-ireland-what-should-we-prioritise/){target="_blank"}
+-   [Published Paper](https://alone.ie/library/loneliness-research-in-ireland-what-should-we-prioritise/){target="_blank"}
 
 ## Abstract
 
-**Objectives:** To elicit research priorities for the topic of loneliness from experts and experts by experience in Ireland. 
+**Objectives:** To elicit research priorities for the topic of loneliness from experts and experts by experience in Ireland.
 
-**Methods:** There were two phases to this research. In Phase 1, 51 attendees of the inaugural meeting of a loneliness research network broke into roundtables to discuss different topics chosen a priori (loneliness in older people; loneliness and health; loneliness in young people; risk factors for loneliness; targeted interventions for loneliness; and loneliness and technology). Each table had a facilitator, and participants were asked to pick research priorities for that topic, shaped by Viergever’s checklist for health research priority setting. Phase 2 involved a survey created of all priorities emerging from Phase 1. The survey was shared with all members of the research network who were asked to rank them in order of importance. 22 network members completed the ranking survey. 
+**Methods:** There were two phases to this research. In Phase 1, 51 attendees of the inaugural meeting of a loneliness research network broke into roundtables to discuss different topics chosen a priori (loneliness in older people; loneliness and health; loneliness in young people; risk factors for loneliness; targeted interventions for loneliness; and loneliness and technology). Each table had a facilitator, and participants were asked to pick research priorities for that topic, shaped by Viergever’s checklist for health research priority setting. Phase 2 involved a survey created of all priorities emerging from Phase 1. The survey was shared with all members of the research network who were asked to rank them in order of importance. 22 network members completed the ranking survey.
 
-**Results:** Risk factors for loneliness (particularly an examination of why Ireland has the highest prevalence of loneliness across Europe), loneliness among young people (particularly measurement of prevalence) and older people (particularly the impact of financial challenges on loneliness), and loneliness interventions (particularly mapping existing interventions on loneliness in Ireland) were identified as the top research priorities. 
+**Results:** Risk factors for loneliness (particularly an examination of why Ireland has the highest prevalence of loneliness across Europe), loneliness among young people (particularly measurement of prevalence) and older people (particularly the impact of financial challenges on loneliness), and loneliness interventions (particularly mapping existing interventions on loneliness in Ireland) were identified as the top research priorities.
 
 **Conclusions:** With this prioritisation exercise complete, Irish loneliness researchers now have a roadmap for future research, which should be considered in future policies related to both loneliness and mental health research.
 

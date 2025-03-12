@@ -15,8 +15,10 @@ anchor-sections: true
 ## Code
 code-tools: true
 self-contained: true
-code-fold: true
+code-link: true
+code-fold: show
 code-summary: "Show the code"
+code-block-bg: "#333A3F"
 
 freeze: true
 

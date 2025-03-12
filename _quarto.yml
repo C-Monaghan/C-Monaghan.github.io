@@ -66,9 +66,11 @@ format:
   html:
     theme: 
       - cosmo
-      - styles.scss
+      - html/styles.scss
     toc: true
     page-layout: full
+    anchor-sections: true
+    highlight-style: monokai
 
 editor: visual
 
