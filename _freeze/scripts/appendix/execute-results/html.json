@@ -1,0 +1,15 @@
+{
+  "hash": "3d58464b67f55c11ac917c3fddd5a253",
+  "result": {
+    "engine": "knitr",
+    "markdown": "<!--\nAdapted from Tom Mock's blog: https://github.com/jthomasmock/themockup-blog/blob/master/_R/footer.qmd\n-->\n\n## Appendix{.appendix}\n:::{.callout-tip collapse=\"true\"}\n## Expand for Session Info\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.4.2 (2024-10-31 ucrt)\n os       Windows 11 x64 (build 26100)\n system   x86_64, mingw32\n ui       RTerm\n language (EN)\n collate  English_Ireland.utf8\n ctype    English_Ireland.utf8\n tz       Europe/Dublin\n date     2025-03-14\n pandoc   3.6.2 @ C:/PROGRA~3/CHOCOL~1/bin/ (via rmarkdown)\n quarto   1.5.57\n\n─ Packages ───────────────────────────────────────────────────────────────────\n package     * version date (UTC) lib source\n sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.4.2)\n\n [1] C:/Coding/R-4.4.2/library\n\n──────────────────────────────────────────────────────────────────────────────\n```\n\n\n:::\n:::\n\n\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
