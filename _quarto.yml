@@ -1,10 +1,29 @@
 project:
   type: website
   output-dir: docs
+  
+  preview:
+    port: 88
+    browser: true
+    watch-inputs: true
+    navigate: true
+    
+  render:
+   - "*.qmd"
+   
+  resources:
+   - "files/**"
+   - "data/**"
+   
+freeze: true
+  
+pagetitle: "{{< meta title >}} | Cormac Monaghan"
+author-meta: "Cormac Monaghan"
 
 website:
   title: "Cormac Monaghan"
   favicon: ./files/images/favicon.png
+  site-url: "https://c-monaghan.github.io/"
   repo-url: "https://github.com/C-Monaghan/C-Monaghan.github.io"
   
   navbar:
@@ -58,9 +77,9 @@ website:
     left: |
       <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>
     center: |
-      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [0000-0001-9012-3060](https://orcid.org/0000-0001-9012-3060)</span>
+      <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
     right: |
-      <span class="faux-block">This website was built with [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/C-Monaghan/C-Monaghan.github.io){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}</span>
+      <span class="faux-block">This website was built with [{{< fa brands github title="GitHub octocat logo" >}}]({{< var github-url >}}){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}</span>
 
 format:
   html:
@@ -71,6 +90,4 @@ format:
     page-layout: full
     anchor-sections: true
     highlight-style: monokai
-
-editor: visual
 
