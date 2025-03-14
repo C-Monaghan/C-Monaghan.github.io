@@ -1,7 +1,7 @@
 ---
 title: "Cormac Monaghan"
 subtitle: "SFI PhD Researcher"
-image: files/profile.jpg
+image: files/images/profile.jpg
 toc: false
 about: 
   template: trestles

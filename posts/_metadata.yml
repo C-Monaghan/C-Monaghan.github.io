@@ -16,8 +16,7 @@ anchor-sections: true
 code-tools: true
 self-contained: true
 code-link: true
-code-fold: show
-code-summary: "Show the code"
+code-fold: false
 code-block-bg: "#333A3F"
 
 freeze: true
