@@ -36,6 +36,9 @@ pub-info:
     - name: Code
       url: https://github.com/C-Monaghan/Procrastination_Predictors
       icon: fa-brands fa-github
+    - name: Data
+      url: https://github.com/C-Monaghan/Procrastination_Predictors/tree/main/01__Data
+      icon: fa-solid fa-table
 toc: true
 ---
 
