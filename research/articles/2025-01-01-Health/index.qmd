@@ -35,7 +35,7 @@ pub-info:
       url: https://github.com/C-Monaghan/Procrastination_Health
       icon: fa-brands fa-github
     - name: Data
-      url: https://github.com/C-Monaghan/Procrastination_Health/tree/main/01__Data
+      url: https://github.com/C-Monaghan/Procrastination_Health/tree/main/data
       icon: fa-solid fa-table
 toc: true
 ---
