@@ -17,5 +17,15 @@
       "/research/conferences/2023-09-13-IGS/index.html",
       "/research/conferences/2022-04-01-WIT/index.html"
     ]
+  },
+  {
+    "listing": "/atom.html",
+    "items": [
+      "/posts/2025/2025-03-14-MLR/index.html",
+      "/posts/2025/2025-03-12-Linear-Regression/index.html",
+      "/posts/2024/2024-10-07-TT-W41/index.html",
+      "/posts/2024/2024-09-28-TT-W40/index.html",
+      "/posts/2024/2024-09-27-AMB/index.html"
+    ]
   }
 ]

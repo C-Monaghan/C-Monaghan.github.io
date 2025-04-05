@@ -57,6 +57,8 @@ website:
         text: PhD Resources
         
     right:
+      - text: "{{< iconify bi rss size=1.1em title='RSS' >}}"
+        href: atom.xml
     # Socials
       - icon: envelope
         href: mailto:cormacmonaghan@protonmail.com

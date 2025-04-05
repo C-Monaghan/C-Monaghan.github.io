@@ -1,0 +1,15 @@
+---
+title: "Cormac Monaghan's blog"
+search: false
+listing:
+  sort: "date desc"
+  feed: 
+    title: "Cormac Monaghan's blog"
+    description: "Cormac Monaghan's blog"
+    items: 60
+    type: full
+    language: en
+  contents:
+    - "posts/**/index.qmd"
+    - "!posts/index.qmd"
+---
