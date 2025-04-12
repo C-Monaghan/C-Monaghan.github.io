@@ -4,8 +4,8 @@
   location: "Durham, United Kingdom"
   links: 
     - name: Slides
-      url: https://c-monaghan.github.io/Talks/stats-4-grads.html#/title-slide
+      url: https://c-monaghan.github.io/talks/stats-4-grads.html#/title-slide
       icon: fa-solid fa-chalkboard-user
     - name: Github Repository
-      url: https://github.com/C-Monaghan/Talks/tree/main/2025-04-23-stats4grads
+      url: https://github.com/C-Monaghan/talks/tree/main/2025-04-23-stats4grads
       icon: fa-brands fa-github
