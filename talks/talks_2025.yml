@@ -1,0 +1,11 @@
+- title: "Procrastination and Dementia"
+  date: 2025-04-23
+  description: "Talk presented at the Stats4Grads seminar series at Durham University"
+  location: "Durham, United Kingdom"
+  links: 
+    - name: Slides
+      url: https://c-monaghan.github.io/Talks/stats-4-grads.html#/title-slide
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/Talks/tree/main/2025-04-23-stats4grads
+      icon: fa-brands fa-github
