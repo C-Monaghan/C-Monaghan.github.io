@@ -1,87 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://c-monaghan.github.io/posts/2024/2024-09-28-TT-W40/index.html</loc>
-    <lastmod>2024-10-08T23:24:30.058Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/posts/2025/2025-03-14-MLR/index.html</loc>
-    <lastmod>2025-03-16T16:00:26.026Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/scripts/appendix.html</loc>
-    <lastmod>2024-09-29T23:17:05.876Z</lastmod>
+    <loc>https://c-monaghan.github.io/talks/index.html</loc>
+    <lastmod>2025-04-12T15:24:47.856Z</lastmod>
   </url>
   <url>
     <loc>https://c-monaghan.github.io/software/index.html</loc>
     <lastmod>2024-11-28T13:35:47.018Z</lastmod>
   </url>
   <url>
-    <loc>https://c-monaghan.github.io/research/index.html</loc>
-    <lastmod>2025-03-06T13:22:36.090Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/conferences/2024-09-06-EHPS/index.html</loc>
-    <lastmod>2024-10-03T10:21:23.313Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/conferences/2022-04-01-WIT/index.html</loc>
-    <lastmod>2024-10-03T10:18:58.207Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/articles/2025-01-01-Health/index.html</loc>
-    <lastmod>2025-03-24T21:18:36.084Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/articles/2022-01-01-Reminiscence/index.html</loc>
-    <lastmod>2024-09-29T23:17:05.785Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/posts/2024/2024-09-27-AMB/index.html</loc>
-    <lastmod>2024-09-29T23:17:05.740Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/index.html</loc>
-    <lastmod>2025-03-14T11:49:06.681Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/posts/index.html</loc>
-    <lastmod>2025-03-11T12:03:14.420Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/articles/2024-05-02-SEM/index.html</loc>
-    <lastmod>2025-03-19T12:13:04.791Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/articles/2025-03-06-LTRN/index.html</loc>
-    <lastmod>2025-03-12T18:32:49.213Z</lastmod>
-  </url>
-  <url>
-    <loc>https://c-monaghan.github.io/research/conferences/2023-09-13-IGS/index.html</loc>
-    <lastmod>2024-10-03T10:20:07.296Z</lastmod>
+    <loc>https://c-monaghan.github.io/resources/index.html</loc>
+    <lastmod>2024-09-29T23:17:05.870Z</lastmod>
   </url>
   <url>
     <loc>https://c-monaghan.github.io/research/conferences/2024-10-04-IGS/index.html</loc>
     <lastmod>2024-10-03T10:17:36.955Z</lastmod>
   </url>
   <url>
-    <loc>https://c-monaghan.github.io/resources/index.html</loc>
-    <lastmod>2024-09-29T23:17:05.870Z</lastmod>
+    <loc>https://c-monaghan.github.io/research/conferences/2023-09-13-IGS/index.html</loc>
+    <lastmod>2024-10-03T10:20:07.296Z</lastmod>
   </url>
   <url>
-    <loc>https://c-monaghan.github.io/software/packages/2024-11-20-LWC2022/index.html</loc>
-    <lastmod>2024-11-28T13:34:59.946Z</lastmod>
+    <loc>https://c-monaghan.github.io/research/articles/2025-03-06-LTRN/index.html</loc>
+    <lastmod>2025-03-12T18:32:49.213Z</lastmod>
   </url>
   <url>
-    <loc>https://c-monaghan.github.io/posts/2024/2024-10-07-TT-W41/index.html</loc>
-    <lastmod>2024-10-08T23:25:25.918Z</lastmod>
+    <loc>https://c-monaghan.github.io/research/articles/2024-05-02-SEM/index.html</loc>
+    <lastmod>2025-03-19T12:13:04.791Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/posts/index.html</loc>
+    <lastmod>2025-03-11T12:03:14.420Z</lastmod>
   </url>
   <url>
     <loc>https://c-monaghan.github.io/posts/2025/2025-03-12-Linear-Regression/index.html</loc>
     <lastmod>2025-03-13T16:45:52.953Z</lastmod>
   </url>
   <url>
+    <loc>https://c-monaghan.github.io/posts/2024/2024-09-28-TT-W40/index.html</loc>
+    <lastmod>2024-10-08T23:24:30.058Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/index.html</loc>
+    <lastmod>2025-03-14T11:49:06.681Z</lastmod>
+  </url>
+  <url>
     <loc>https://c-monaghan.github.io/atom.html</loc>
     <lastmod>2025-04-05T14:52:44.626Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/posts/2024/2024-09-27-AMB/index.html</loc>
+    <lastmod>2024-09-29T23:17:05.740Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/posts/2024/2024-10-07-TT-W41/index.html</loc>
+    <lastmod>2024-10-08T23:25:25.918Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/posts/2025/2025-03-14-MLR/index.html</loc>
+    <lastmod>2025-03-16T16:00:26.026Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/research/articles/2022-01-01-Reminiscence/index.html</loc>
+    <lastmod>2024-09-29T23:17:05.785Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/research/articles/2025-01-01-Health/index.html</loc>
+    <lastmod>2025-03-24T21:18:36.084Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/research/conferences/2022-04-01-WIT/index.html</loc>
+    <lastmod>2024-10-03T10:18:58.207Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/research/conferences/2024-09-06-EHPS/index.html</loc>
+    <lastmod>2024-10-03T10:21:23.313Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/research/index.html</loc>
+    <lastmod>2025-03-06T13:22:36.090Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/scripts/appendix.html</loc>
+    <lastmod>2024-09-29T23:17:05.876Z</lastmod>
+  </url>
+  <url>
+    <loc>https://c-monaghan.github.io/software/packages/2024-11-20-LWC2022/index.html</loc>
+    <lastmod>2024-11-28T13:34:59.946Z</lastmod>
   </url>
 </urlset>
