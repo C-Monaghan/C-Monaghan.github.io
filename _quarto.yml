@@ -46,8 +46,8 @@ website:
         text: Research
         
       # Talks
-      - href: talks/index.qmd
-        text: Talks
+      # - href: talks/index.qmd
+      #  text: Talks
         
       # Software
       - href: software/index.qmd
