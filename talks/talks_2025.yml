@@ -1,3 +1,15 @@
+- title: "Managing Literature: Zotero (and other cool stuff)"
+  date: 2025-03-27
+  description: "Workshop for MSc psychology students at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      url: https://c-monaghan.github.io/Zotero/#1
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/Zotero
+      icon: fa-brands fa-github
+      
 - title: "Procrastination and Dementia"
   date: 2025-04-23
   description: "Talk presented at the Stats4Grads seminar series at Durham University"
