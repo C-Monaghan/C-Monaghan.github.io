@@ -103,6 +103,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-working-papers .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-freeze','listing-pagetitle','listing-author-meta','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-anchor-sections','listing-title','listing-date','listing-author','listing-categories','listing-pub-info','listing-pub-status','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-freeze","listing-pagetitle","listing-author-meta","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-anchor-sections","listing-title","listing-date","listing-author","listing-categories","listing-pub-info","listing-pub-status","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-working-papers'] = new List('listing-working-papers', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-conferences .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -282,10 +310,11 @@ window.Quarto = {
    
   <ul>
   <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal articles</a></li>
-  <li><a href="#conference-presentations" id="toc-conference-presentations" class="nav-link" data-scroll-target="#conference-presentations">Conference Presentations</a></li>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working papers</a></li>
+  <li><a href="#conference-presentations" id="toc-conference-presentations" class="nav-link" data-scroll-target="#conference-presentations">Conference presentations</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="YWdlaW5n">ageing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Z2VuZXJhbGlzZWQlMjBhZGRpdGl2ZSUyMG1vZGVscw==">generalised additive models <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aGVhbHRo">health <span class="quarto-category-count">(3)</span></div><div class="category" data-category="am91cm5hbCUyMGFydGljbGU=">journal article <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bG9uZWxpbmVzcw==">loneliness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVtb3J5">memory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyZmVjdGlvbmlzbQ==">perfectionism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJldmVudGl0aXZlJTIwYmVoYXZpb3Vy">preventitive behaviour <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpb3JpdGlzYXRpb24=">prioritisation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvY3Jhc3RpbmF0aW9u">procrastination <span class="quarto-category-count">(5)</span></div><div class="category" data-category="c3RydWN0dXJhbCUyMGVxdWF0aW9uJTIwbW9kZWxsaW5n">structural equation modelling <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="YWdlaW5n">ageing <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Y29nbml0aXZlJTIwZGVjbGluZQ==">cognitive decline <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29uZmVyZW5jZQ==">conference <span class="quarto-category-count">(4)</span></div><div class="category" data-category="ZGVtZW50aWE=">dementia <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGlhZ25vc3RpY3M=">diagnostics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z2VuZXJhbGlzZWQlMjBhZGRpdGl2ZSUyMG1vZGVscw==">generalised additive models <span class="quarto-category-count">(3)</span></div><div class="category" data-category="aGVhbHRo">health <span class="quarto-category-count">(4)</span></div><div class="category" data-category="am91cm5hbCUyMGFydGljbGU=">journal article <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bGlmZSUyMGV4cGVjdGFuY3k=">life expectancy <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bG9uZWxpbmVzcw==">loneliness <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWFya292JTIwbW9kZWxz">markov models <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWVtb3J5">memory <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cGVyZmVjdGlvbmlzbQ==">perfectionism <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJldmVudGl0aXZlJTIwYmVoYXZpb3Vy">preventitive behaviour <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJpb3JpdGlzYXRpb24=">prioritisation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvY3Jhc3RpbmF0aW9u">procrastination <span class="quarto-category-count">(7)</span></div><div class="category" data-category="c2ltdWxhdGlvbg==">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c3RydWN0dXJhbCUyMGVxdWF0aW9uJTIwbW9kZWxsaW5n">structural equation modelling <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -523,8 +552,143 @@ No matching items
 </div>
 </div>
 </section>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working papers</h2>
+<div id="listing-working-papers" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+<ul class="list">
+    
+        <li class="project" data-index="0" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDZGVtZW50aWElMkNoZWFsdGglMkNjb2duaXRpdmUlMjBkZWNsaW5lJTJDYWdlaW5n" data-listing-date-sort="1772582400000" data-listing-file-modified-sort="1744711003730" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+            <div class="project-content listing-pub-info">
+                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, &amp; McHugh Power, J. Procrastination as an early risk factor for dementia.</p>
+            </div>
+
+            
+            <div class="project-categories">
+                
+                    <div class="project-category"><a href="#category=procrastination">
+                            procrastination
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=dementia">
+                            dementia
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=health">
+                            health
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=cognitive decline">
+                            cognitive decline
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=ageing">
+                            ageing
+                        </a></div>
+                    
+            </div>
+            
+
+            
+            
+            
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/working-papers/monaghan-andrade-power-dementia/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li class="project" data-index="1" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDYWdlaW5nJTJDbGlmZSUyMGV4cGVjdGFuY3k=" data-listing-date-sort="1744671600000" data-listing-file-modified-sort="1744711692143" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
+            <div class="project-content listing-pub-info">
+                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Gartlan, C., de Andrade Moral, R, &amp; McHugh Power, J. Temporal Orientation and Procrastination: Exploring the Role of Subjective Remaining Life.</p>
+            </div>
+
+            
+            <div class="project-categories">
+                
+                    <div class="project-category"><a href="#category=procrastination">
+                            procrastination
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=ageing">
+                            ageing
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=life expectancy">
+                            life expectancy
+                        </a></div>
+                    
+            </div>
+            
+
+            
+            
+            
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/working-papers/monaghan-gartlan-andrade-power-srl/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+        <li class="project" data-index="2" data-categories="bWFya292JTIwbW9kZWxzJTJDZGlhZ25vc3RpY3MlMkNzaW11bGF0aW9u" data-listing-date-sort="1744585200000" data-listing-file-modified-sort="1744712059327" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+            <div class="project-content listing-pub-info">
+                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Lara, I. A. R., &amp; de Andrade Moral, R. A new goodness of fit diagnostic for Markov models.</p>
+            </div>
+
+            
+            <div class="project-categories">
+                
+                    <div class="project-category"><a href="#category=markov models">
+                            markov models
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=diagnostics">
+                            diagnostics
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=simulation">
+                            simulation
+                        </a></div>
+                    
+            </div>
+            
+
+            
+            
+            
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/working-papers/monaghan-lara-andrade-residuals/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+</ul>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
 <section id="conference-presentations" class="level2">
-<h2 class="anchored" data-anchor-id="conference-presentations">Conference Presentations</h2>
+<h2 class="anchored" data-anchor-id="conference-presentations">Conference presentations</h2>
 <div id="listing-conferences" class="quarto-listing quarto-listing-container-custom">
 <div class="research project-list">
 <ul class="list">

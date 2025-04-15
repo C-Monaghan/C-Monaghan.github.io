@@ -6,6 +6,10 @@ listing:
     sort: "date desc"
     template: ../html/research/listing.ejs
     categories: true
+  - id: working-papers
+    contents: "working-papers/*/index.qmd"
+    sort: "date desc"
+    template: ../html/research/listing.ejs
   - id: conferences
     contents: "conferences/*/index.qmd"
     sort: "date desc"
@@ -20,7 +24,12 @@ toc-location: right
 ::: {#articles}
 :::
 
-## Conference Presentations
+## Working papers
+
+::: {#working-papers}
+:::
+
+## Conference presentations
 
 ::: {#conferences}
 :::

@@ -1,0 +1,32 @@
+---
+title: "A new goodness of fit diagnostic for Markov models"
+date: 2025-04-14
+author: 
+  - name: "Cormac Monaghan"
+    url: "https://c-monaghan.github.io/"
+    orcid: "https://orcid.org/0000-0001-9012-3060"
+    affiliation:
+      - "Hamilton Institute, Maynooth University"
+      - "Department of Psychology, Maynooth University"
+  - name: "Idemauro Antonio Rodrigues de Lara"
+    affiliation: 
+      - "Universidade de São Paulo"
+    orcid: "https://orcid.org/0000-0002-1172-9855"
+  - name: "Rafael de Andrade Moral"
+    url: "https://rafamoral.github.io/"
+    orcid: "https://orcid.org/0000-0002-0875-3563"
+    affiliation:
+      - "Department of Mathematics and Statistics, Maynooth University"
+categories:
+  - markov models
+  - diagnostics
+  - simulation
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Lara, I. A. R., & de Andrade Moral, R. A new goodness of fit diagnostic for Markov models.
+pub-status:
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+---
+

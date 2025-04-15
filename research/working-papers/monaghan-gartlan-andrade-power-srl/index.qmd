@@ -1,0 +1,38 @@
+---
+title: "Temporal Orientation and Procrastination: Exploring the Role of Subjective Remaining Life"
+date: 2025-04-15
+author: 
+  - name: "Cormac Monaghan"
+    url: "https://c-monaghan.github.io/"
+    orcid: "https://orcid.org/0000-0001-9012-3060"
+    affiliation:
+      - "Hamilton Institute, Maynooth University, Ireland"
+      - "Department of Psychology, Maynooth University"
+  - name: "Ciarán Gartlan"
+    affiliation: 
+      - "Department of Psychology, Maynooth University"
+  - name: "Rafael de Andrade Moral"
+    url: "https://rafamoral.github.io/"
+    orcid: "https://orcid.org/0000-0002-0875-3563"
+    affiliation:
+      - "Department of Mathematics and Statistics, Maynooth University"
+  - name: "Joanna McHugh Power"
+    orcid: "https://orcid.org/0000-0002-7387-3107"
+    affiliation: 
+      - "Department of Psychology, Maynooth University"
+categories:
+  - procrastination
+  - ageing
+  - life expectancy
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Gartlan, C., de Andrade Moral, R, & McHugh Power, J. Temporal Orientation and Procrastination: Exploring the Role of Subjective Remaining Life.
+pub-status:
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+---
+
+## Abstract
+
+Procrastination is associated with a diminished future time perspective, where individuals prioritize immediate needs over long-term goals. However, individuals who perceive they have less time remaining in life may be less inclined to delay important actions. The purpose of this study was to explore how temporal orientation and subjective remaining life influence procrastination. This secondary analysis uses cross-sectional survey data of 143 participants aged 18-77. Participants completed measures of subjective life expectancy, consideration of future consequences, and procrastination. Latent class analysis and structural equation modelling were applied to the data to examine the potential moderating effects of temporal orientation and subjective remaining life on procrastination. Latent class analysis identified two temporal orientation classes: “neutral orientation (54.9%) and “highly future oriented” (45.1%). These classes were used in a structural equation model to assess moderation by subjective remaining life. The results revealed no moderating or direct effect of subjective remaining life on procrastination. However, high future orientation was negatively associated with decisional procrastination. Subjective perceptions of remaining life appear to have little influence on procrastination tendencies compared to temporal orientation. Individuals with a strong future orientation are better able to manage the temporal dilemmas that contribute to decisional procrastination, suggesting that future orientation plays a key role in reducing delay in decision-making
