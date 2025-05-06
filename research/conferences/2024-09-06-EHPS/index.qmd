@@ -34,5 +34,5 @@ pub-info:
 
 ## Important links
 
--   [Conference poster](./Poster.pdf){target="_blank"}
+-   [Conference poster](./files/EHPS_2024.pdf){target="_blank"}
 -   [Book of abstracts](https://2024.ehps.net/wp-content/uploads/2024/09/ehps-2024_abstracts-Page-numbers.pdf){target="_blank"}

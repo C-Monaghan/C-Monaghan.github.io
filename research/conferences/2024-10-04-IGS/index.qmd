@@ -37,5 +37,5 @@ pub-info:
 
 ## Important links
 
-- [Conference poster](./Poster.pdf){target="_blank"}
+- [Conference poster](./files/IGS_2024.pdf){target="_blank"}
 - [Supplement article](https://doi.org/10.1093/ageing/afae178.084){target="_blank"}
