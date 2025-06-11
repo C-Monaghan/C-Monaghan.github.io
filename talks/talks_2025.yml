@@ -21,3 +21,15 @@
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-04-23-stats4grads
       icon: fa-brands fa-github
+      
+- title: "Procrastination and Cognitive Decline"
+  date: 2025-06-12
+  description: "Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      irl: https://c-monaghan.github.io/talks/TSE.html#/title-slide
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2025-06-12-TSE
+      icon: fa-brands fa-github
