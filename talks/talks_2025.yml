@@ -28,7 +28,7 @@
   location: "Maynooth, Ireland"
   links:
     - name: Slides
-      irl: https://c-monaghan.github.io/talks/TSE.html#/title-slide
+      url: https://c-monaghan.github.io/talks/TSE.html#/title-slide
       icon: fa-solid fa-chalkboard-user
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-06-12-TSE
