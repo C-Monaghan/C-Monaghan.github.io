@@ -33,3 +33,15 @@
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-06-12-TSE
       icon: fa-brands fa-github
+      
+- title: "The Role of Temporal Orientation and Subjective Remaining Life in Procrastination"
+  date: 2025-07-11
+  description: "Talk presented at the 12th International Conference on Procrastination Research in Utrecht"
+  location: "Utrecht, The Netherlands"
+  links:
+    - name: Slides
+      url: https://github.com/C-Monaghan/talks/blob/main/2025-07-11-PRC/slides.pdf
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2025-07-11-PRC
+      icon: fa-brands fa-github
