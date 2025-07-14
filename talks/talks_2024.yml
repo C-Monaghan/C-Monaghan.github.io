@@ -1,0 +1,11 @@
+- title: "The health risks of procrastination"
+  date: 2024-03-20
+  description: "Talk presented at the Hamilton Student Seminar Series (2024) at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      url: https://github.com/C-Monaghan/talks/blob/main/2024-03-20-student-seminar/slides.pdf
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2024-03-20-student-seminar
+      icon: fa-brands fa-github

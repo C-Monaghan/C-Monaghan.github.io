@@ -1,0 +1,11 @@
+- title: "Procrastination in older adults"
+  date: 2023-10-24
+  description: "Talk presented at Research Week (2023) at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      url: https://github.com/C-Monaghan/talks/blob/main/2023-10-24-research-week/slides.pdf
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2023-10-24-research-week
+      icon: fa-brands fa-github
