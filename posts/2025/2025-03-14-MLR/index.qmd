@@ -50,7 +50,13 @@ The goal of multiple linear regression is to find the values of $\beta_0, \beta_
 
 First, let's again load some packages and set up our theme.
 
-```{r setting-up}
+```{r}
+#| label: setting-up
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "Check out my code"
+
 # Loading packages
 library(ggplot2)    # For plotting
 library(ggsci)      # Going with a simpsons theme 
@@ -74,7 +80,9 @@ theme_set(
 
 To illustrate multiple linear regression, let’s generate some data. For this example, let's stick with the happiness theme we have going. We’ll create a dataset with three predictor variables $(X_1, X_2, X_3)$ representing daily coffee intake, sleep, and emails, and one response variable $(Y)$ representing daily happiness.
 
-```{r data-generation}
+```{r}
+#| label: data-generation
+#| collapse: true
 
 set.seed(321)
 
@@ -96,13 +104,11 @@ happiness_data <- data.frame(
 
 head(happiness_data)
 
-View(happiness_data)
-
 ```
 
 Before we dive into regression, let’s take a moment to visualize our data. We’ll use a combination of boxplots and jittered points to show the distribution of each variable
 
-```{r visualise-data}
+```{r}
 #| fig-width: 12
 #| label: fig-visualisation
 #| fig-cap: Visualising the distribution of our variables
@@ -268,7 +274,9 @@ Phew, that was a lot of work!!
 
 Let's verify this by running the `lm()` function in R
 
-```{r modelling}
+```{r}
+#| label: modelling
+#| collapse: true
 
 fit <- lm(happiness ~ coffee + sleep + emails, data = happiness_data)
 
@@ -395,7 +403,10 @@ $$
 
 For my own mental sanity I will not perform this operation by hand, but rather use the `solve()` function in R to calculate the inverse of $X^TX$.
 
-```{r matrix-inversion}
+```{r}
+#| label: matrix-inversion
+#| collapse: true
+
 XT_X <- matrix(c(
   10, 16, 80, 94,
   16, 30, 127, 154,
@@ -444,7 +455,10 @@ $$y = 3.239 - 0.556X_1 + 0.998X_2 - 0.261X_3$$
 
 This is because the `solve()` function in R is able to calculate the inverse of a matrix without any rounding errors. This is not the case when doing it by hand. If I removed `|> round(digits = 3)` from the above we get a much more precise estimate of $(X^TX)^{-1}$
 
-```{r precise-calculation}
+```{r}
+#| label: precise-calculation
+#| collapse: true
+
 solve(XT_X)
 ```
  
@@ -463,7 +477,10 @@ $$y = 3.03 - 0.74X_1 + 0.92X_2 - 0.005X_3$$
 Just goes to show how much rounding makes a difference!
 
 
-```{r saving-image, echo=FALSE }
+```{r}
+#| label: saving-image
+#| echo: false
+
 # Paths
 path <- "posts/2025/"
 folder <- "2025-03-14-MLR/"

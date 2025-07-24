@@ -495,5 +495,26 @@
     "title": "Cormac Monaghan",
     "section": "",
     "text": "Expand for Session Info\n\n\n\n\n\n\n\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.4.2 (2024-10-31 ucrt)\n os       Windows 11 x64 (build 26100)\n system   x86_64, mingw32\n ui       RTerm\n language (EN)\n collate  English_Ireland.utf8\n ctype    English_Ireland.utf8\n tz       Europe/Dublin\n date     2025-03-14\n pandoc   3.6.2 @ C:/PROGRA~3/CHOCOL~1/bin/ (via rmarkdown)\n quarto   1.5.57\n\n─ Packages ───────────────────────────────────────────────────────────────────\n package     * version date (UTC) lib source\n sessioninfo * 1.2.2   2021-12-06 [1] CRAN (R 4.4.2)\n\n [1] C:/Coding/R-4.4.2/library\n\n──────────────────────────────────────────────────────────────────────────────"
+  },
+  {
+    "objectID": "software/index.html",
+    "href": "software/index.html",
+    "title": "Software",
+    "section": "",
+    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. R package version 1.0.0. https://c-monaghan.github.io/lwc2022/      \n            \n\n            \n\n            \n            \n        \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "software/index.html#r-packages",
+    "href": "software/index.html#r-packages",
+    "title": "Software",
+    "section": "",
+    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. R package version 1.0.0. https://c-monaghan.github.io/lwc2022/      \n            \n\n            \n\n            \n            \n        \n        \n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "software/index.html#quarto-extensions",
+    "href": "software/index.html#quarto-extensions",
+    "title": "Software",
+    "section": "Quarto Extensions",
+    "text": "Quarto Extensions\n\n\n\n    \n        \n            \n                Monaghan, C., (2025). 🧁 Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js (Version 0.0.9).  https://github.com/C-Monaghan/mocha \n            \n\n            \n\n            \n            \n        \n        \n\n\n\nNo matching items"
   }
 ]

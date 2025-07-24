@@ -1,8 +1,13 @@
 ---
 title: "Software"
 listing:
-  - id: R Packages
+  - id: packages
     contents: "packages/*/index.qmd"
+    sort: "date desc"
+    template: ../html/packages/listing.ejs
+    categories: true
+  - id: quarto
+    contents: "quarto/*/index.qmd"
     sort: "date desc"
     template: ../html/packages/listing.ejs
     categories: true
@@ -13,4 +18,9 @@ toc-location: right
 ## R Packages
 
 ::: {#packages}
+:::
+
+## Quarto Extensions
+
+::: {#quarto}
 :::

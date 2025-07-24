@@ -1,0 +1,11 @@
+---
+title: "Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js"
+date: 2025-07-23
+author:
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/     
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, (2025). 🧁 Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js (Version 0.0.9). <a href = "https://github.com/C-Monaghan/mocha"> https://github.com/C-Monaghan/mocha </a>
+toc: true
+---
