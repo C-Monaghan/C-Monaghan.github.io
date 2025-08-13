@@ -4,13 +4,6 @@
     "items": []
   },
   {
-    "listing": "/software/index.html",
-    "items": [
-      "/software/packages/2024-11-20-LWC2022/index.html",
-      "/software/quarto/2025-07-23-mocha/index.html"
-    ]
-  },
-  {
     "listing": "/research/index.html",
     "items": [
       "/research/articles/2025-03-06-LTRN/index.html",
@@ -18,6 +11,7 @@
       "/research/articles/2024-05-02-SEM/index.html",
       "/research/articles/2022-01-01-Reminiscence/index.html",
       "/research/working-papers/monaghan-andrade-power-dementia/index.html",
+      "/research/working-papers/monaghan-sirois-mod/index.html",
       "/research/working-papers/monaghan-gartlan-andrade-power-srl/index.html",
       "/research/working-papers/monaghan-lara-andrade-residuals/index.html",
       "/research/conferences/2025-05-12-CASI/index.html",
@@ -35,6 +29,13 @@
       "/posts/2024/2024-10-07-TT-W41/index.html",
       "/posts/2024/2024-09-28-TT-W40/index.html",
       "/posts/2024/2024-09-27-AMB/index.html"
+    ]
+  },
+  {
+    "listing": "/software/index.html",
+    "items": [
+      "/software/packages/2024-11-20-LWC2022/index.html",
+      "/software/quarto/2025-07-23-mocha/index.html"
     ]
   }
 ]
