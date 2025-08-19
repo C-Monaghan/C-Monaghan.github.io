@@ -1,6 +1,6 @@
 ---
 title: "Procrastination as an early risk factor for dementia"
-date: 15/04/2025
+date: 2025-04-15
 author:
   - name: Cormac Monaghan     
     url: https://c-monaghan.github.io/     

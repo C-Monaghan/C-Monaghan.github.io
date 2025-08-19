@@ -1,0 +1,27 @@
+---
+title: "Does Personality Influence How we see Others?"
+date: 2025-08-19
+author: 
+  - name: "Fuschia Sirois"
+    url: "https://fuschiasirois.com/"
+    orcid: "https://orcid.org/0000-0002-0927-277X"
+    affiliation: "Department of Psychology, Durham University"
+  - name: "Cormac Monaghan"
+    url: "https://c-monaghan.github.io/"
+    orcid: "https://orcid.org/0000-0001-9012-3060"
+    affiliation:
+      - "Hamilton Institute, Maynooth University"
+      - "Department of Psychology, Maynooth University"
+categories: 
+  - procrastination
+  - perceptions
+  - social norms
+pub-info:
+  reference: >-
+    Sirois, F., and <a href="https://github.com/C-Monaghan">Monaghan, C.</a> Does Personality Influence How we see Others?
+pub-status:
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+---
+
