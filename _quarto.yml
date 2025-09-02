@@ -92,7 +92,7 @@ format:
   html:
     theme: 
       - cosmo
-      - html/latte.scss
+      - html/styles.scss
     toc: true
     page-layout: full
     anchor-sections: true
