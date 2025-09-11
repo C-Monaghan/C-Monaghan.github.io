@@ -33,29 +33,35 @@ website:
     logo: ./files/images/favicon.png
     left:
     # Home Page
-      - href: index.qmd
-        text: About
+      - text: About 
+        icon: person-circle
+        href: index.qmd
         
     # CV
-      - href: ./files/CV.pdf
-        text: CV
+      - text: CV
+        icon: file-earmark-text-fill
         target: _blank
+        href: ./files/CV.pdf
       
       # Research
-      - href: research/index.qmd
-        text: Research
+      - text: Research
+        icon: book-half
+        href: research/index.qmd
         
       # Talks
-      - href: talks/index.qmd
-        text: Talks
+      - text: Talks
+        icon: mic-fill
+        href: talks/index.qmd
         
       # Software
-      - href: software/index.qmd
-        text: Software
+      - text: Software
+        icon: laptop-fill
+        href: software/index.qmd
         
       # Blog
-      - href: posts/index.qmd
-        text: Blog
+      - text: Blog
+        icon: pen-fill
+        href: posts/index.qmd
         
       # PhD Resources
       - href: resources/index.qmd
