@@ -131,6 +131,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-book-chapters .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-project','listing-freeze','listing-pagetitle','listing-author-meta','listing-website','listing-format','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-anchor-sections','listing-title','listing-date','listing-author','listing-doi','listing-categories','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-freeze","listing-pagetitle","listing-author-meta","listing-website","listing-format","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-anchor-sections","listing-title","listing-date","listing-author","listing-doi","listing-categories","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-book-chapters'] = new List('listing-book-chapters', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-conferences .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -214,27 +242,33 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../index.html"> <i class="bi bi-person-circle" role="img">
+</i> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href=".././files/CV.pdf" target="_blank"> 
+    <a class="nav-link" href=".././files/CV.pdf" target="_blank"> <i class="bi bi-file-earmark-text-fill" role="img">
+</i> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../research/index.html" aria-current="page"> 
+    <a class="nav-link active" href="../research/index.html" aria-current="page"> <i class="bi bi-book-half" role="img">
+</i> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../talks/index.html"> 
+    <a class="nav-link" href="../talks/index.html"> <i class="bi bi-mic-fill" role="img">
+</i> 
 <span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../software/index.html"> 
+    <a class="nav-link" href="../software/index.html"> <i class="bi bi-laptop-fill" role="img">
+</i> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../posts/index.html"> 
+    <a class="nav-link" href="../posts/index.html"> <i class="bi bi-pen-fill" role="img">
+</i> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
@@ -311,6 +345,7 @@ window.Quarto = {
   <ul>
   <li><a href="#journal-articles" id="toc-journal-articles" class="nav-link active" data-scroll-target="#journal-articles">Journal articles</a></li>
   <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working papers</a></li>
+  <li><a href="#book-chapters" id="toc-book-chapters" class="nav-link" data-scroll-target="#book-chapters">Book chapters</a></li>
   <li><a href="#conference-presentations" id="toc-conference-presentations" class="nav-link" data-scroll-target="#conference-presentations">Conference presentations</a></li>
   </ul>
 </nav>
@@ -375,7 +410,7 @@ window.Quarto = {
             </div>
         </li>
         
-        <li class="project" data-index="1" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDaGVhbHRoJTJDcHJldmVudGl0aXZlJTIwYmVoYXZpb3VyJTJDZ2VuZXJhbGlzZWQlMjBhZGRpdGl2ZSUyMG1vZGVscyUyQ2pvdXJuYWwlMjBhcnRpY2xl" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1742851116084" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400">
+        <li class="project" data-index="1" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDaGVhbHRoJTJDcHJldmVudGl0aXZlJTIwYmVoYXZpb3VyJTJDZ2VuZXJhbGlzZWQlMjBhZGRpdGl2ZSUyMG1vZGVscyUyQ2pvdXJuYWwlMjBhcnRpY2xl" data-listing-date-sort="1735689600000" data-listing-file-modified-sort="1757588283819" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="400">
             <div class="project-content listing-pub-info">
                 <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, &amp; McHugh Power, J. (2025). Procrastination and preventive health-care in the older U.S. population. <em>Preventive Medicine, 190,</em> 108185. <a href="https://doi.org/10.1016/j.ypmed.2024.108185"><code>10.1016/j.ypmed.2024.108185</code></a></p>
             </div>
@@ -442,12 +477,20 @@ window.Quarto = {
                         </a>
                     </li>
                         
+                    <li class="project-link">
+                        
+                        <a href="https://www.zotero.org/save?type=doi&amp;q=10.1016/j.ypmed.2024.108185">
+                        
+                            <i class="ai ai-zotero"></i> Add to Zotero
+                        </a>
+                    </li>
+                        
                     
                 </ul>
             </div>
         </li>
         
-        <li class="project" data-index="2" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDc3RydWN0dXJhbCUyMGVxdWF0aW9uJTIwbW9kZWxsaW5nJTJDam91cm5hbCUyMGFydGljbGU=" data-listing-date-sort="1714518000000" data-listing-file-modified-sort="1742386384791" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
+        <li class="project" data-index="2" data-categories="cHJvY3Jhc3RpbmF0aW9uJTJDc3RydWN0dXJhbCUyMGVxdWF0aW9uJTIwbW9kZWxsaW5nJTJDam91cm5hbCUyMGFydGljbGU=" data-listing-date-sort="1714518000000" data-listing-file-modified-sort="1757522573802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="329">
             <div class="project-content listing-pub-info">
                 <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Avila-Palencia, I., Han, S. D., &amp; McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. <em>Aging &amp; Mental Health, 28</em>(9), 1270–1277. <a href="https://doi.org/10.1080/13607863.2024.2345781"><code>10.1080/13607863.2024.2345781</code></a></p>
             </div>
@@ -506,40 +549,14 @@ window.Quarto = {
                         </a>
                     </li>
                         
-                    
-                </ul>
-            </div>
-        </li>
-        
-        <li class="project" data-index="3" data-categories="bWVtb3J5JTJDam91cm5hbCUyMGFydGljbGU=" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1727651825785" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
-            <div class="project-content listing-pub-info">
-                <p>Allen, A.P., Doyle, C., Doyle, C.M., <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Fitzpatrick, N., Roche, R.A.P. (2021). What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults. <em>Psychobiographical illustrations on meaning and identity in sociocultural contexts</em>, 327-344. <a href="https://doi.org/10.1007/978-3-030-81238-6_15"><code>10.1007/978-3-030-81238-6_15</code></a></p>
-            </div>
-
-            
-            <div class="project-categories">
-                
-                    <div class="project-category"><a href="#category=memory">
-                            memory
-                        </a></div>
-                    
-                    <div class="project-category"><a href="#category=journal article">
-                            journal article
-                        </a></div>
-                    
-            </div>
-            
-
-            
-            
-            
-            <div class="project-details-listing">
-                <ul class="project-links">
-                    <li class="project-link details">
-                        <a href="../research/articles/2022-01-01-Reminiscence/index.html" class="listing-name">
-                            <i class="fa-solid fa-circle-info"></i> Full details »
+                    <li class="project-link">
+                        
+                        <a href="https://www.zotero.org/save?type=doi&amp;q=10.1080/13607863.2024.2345781">
+                        
+                            <i class="ai ai-zotero"></i> Add to Zotero
                         </a>
                     </li>
+                        
                     
                 </ul>
             </div>
@@ -789,6 +806,63 @@ No matching items
                             <i class="fa-solid fa-circle-info"></i> Full details »
                         </a>
                     </li>
+                    
+                </ul>
+            </div>
+        </li>
+        
+</ul>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="book-chapters" class="level2">
+<h2 class="anchored" data-anchor-id="book-chapters">Book chapters</h2>
+<div id="listing-book-chapters" class="quarto-listing quarto-listing-container-custom">
+<div class="research project-list">
+<ul class="list">
+    
+        <li class="project" data-index="0" data-categories="bWVtb3J5JTJDam91cm5hbCUyMGFydGljbGU=" data-listing-date-sort="1640995200000" data-listing-file-modified-sort="1757522479490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="238">
+            <div class="project-content listing-pub-info">
+                <p>Allen, A.P., Doyle, C., Doyle, C.M., <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Fitzpatrick, N., Roche, R.A.P. (2021). What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults. <em>Psychobiographical illustrations on meaning and identity in sociocultural contexts</em>, 327-344. <a href="https://doi.org/10.1007/978-3-030-81238-6_15"><code>10.1007/978-3-030-81238-6_15</code></a></p>
+            </div>
+
+            
+            <div class="project-categories">
+                
+                    <div class="project-category"><a href="#category=memory">
+                            memory
+                        </a></div>
+                    
+                    <div class="project-category"><a href="#category=journal article">
+                            journal article
+                        </a></div>
+                    
+            </div>
+            
+
+            
+            
+            
+            <div class="project-details-listing">
+                <ul class="project-links">
+                    <li class="project-link details">
+                        <a href="../research/book-chapters/2022-01-01-Reminiscence/index.html" class="listing-name">
+                            <i class="fa-solid fa-circle-info"></i> Full details »
+                        </a>
+                    </li>
+                    
+                        
+                    <li class="project-link">
+                        
+                        <a href="https://www.zotero.org/save?type=doi&amp;q=10.1007/978-3-030-81238-6_15">
+                        
+                            <i class="ai ai-zotero"></i> Add to Zotero
+                        </a>
+                    </li>
+                        
                     
                 </ul>
             </div>
