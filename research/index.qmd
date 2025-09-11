@@ -10,6 +10,9 @@ listing:
     contents: "working-papers/*/index.qmd"
     sort: "date desc"
     template: ../html/research/listing.ejs
+  - id: book-chapters
+    contents: "book-chapters/*/index.qmd"
+    template: ../html/research/listing.ejs
   - id: conferences
     contents: "conferences/*/index.qmd"
     sort: "date desc"
@@ -27,6 +30,11 @@ toc-location: right
 ## Working papers
 
 ::: {#working-papers}
+:::
+
+## Book chapters
+
+::: {#book-chapters}
 :::
 
 ## Conference presentations
