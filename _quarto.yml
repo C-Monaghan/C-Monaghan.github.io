@@ -64,8 +64,8 @@ website:
         href: posts/index.qmd
         
       # PhD Resources
-      - href: resources/index.qmd
-        text: PhD Resources
+      # - href: resources/index.qmd
+      # text: PhD Resources
         
     right:
       - text: "{{< iconify bi rss size=1.1em title='RSS' >}}"
