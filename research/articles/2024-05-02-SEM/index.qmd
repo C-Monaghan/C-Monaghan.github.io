@@ -39,8 +39,9 @@ pub-info:
     - name: Data
       url: https://github.com/C-Monaghan/Procrastination_Predictors/tree/main/01__Data
       icon: fa-solid fa-table
-    - name: "{{< ai zotero >}} Add to Zotero"
+    - name: Add to Zotero
       url: https://www.zotero.org/save?type=doi&q=10.1080/13607863.2024.2345781
+      icon: ai ai-zotero
 toc: true
 ---
 
