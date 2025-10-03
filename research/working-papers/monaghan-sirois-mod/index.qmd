@@ -1,5 +1,5 @@
 ---
-title: "Procrastination and self-rated health: A meta-analysis of own data (MOD)"
+title: "Procrastination, stress, and self-rated health: A multi-sample meta-analysis"
 date: 2025-08-13
 author: 
   - name: "Cormac Monaghan"
@@ -18,7 +18,7 @@ categories:
   - meta analysis
 pub-info:
   reference: >-
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, and Sirois, F. Procrastination and self-rated health: A meta-analysis of own data (MOD).
+    Sirois, F, M and <a href="https://github.com/C-Monaghan">Monaghan, C.</a>. Procrastination, stress, and self-rated health: A multi-sample meta-analysis.
 pub-status:
   status: Writing
   class: warning
