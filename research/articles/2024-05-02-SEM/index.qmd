@@ -60,14 +60,22 @@ Procrastination is an almost universal behaviour and yet little research to date
 
 ## Citation
 
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1080/13607863.2024.2345781">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
 ``` bibtex
 @article{monaghan2024,
-  title={Procrastination, depressive symptomatology, and loneliness in later life},
-  author={Monaghan, Cormac and Avila-Palencia, Ione and Han, S Duke and McHugh Power, Joanna},
-  journal={Aging \& Mental Health},
-  pages={1--8},
-  year={2024},
-  publisher={Taylor \& Francis},
-  doi={10.1080/13607863.2024.2345781}
+  title = {Procrastination, Depressive Symptomatology, and Loneliness in Later Life},
+  author = {Monaghan, Cormac and Avila-Palencia, Ione and Han, S. Duke and McHugh Power, Joanna},
+  date = {2024-09-01},
+  journaltitle = {Aging \& Mental Health},
+  volume = {28},
+  number = {9},
+  eprint = {38695380},
+  eprinttype = {pubmed},
+  pages = {1270--1277},
+  publisher = {Routledge},
+  doi = {10.1080/13607863.2024.2345781}
 }
 ```

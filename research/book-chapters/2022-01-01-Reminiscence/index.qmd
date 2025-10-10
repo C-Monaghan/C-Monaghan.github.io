@@ -26,8 +26,9 @@ pub-info:
   reference: >-
     Allen, A.P., Doyle, C., Doyle, C.M., <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Fitzpatrick, N., Roche, R.A.P. (2021). What we talk about when we talk about the past: Discursive psychological analysis of autobiographical reminiscence in older Irish adults. <em>Psychobiographical illustrations on meaning and identity in sociocultural contexts</em>, 327-344. <a href=https://doi.org/10.1007/978-3-030-81238-6_15><code>10.1007/978-3-030-81238-6_15</code></a>
   links:
-    - name: "{{< ai zotero >}} Add to Zotero"
+    - name: Add to Zotero
       url: https://www.zotero.org/save?type=doi&q=10.1007/978-3-030-81238-6_15
+      icon: ai ai-zotero
 ---
 
 ## Abstract
@@ -35,6 +36,10 @@ pub-info:
 Oral reminiscence about autobiographical memory may serve a number of discursive functions for older adults. In this article we use a discursive psychological approach to analyse reminiscence discussions with four older Irish adults. A number of functions of reminiscence are evident in the discussion, including narrative, offering/seeking guidance, and building rapport with others. However, other putative functions of reminiscence, such as death preparation or obsessive/escapist, were less evident at an explicit level. Furthermore, the function of maintaining a sense of self is perhaps oversimplified, as changes in sense of self were confronted across different life periods within participants’ autobiographical memories. Reminiscence segued between first person, interpersonal and broader societal accounts, and employed counterfactual scenarios as well as direct descriptions of memory. The current methodology and findings indicate the complexity of autobiographical memory and how it is employed, and have relevance for discursive analysis of biographical materials from famous individuals from the past. The application of discursive psychological analysis to autobiographical texts will allow for understanding of how remarkable individuals have attempted to position themselves “for posterity”.
 
 ## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1007/978-3-030-81238-6_15">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
 
 ``` bibtex
 @article{allen2021,

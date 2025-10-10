@@ -22,6 +22,8 @@ page-layout: full
 toc-location: right
 ---
 
+Currently, my research is focused on the study of procrastination in older adult populations. I apply (oftentimes) advanced statistical techniques to better understand both the predictors and consequences of unwarranted delay in older adults. {{< ai blank-just-to-add-ai-dependency-to-this-page >}}
+
 ## Journal articles
 
 ::: {#articles}

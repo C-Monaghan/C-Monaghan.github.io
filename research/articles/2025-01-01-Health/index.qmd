@@ -68,13 +68,19 @@ Maintaining health preventive behaviours in later life reduces the risk of non-c
 
 ## Citation
 
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1016/j.ypmed.2024.108185">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
 ``` bibtex
-@article{monaghan2025,   
-  title={Procrastination and preventive health-care in the older U.S. population},   
-  author={Monaghan, de Andrade Moral, Rafael and Power, Joanna McHugh},   
-  journal={Preventitive Medicine},
-  year={2025},   
-  publisher={Elsevier},   
-  doi={10.1016/j.ypmed.2024.108185}
-  }
+@article{monaghan2025,
+  title = {Procrastination and Preventive Health-Care in the Older {{U}}.{{S}}. Population},
+  author = {Monaghan, Cormac and family=Andrade Moral, given=Rafael, prefix=de, useprefix=true and Power, Joanna McHugh},
+  date = {2025-01-01},
+  journaltitle = {Preventive Medicine},
+  shortjournal = {Preventive Medicine},
+  volume = {190},
+  pages = {108185},
+  doi = {10.1016/j.ypmed.2024.108185}
+}
 ```
