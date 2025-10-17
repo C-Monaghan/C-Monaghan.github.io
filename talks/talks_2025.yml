@@ -45,3 +45,16 @@
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-07-11-PRC
       icon: fa-brands fa-github
+
+  
+- title: "My Summer Holiday"
+  date: 2025-10-22
+  description: "Talk presented at Research Week (2025) at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      url: https://c-monaghan.github.io/talks/2025_research_week.html#/title-slide
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2025-10-22-research-week
+      icon: fa-brands fa-github
