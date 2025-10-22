@@ -1,0 +1,499 @@
+---
+title: "Doing multiple linear regression by hand"
+description: "A step-by-step guide to calculating regression coefficients by hand"
+date: "2025-03-14"
+format:
+  html:
+    html-math-method: katex
+    shift-heading-level-by: 1
+    lightbox: true
+categories:
+  - statistics
+  - regression
+  - r
+image: "../../../thumbnails/regression_mlr_thumb.png"
+citation:
+  url: "https://c-monaghan.github.io/posts/2025/03/14/MLR/"
+execute:
+  warning: false
+editor: source
+---
+
+In my last post I showed how to do [simple linear regression by hand](https://c-monaghan.github.io/posts/2025/03/12/Linear-Regression/). However, naturally, in most cases with statistics, you never have just one predictor variable, but rather multiple. As such, in this post, I will show how to do multiple linear regression by hand. Multiple linear regression is an extension of simple linear regression that allows for more than one predictor variable. It’s a powerful tool for understanding the relationship between several independent variables and a single dependent variable.
+
+While the calculations can get a bit more involved, the core idea remains the same: we’re trying to find the best-fitting linear relationship between our predictors and the outcome.
+
+# What is multiple linear regression?
+
+If simple linear regression is like baking a cake with just flour, multiple linear regression is like adding sugar, eggs, and butter to the mix. It’s a richer and more complex way of understanding relationships in your data.
+
+In the real world, things are rarely influenced by just one factor. For example, your happiness isn’t just determined by how much coffee you drink (though that’s a big part of it). It’s also influenced by how much sleep you got, how many emails are in your inbox, and whether your cat decided to knock over your favorite mug. Multiple linear regression helps us model these kinds of multi-faceted relationships.
+
+## The equation
+
+At its core, multiple linear regression is about finding the best-fitting linear relationship between **multiple predictor variables** (independent variables) and a **response variable** (dependent variable). The equation is similar to that of simple linear regression, but with more predictor variables:
+
+$$
+Y = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_jX_j + \epsilon
+$$
+
+Where:
+
+- $Y$ is your dependent variable—the thing you’re trying to predict or explain. (Think: your happiness score.)
+- $\beta_0$ is the **intercept**. It’s the value of $Y$ when all the predictor variables are zero. (If you drank no coffee, got zero sleep, and had no emails, how happy would you be? Probably not very.)
+- $\beta_1, \beta_2, \dots, \beta_j$ are the **coefficients** for each predictor variable $(X_1, X_2, \dots, X_j)$. They tell you how much each predictor contributes to YY. (For example, does coffee make you happier than sleep? These coefficients will tell you!)
+- $\epsilon$ is the error term. It accounts for the randomness in life that the model can’t explain. (Maybe your cat did something unpredictable, like actually not knocking over your mug.)
+
+The goal of multiple linear regression is to find the values of $\beta_0, \beta_1, \dots, \beta_j$ that minimize the sum of squared errors—basically, the difference between what the model predicts $(\hat{Y})$ and what actually happens $(Y)$. In other words, **we’re trying to make our predictions as accurate as possible**.
+
+## Generating some data
+
+First, let's again load some packages and set up our theme.
+
+```{r}
+#| label: setting-up
+#| message: false
+#| warning: false
+#| code-fold: true
+#| code-summary: "Check out my code"
+
+# Loading packages
+library(ggplot2)    # For plotting
+library(ggsci)      # Going with a simpsons theme
+library(gghalves)   # Using half plots
+library(dplyr)      # Data manipulation
+library(tidyr)      # Data manipulation
+
+# Setting default theme
+theme_set(
+  theme_minimal() +
+    theme(
+      panel.grid.minor = element_blank(),
+      plot.title = element_text(hjust = 0.5, face = "bold", size = rel(1.4)),
+      axis.title = element_text(face = "bold", size = rel(1)),
+      strip.background = element_rect(fill = "grey80", color = NA)
+      )
+)
+
+```
+
+
+To illustrate multiple linear regression, let’s generate some data. For this example, let's stick with the happiness theme we have going. We’ll create a dataset with three predictor variables $(X_1, X_2, X_3)$ representing daily coffee intake, sleep, and emails, and one response variable $(Y)$ representing daily happiness.
+
+```{r}
+#| label: data-generation
+#| collapse: true
+
+set.seed(321)
+
+# Generating our predictor variables
+coffee <- rnorm(10, mean = 2, sd = 1)   # Coffee intake (cups per day)
+sleep  <- rnorm(10, mean = 7, sd = 1)   # Sleep (hours per night)
+emails <- rnorm(10, mean = 10, sd = 3)  # Emails (received per day)
+
+# Generating our response variable
+happiness <- 5 + 0.2 * coffee + 0.7 * sleep - 0.2 * emails + rnorm(10, mean = 0, sd = 1)
+
+# Creating data set
+happiness_data <- data.frame(
+  happiness = ceiling(happiness),
+  coffee    = floor(coffee),
+  sleep     = ceiling(sleep),
+  emails    = ceiling(emails)
+)
+
+head(happiness_data)
+
+```
+
+Before we dive into regression, let’s take a moment to visualize our data. We’ll use a combination of boxplots and jittered points to show the distribution of each variable
+
+```{r}
+#| fig-width: 12
+#| label: fig-visualisation
+#| fig-cap: Visualising the distribution of our variables
+
+happiness_long <- happiness_data |>
+  pivot_longer(
+    cols = everything(),
+    names_to = "variable",
+    values_to = "value") |>
+  mutate(variable = factor(
+    variable, levels = c("coffee", "sleep", "emails", "happiness")))
+
+happiness_plot <- happiness_long |>
+  ggplot(aes(x = variable, y = value, fill = variable, colour = variable)) +
+  gghalves::geom_half_point(
+    transformation = ggbeeswarm::position_quasirandom(width = 0.1),
+    side = "r") +
+  gghalves::geom_half_boxplot(side = "l", colour = "black") +
+  scale_fill_simpsons() +
+  scale_colour_simpsons() +
+  scale_y_continuous(breaks = seq(2, 12, by = 2)) +
+  labs(x = "Variables", y = "Value") +
+  guides(fill = "none", colour = "none")
+
+happiness_plot
+```
+
+**What Do We See?**
+
+From the plot, we can start to get a sense of how our variables are distributed:
+
+- Coffee intake hovers around 2-3 cups per day.
+- Sleep is mostly in the 7-8 hour range.
+- Emails are all over the place, because inboxes are chaos.
+- Happiness scores are a bit more spread out, reflecting the combined influence of coffee, sleep, and emails.
+
+This visualization sets the stage for our regression analysis. Next up, we’ll dive into the math and find out exactly how much each of these factors contributes to happiness.
+
+# Calculating coefficients (using equations)
+
+We'll calculate the coefficients for the regression equation of the form:
+
+$$
+\text{happiness} = \beta_0 + \beta_1(\text{coffee}) + \beta_2(\text{sleep}) + \beta_3(\text{emails})
+$$
+
+In order to obtain these coefficients we use least squares estimation. This involves finding the values of $\beta_0, \beta_1, \beta_2, \beta_3$ that minimize the sum of squared errors between the observed happiness scores and the predicted happiness scores.
+
+**Our formulas are**:
+
+\begin{align*}
+\beta_0 &= \bar{y} - \beta_1 \bar{x_1} - \beta_2 \bar{x_2} - \beta_3 \bar{x_3} \\[12pt]
+
+\beta_1 &= \frac{S_{x_1 y} S_{x_2 x_2} S_{x_3 x_3} - S_{x_2 y} S_{x_1 x_2} S_{x_3 x_3} - S_{x_3 y} S_{x_1 x_3} S_{x_2 x_2} + S_{x_2 y} S_{x_1 x_3} S_{x_2 x_3} + S_{x_3 y} S_{x_1 x_2} S_{x_2 x_3} - S_{x_1 y} S_{x_2 x_3}^2}{S_{x_1 x_1} S_{x_2 x_2} S_{x_3 x_3} - S_{x_1 x_2}^2 S_{x_3 x_3} - S_{x_1 x_3}^2 S_{x_2 x_2} + 2 S_{x_1 x_2} S_{x_1 x_3} S_{x_2 x_3} - S_{x_2 x_3}^2 S_{x_1 x_1}} \\[12pt]
+
+\beta_2 &= \frac{S_{x_2 y} S_{x_1 x_1} S_{x_3 x_3} - S_{x_1 y} S_{x_1 x_2} S_{x_3 x_3} - S_{x_3 y} S_{x_1 x_1} S_{x_2 x_3} + S_{x_1 y} S_{x_1 x_3} S_{x_2 x_3} + S_{x_3 y} S_{x_1 x_2} S_{x_1 x_3} - S_{x_2 y} S_{x_1 x_3}^2}{S_{x_1 x_1} S_{x_2 x_2} S_{x_3 x_3} - S_{x_1 x_2}^2 S_{x_3 x_3} - S_{x_1 x_3}^2 S_{x_2 x_2} + 2 S_{x_1 x_2} S_{x_1 x_3} S_{x_2 x_3} - S_{x_2 x_3}^2 S_{x_1 x_1}} \\[12pt]
+
+\beta_3 &= \frac{S_{x_3 y} S_{x_1 x_1} S_{x_2 x_2} - S_{x_1 y} S_{x_1 x_3} S_{x_2 x_2} - S_{x_2 y} S_{x_1 x_1} S_{x_2 x_3} + S_{x_1 y} S_{x_1 x_2} S_{x_2 x_3} + S_{x_2 y} S_{x_1 x_3} S_{x_1 x_2} - S_{x_3 y} S_{x_1 x_2}^2}{S_{x_1 x_1} S_{x_2 x_2} S_{x_3 x_3} - S_{x_1 x_2}^2 S_{x_3 x_3} - S_{x_1 x_3}^2 S_{x_2 x_2} + 2 S_{x_1 x_2} S_{x_1 x_3} S_{x_2 x_3} - S_{x_2 x_3}^2 S_{x_1 x_1}}
+
+
+\end{align*}
+
+where:
+
+\begin{align*}
+S_{x_1 y} &= \sum (x_1 - \bar{x_1})(y - \bar{y}) \quad \text{(cross-deviations between coffee and happiness)} \\
+S_{x_2 y} &= \sum (x_2 - \bar{x_2})(y - \bar{y}) \quad \text{(cross-deviations between sleep and happiness)} \\
+S_{x_3 y} &= \sum (x_3 - \bar{x_3})(y - \bar{y}) \quad \text{(cross-deviations between emails and happiness)} \\
+S_{x_1 x_1} &= \sum (x_1 - \bar{x_1})^2 \quad \text{(squared deviations for coffee)} \\
+S_{x_2 x_2} &= \sum (x_2 - \bar{x_2})^2 \quad \text{(squared deviations for sleep)} \\
+S_{x_3 x_3} &= \sum (x_3 - \bar{x_3})^2 \quad \text{(squared deviations for emails)} \\
+S_{x_1 x_2} &= \sum (x_1 - \bar{x_1})(x_2 - \bar{x_2}) \quad \text{(cross-deviations between coffee and sleep)} \\
+S_{x_1 x_3} &= \sum (x_1 - \bar{x_1})(x_3 - \bar{x_3}) \quad \text{(cross-deviations between coffee and emails)} \\
+S_{x_2 x_3} &= \sum (x_2 - \bar{x_2})(x_3 - \bar{x_3}) \quad \text{(cross-deviations between sleep and emails)}
+\end{align*}
+
+
+## Step 1: Computing means
+
+First, calculate the means of happiness, coffee, sleep, and emails.
+
+\begin{align*}
+\bar{y}   &= \frac{\sum y_i}{n}    = \frac{7 + 10 + 9 + \dots + 9}{10}   = \frac{92}{10} =  9.2 \\[12pt]
+\bar{x_1} &= \frac{\sum x_{1i}}{n} = \frac{3 + 1 + 1 + \dots + 1}{10}    = \frac{16}{10} = 1.6  \\[12pt]
+\bar{x_2} &= \frac{\sum x_{2i}}{n} = \frac{8 + 9 + 8 + \dots + 8}{10}    = \frac{80}{10} = 8    \\[12pt]
+\bar{x_3} &= \frac{\sum x_{3i}}{n} = \frac{13 + 10 + 13 + \dots + 9}{10} = \frac{94}{10} = 9.4
+\end{align*}
+
+## Step 2: Computing deviations
+
+Next, we calculate the deviations for each variable from their mean.
+
+| Observation | $y - \bar{y}$      | $x_1 - \bar{x_1}$ | $x_2 - \bar{x_2}$   | $x_3 - \bar{x_3}$   |
+|-------------|--------------------|-------------------|---------------------|---------------------|
+| 1           | 7 - 9.2 = -2.2     | 3 - 1.6 = 1.4     | 8 - 8 = 0           | 13 - 9.4 = 3.6      |
+| 2           | 10 - 9.2 = 0.8     | 1 - 1.6 = -0.6    | 9 - 8 = 1           | 10 - 9.4 = 0.6      |
+| 3           | 9 - 9.2 = -0.2     | 1 - 1.6 = -0.6    | 8 - 8 = 0           | 13 - 9.4 = 3.6      |
+| 4           | 12 - 9.2 = 2.8     | 1 - 1.6 = -0.6    | 10 - 8 = 2          | 7 - 9.4 = -2.4      |
+| 5           | 8 - 9.2 = -1.2     | 1 - 1.6 = -0.6    | 6 - 8 = -2          | 8 - 9.4 = -1.4      |
+| 6           | 8 - 9.2 = -1.2     | 2 - 1.6 = 0.4     | 7 - 8 = -1          | 11 - 9.4 = 1.6      |
+| 7           | 8 - 9.2 = -1.2     | 2 - 1.6 = 0.4     | 8 - 8 = 0           | 4 - 9.4 = -5.4      |
+| 8           | 11 - 9.2 = 1.8     | 2 - 1.6 = 0.4     | 8 - 8 = 0           | 12 - 9.4 = 2.6      |
+| 9           | 10 - 9.2 = 0.8     | 2 - 1.6 = 0.4     | 8 - 8 = 0           | 7 - 9.4 = -2.4      |
+| 10          | 9 - 9.2 = -0.2     | 1 - 1.6 = -0.6    | 8 - 8 = 0           | 9 - 9.4 = -0.4      |
+
+
+## Step 3: Computing cross deviations
+
+Now that we know our means and deviations we are able to solve for our set of cross-deviations.
+
+\begin{align*}
+S_{x_1 y} &= (1.4 \times -2.2) + (-0.6 \times 0.8) + (-0.6 \times -0.2) + \dots (-0.6 \times -0.2) = -4.2 \\[12pt]
+
+S_{x_2 y} &= (0 \times -2.2) + (1 \times 0.8) + (0 \times -0.2) + \dots + (0 \times -0.2) = 10 \\[12pt]
+
+S_{x_3 y} &= (3.6 \times -2.2) + (0.6 \times 0.8) + (3.6 \times -0.2) \dots + (-0.4 \times -0.2) = -5.8 \\[24pt]
+
+S_{x_1x_2} &= (1.4 \times 0) + (-0.6 \times 1) + (-0.6 \times 0) + \dots (-0.6 \times 0) = -1 \\[12pt]
+
+S_{x_1x_3} &= (1.4 \times 3.6) + (-0.6 \times 0.6) + (-0.6 \times 3.6) + \dots + (-0.6 \times -0.4) = 3.6 \\[12pt]
+
+S_{x_2x_3} &= (0 \times 3.6) + (1 \times 0.6) + (0 \times 3.6) + \dots (0 \times -0.4) = -3
+\end{align*}
+
+## Step 4: Computing squared deviations
+
+Finally, we can calculate the squared deviations for each variable.
+
+\begin{align*}
+S_{x_1 x_1} &= (1.4^2) + (-0.6^2) + (-0.6^2) + \dots + (-0.6^2) = 4.4 \\[12pt]
+
+S_{x_2 x_2} &= (0^2) + (1^2) + (0^2) + \dots + (0^2) = 10 \\[12pt]
+
+S_{x_3 x_3} &= (3.6^2) + (0.6^2) + (3.6^2) + \dots + (-0.4^2) = 78.4 \\[12pt]
+\end{align*}
+
+## Step 5: Computing our coefficients
+
+Now that we have all the necessary values, we can calculate our coefficients.
+
+\begin{align*}
+\beta_1 &= \frac{-4.2 \times 10 \times 78.4 - 10 \times -1 \times -3 - 5.8 \times 4 \times 10 + 10 \times 3.6 \times -3 - 5.8 \times -1 \times -3 + 4.2 \times (-3)^2}{4.4 \times 10 \times 78.4 - 10 \times (-1)^2 \times 78.4 - 10 \times 3.6^2 + 2 \times -1 \times 3.6 \times -3 - 3^2 \times 10} \approx -0.74 \\[12pt]
+
+\beta_2 &= \frac{10 \times 4.4 \times 78.4 - -4.2 \times -1 \times 78.4 - 5.8 \times 4.4 \times -3 + -4.2 \times 3.6 \times -3 + 5.8 \times -1 \times -1 - 10 \times (-3)^2}{4.4 \times 10 \times 78.4 - 10 \times (-1)^2 \times 78.4 - 10 \times 3.6^2 + 2 \times -1 \times 3.6 \times -3 - 3^2 \times 10} \approx 0.92 \\[12pt]
+
+\beta_3 &= \frac{-5.8 \times 4.4 \times 10 - -4.2 \times 3.6 \times 10 - 10 \times 4.4 \times -3 + -4.2 \times -1 \times -3 + 10 \times 3.6 \times -1 - 10 \times (-3)^2}{4.4 \times 10 \times 78.4 - 10 \times (-1)^2 \times 78.4 - 10 \times 3.6^2 + 2 \times -1 \times 3.6 \times -3 - 3^2 \times 10} \approx -0.005 \\[12pt]
+
+\beta_0 &= 9.2 - (-0.74 \times 1.6) - 0.92 \times 8 - (-0.005 \times 9.4) = 9.2 + 1.924 - 7.36 + 0.047 \approx 3.81
+\end{align*}
+
+## Step 6: Writing our regression equation
+
+Finally, we can write our regression equation:
+
+$$\hat{Y} = 3.07 - 0.74X_1 + 0.92X_2 - 0.005X_3$$
+Phew, that was a lot of work!!
+
+**But what does this now tells us??**
+
+- For every additional cup of coffee you drink, your happiness score decreases by 0.74.
+- For every additional hour of sleep you get, your happiness score increases by 0.92.
+- For every additional email you receive, your happiness score decreases by 0.005.
+
+Let's verify this by running the `lm()` function in R
+
+```{r}
+#| label: modelling
+#| collapse: true
+
+fit <- lm(happiness ~ coffee + sleep + emails, data = happiness_data)
+
+broom::tidy(fit)
+```
+
+The coefficients are very close to what we calculated by hand.
+
+# Calculating coefficients (using matrices)
+
+While the manual method of calculating coefficients for multiple linear regression is a great way to understand the underlying mechanics, it can become tedious, especially when dealing with multiple predictor variables. Imagine having five or six predictors—the calculations would quickly become overwhelming! Fortunately, matrices provide a more efficient and streamlined approach.
+
+## Step 1: Setting up our matrices
+
+To begin, let’s define the key components of our regression model:
+
+- $y$ as the response variable
+- $X$ as the matrix of predictor variables
+- $\beta$ as the vector of coefficients we want to estimate
+- $\epsilon$ as the error term
+
+The regression model can be expressed in matrix form as:
+
+$$y = X \beta + \epsilon$$
+
+Our goal is to solve for $\beta$, the vector of coefficients. The least squares solution for $\beta$ is given by:
+
+$$\beta = (X^TX)^{-1} X^Ty$$
+Let's define the $X$ matrix (including our intercept) and $y$ matrix
+
+$$
+X = \begin{bmatrix}
+1 & 3 & 8 & 13 \\
+1 & 1 & 9 & 10 \\
+1 & 1 & 8 & 13 \\
+1 & 1 & 10 & 7 \\
+1 & 1 & 6 & 8 \\
+1 & 2 & 7 & 11 \\
+1 & 2 & 8 & 4 \\
+1 & 2 & 8 & 12 \\
+1 & 2 & 8 & 7 \\
+1 & 1 & 8 & 9 \\
+\end{bmatrix} \qquad
+y = \begin{bmatrix}
+7 \\
+10 \\
+9 \\
+12 \\
+8 \\
+8 \\
+8 \\
+11 \\
+10 \\
+9 \\
+\end{bmatrix}
+$$
+
+## Step 2: Transposing $X$
+
+The next step is to compute the transpose of $X$ denoted as $X^T$. Transposing a matrix involves flipping its rows and columns. For our $X$ matrix, this results in:
+
+$$
+X^T = \begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+3 & 1 & 1 & 1 & 1 & 2 & 2 & 2 & 2 & 1 \\
+8 & 9 & 8 & 10 & 6 & 7 & 8 & 8 & 8 & 8 \\
+13 & 10 & 13 & 7 & 8 & 11 & 4 & 12 & 7 & 9 \\
+\end{bmatrix}
+$$
+
+## Step 3: Computing matrix products
+
+With $X^T$ calculated, we now compute two key matrix products:
+
+- $X^TX$: This product of the transposed predictor matrix and original predictor matrix.
+- $X^Ty$: This product of the transposed predictor matrix and the response variable matrix.
+
+Matrix multiplication involves multiplying corresponding elements of each row and column. For example, the first element of the resulting matrix is the sum of the products of the first row of the first matrix $X^TX$ and the first column of the second matrix $X$. To illustrate, the first two elements of $X^TX$ would be:
+
+$$
+(1 \times 1) + (1 \times 1) + \dots + (1 \times 1) = 10 \\[8pt]
+(1 \times 3) + (1 \times 1) + \dots + (1 \times 1) = 16
+$$
+
+Continuing this process for all elements of $X^TX$ and $X^Ty$ results in:
+
+$$
+X^T X = \begin{bmatrix}
+10 & 16 & 80 & 94 \\
+16 & 30 & 127 & 154 \\
+80 & 127 & 650 & 749 \\
+94 & 154 & 749 & 962 \\
+\end{bmatrix} \qquad
+X^T y = \begin{bmatrix}
+92 \\
+143 \\
+746 \\
+859 \\
+\end{bmatrix}
+$$
+
+
+## Step 4: Computing the inverse
+
+The next step is to compute the inverse of $X^TX$, otherwise denoted as $(X^TX)^{-1}$. The inverse of a matrix is a special matrix that, when multiplied by the original matrix, yields the identity matrix. In other words:
+
+$$(X^TX)^{-1}(X^TX) = I$$
+
+where $I$ is the identity matrix. The inverse of a matrix can be computed using various methods, with [Gaussian elimination](https://en.wikipedia.org/wiki/Gaussian_elimination) being one of the most common. Gaussian elimination transforms the matrix into row echelon form through a series of row operations, ultimately reducing it to the identity matrix.
+
+- Start by augmenting $X^TX$ with an identity matrix $I$ such that $[X^TX \: \vert \: I]$:
+
+$$
+[X^TX \: \vert \: I] = \begin{bmatrix}
+10 & 16 & 80 & 94 & \vert & 1 & 0 & 0 & 0 \\
+16 & 30 & 127 & 154 & \vert & 0 & 1 & 0 & 0 \\
+80 & 127 & 650 & 749 & \vert & 0 & 0 & 1 & 0 \\
+94 & 154 & 749 & 962 & \vert & 0 & 0 & 0 & 1 \\
+\end{bmatrix}
+$$
+
+- Perform row operations to reduce the left side of the matrix to the identity matrix, resulting in the inverse of $X^TX$ on the right side.
+- The resulting matrix on the right side will be the inverse of $X^TX$.
+
+For my own mental sanity I will not perform this operation by hand, but rather use the `solve()` function in R to calculate the inverse of $X^TX$.
+
+```{r}
+#| label: matrix-inversion
+#| collapse: true
+
+XT_X <- matrix(c(
+  10, 16, 80, 94,
+  16, 30, 127, 154,
+  80, 127, 650, 749,
+  94, 154, 749, 962
+), nrow = 4, ncol = 4, byrow = TRUE)
+
+solve(XT_X) |> round(digits = 3)
+```
+
+We can then write $(X^TX)^{-1}$ as:
+
+$$
+(X^TX)^{-1} = \begin{bmatrix}
+9.162 & -0.446 & -0.885 & -0.133 \\
+-0.456 & 0.240 & 0.021 & -0.010 \\
+-0.885 & 0.021 & 0.103 & 0.003 \\
+-0.133 & -0.010 & 0.003 & 0.013
+\end{bmatrix}
+$$
+
+## Step 5: Computing $\beta$
+
+With $(X^TX)^{-1}$ calculated, we can now compute $\beta$ using the formula:
+
+$$\beta = (X^TX)^{-1} (X^Ty)$$
+
+Multiplying $(X^TX)^{-1}$ by $X^Ty$ gives us:
+
+$$
+\beta = \begin{bmatrix}
+3.239 \\
+-0.556 \\
+0.998 \\
+-0.261 \\
+\end{bmatrix}
+$$
+
+## Step 6: Writing our regression equation
+
+Finally, we can write our regression equation:
+
+$$y = 3.239 - 0.556X_1 + 0.998X_2 - 0.261X_3$$
+
+**But wait, this isn't what we got by doing it by hand, nor does it match the `lm()` output.**
+
+This is because the `solve()` function in R is able to calculate the inverse of a matrix without any rounding errors. This is not the case when doing it by hand. If I removed `|> round(digits = 3)` from the above we get a much more precise estimate of $(X^TX)^{-1}$
+
+```{r}
+#| label: precise-calculation
+#| collapse: true
+
+solve(XT_X)
+```
+
+and then ultimately an exact match to the `lm()` output
+
+```{r}
+XT_y <- matrix(c(92, 143, 746, 859), nrow = 4, ncol = 1, byrow = TRUE)
+
+solve(XT_X) %*% XT_y
+```
+
+So finally, we could say our regression equation is:
+
+$$y = 3.03 - 0.74X_1 + 0.92X_2 - 0.005X_3$$
+
+Just goes to show how much rounding makes a difference!
+
+
+```{r}
+#| label: saving-image
+#| echo: false
+
+# Paths
+path <- "posts/2025/03/14"
+folder <- "MLR/"
+
+ggsave(filename = here::here(path, folder, "regression_mlr.png"),
+       plot = happiness_plot,
+       width = 7.5,
+       height = 5,
+       units = "in",
+       dpi = 320)
+
+# Thumbnail
+magick::image_read(here::here(path, folder, "regression_mlr.png")) |>
+  magick::image_resize(geometry = "800") |>
+  magick::image_write(here::here("posts/2025", "thumbnails/regression_mlr_thumb.png"))
+```
