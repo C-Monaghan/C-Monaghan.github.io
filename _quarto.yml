@@ -1,22 +1,23 @@
 project:
   type: website
   output-dir: docs
-  
+
   preview:
     port: 88
     browser: true
     watch-inputs: true
     navigate: true
-    
+
   render:
    - "*.qmd"
-   
+
   resources:
-   - "files/**"
-   - "data/**"
-   
+   - "./files/**"
+   - "./files/images/**"
+   - "./data/**"
+
 freeze: true
-  
+
 pagetitle: "{{< meta title >}} | Cormac Monaghan"
 author-meta: "Cormac Monaghan"
 
@@ -25,48 +26,48 @@ website:
   favicon: ./files/images/favicon.png
   site-url: "https://c-monaghan.github.io/"
   repo-url: "https://github.com/C-Monaghan/C-Monaghan.github.io"
-  
+
   navbar:
     pinned: true
-    
+
     title: false
     logo: ./files/images/favicon.png
     left:
     # Home Page
-      - text: About 
+      - text: About
         icon: person-circle
         href: index.qmd
-        
+
     # CV
       - text: CV
         icon: file-earmark-text-fill
         target: _blank
         href: ./files/CV.pdf
-      
+
       # Research
       - text: Research
         icon: book-half
         href: research/index.qmd
-        
+
       # Talks
       - text: Talks
         icon: mic-fill
         href: talks/index.qmd
-        
+
       # Software
       - text: Software
         icon: laptop-fill
         href: software/index.qmd
-        
+
       # Blog
       - text: Blog
         icon: pen-fill
         href: posts/index.qmd
-        
+
       # PhD Resources
       # - href: resources/index.qmd
       # text: PhD Resources
-        
+
     right:
       - text: "{{< iconify bi rss size=1.1em title='RSS' >}}"
         href: atom.xml
@@ -85,7 +86,7 @@ website:
       - icon: twitter-x
         href: https://twitter.com/CormacMonaghan1
         target: _blank
-  page-footer: 
+  page-footer:
     background: light
     left: |
       <span class="faux-block">All content licensed under<br>[{{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} Creative Commons CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)</span>
@@ -96,11 +97,10 @@ website:
 
 format:
   html:
-    theme: 
+    theme:
       - cosmo
       - html/styles.scss
     toc: true
     page-layout: full
     anchor-sections: true
     highlight-style: monokai
-
