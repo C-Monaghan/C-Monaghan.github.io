@@ -10,11 +10,10 @@ categories:
   - "#TidyTuesday"
   - data visualisation
 image: "../../../thumbnails/tt_2024_w40_thumb.png"
-citation:
-  url: "https://c-monaghan.github.io/posts/2024/09/28/TT-W40/"
+doi: 10.59350/0qppj-j7r10
+citation: true
 execute:
   warning: false
-editor: source
 ---
 
 ![The image displays the positional movements of major white chess pieces. Denser curves indicate that pieces are move often moved in that direction.](tt_2024_w40.png){#fig-position .lightbox}
@@ -22,7 +21,9 @@ This document analyzes a dataset of chess games from [Lichess](https://lichess.o
 
 # Setting up
 
-```{r setting-up, output = FALSE}
+```{r}
+#| label: setting-up
+#| output: false
 set.seed(321) # For reproducibility
 
 # Loading packages -------------------------------------------------------------
@@ -93,7 +94,10 @@ data <- data$chess
 
 The dataset includes the move sequences made by each player, represented as a string of moves. Below is a preview of the first two rows of the dataset.
 
-```{r data-moves}
+```{r}
+#| label: date-moves
+#| collapse: true
+#|
 data %>%
   select(game_id, moves) %>%
   mutate(game_id = seq(1:nrow(data))) %>%
@@ -107,7 +111,10 @@ Each row displays the move sequence for a game, starting with White's move. For 
 
 To facilitate further analysis, we will convert the raw move strings into the PGN format, using a custom `convert_to_pgn()` function that I wrote.
 
-```{r convert-to-pgn}
+```{r}
+#| label: convert-to-pgn
+#| collapse: true
+#|
 # Convert moves into PGN format ------------------------------------------------
 convert_to_pgn <- function(moves, game_id) {
 
@@ -158,7 +165,10 @@ However, for those interested I have left the parallel processing code below
 
 Now that the data is in PGN format, we can use the `history_detail()` function from the `rhcess` package to extract the game history. However, because the dataset contains over 20,000 rows, processing every game sequentially would be time-consuming. To speed up this process, we will implement parallel processing using the `furrr` package.
 
-```{r game-history, eval=FALSE}
+```{r}
+#| label: game-history
+#| eval: false
+#|
 # Function to extract game history
 process_moves <- function(p) {
   chss <- Chess$new()          # Initialize a new chess object
@@ -177,7 +187,10 @@ chess_games <- chess_games %>%
 
 The game history data contains 1,393,586 observations on both white and black's moves. For the purpose of analysis we are only interested in plotting white's moves. Additionally, we will sample 25,000 moves from white so as not to create an over-populated graph.
 
-```{r filtering-to-white, eval=FALSE}
+```{r}
+#| label: filtering-to-white
+#| eval: false
+#|
 # White pieces
 white_pieces <- c(
   "a1 Rook", "b1 Knight", "c1 Bishop", "White Queen",
@@ -190,7 +203,10 @@ chess_games <- chess_games %>%
 
 :::
 
-```{r history-data}
+```{r}
+#| label: history-data
+#| collapse: true
+#|
 chess_games <- readxl::read_xlsx(path = here::here("data/chess_history.xlsx"))
 
 chess_games %>%
@@ -203,7 +219,9 @@ chess_games %>%
 
 First, we will create a chessboard using `ggplot`. We can do this using the `.chessboard()` function, again from the `rchess` package. This function generates the grid and coordinates for each square which can piped into ggplot.
 
-```{r chess-board}
+```{r}
+#| label: chess-board
+#|
 # Creating a chess board -------------------------------------------------------
 board <- rchess:::.chessboarddata() %>%
   tibble() %>%

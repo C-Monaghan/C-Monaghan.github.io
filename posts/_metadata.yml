@@ -1,31 +1,32 @@
 # options specified here will apply to all posts in this folder
 
-date-format: "MMMM D, YYYY"
+# Date format
+date-format: "dddd, MMMM D, YYYY"
 
-# enable banner style title blocks ----
-title-block-banner: true
+# enable banner style title blocks
+title-block-banner: "#170C3A"
 
-# HTML Options: https://quarto.org/docs/reference/formats/html.html ------------
-## General
+format:
+  html:
+    code-tools: true
+    quarto-template-params:
+      banner-header-class: "blog-post"
+
+# TOC options
 toc: true
 toc-title: On this page
 toc-location: right
-anchor-sections: true	
+
+anchor-sections: true
 
 ## Code
-code-tools: true
-self-contained: true
 code-link: true
-code-fold: false
 code-block-bg: "#333A3F"
 
 freeze: true
 
-## Appendix
-citation: true
-
 # Default author
-author: 
+author:
   - name: "Cormac Monaghan"
     url: "https://c-monaghan.github.io/"
     orcid: "0000-0001-9012-3060"

@@ -12,11 +12,10 @@ categories:
   - regression
   - r
 image: "../../../thumbnails/regression_model_thumb.png"
-citation:
-  url: "https://c-monaghan.github.io/posts/2025/03/12/Linear-Regression/"
+doi: 10.59350/nj895-ta783
+citation: true
 execute:
   warning: false
-editor: source
 ---
 
 For the past few years I've been a statistics tutor in the psychology department at Maynooth University. We cover everything from the basics of descriptive statistics and graphs to the nitty-gritty of t-tests, correlations, and ANOVAs. However, there's one topic where I always slow down and dive deep: regression analysis. Why? Because linear regression is basically the Swiss Army knife of statistics—it’s everywhere, it’s versatile, and it’s way cooler than it sounds.

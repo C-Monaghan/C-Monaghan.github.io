@@ -9,11 +9,10 @@ categories:
   - "#TidyTuesday"
   - data visualisation
 image: "../../../thumbnails/tt_2024_w41_thumb.png"
-citation:
-  url: "https://c-monaghan.github.io/posts/2024/10/07/TT-W41/"
+doi: 10.59350/j4p1m-m9296
+citation: true
 execute:
   warning: false
-editor: source
 ---
 
 ![The image displays the abundance of birds for the 15 most visited National Parks in the USA](tt_2024_w41.png){#fig-bird .lightbox}

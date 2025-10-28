@@ -1,9 +1,11 @@
 ---
 title: "Agent Based Models"
-description: "Introduction to Agent-Based Modelling for Public Health Research workshop"
 date: 2024-07-10
+description: "Introduction to Agent-Based Modelling for Public Health Research workshop"
 image: ABMs.png
 code-tools: false
+citation: true
+doi: 10.59350/50r9q-kyb55
 ---
 
 Recently, I attended the "Introduction to Agent-Based Modelling for Public Health Research" workshop, organised by the [National Centre for Research Methods](https://www.ncrm.ac.uk/) and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software [NetLogo](https://github.com/NetLogo/NetLogo). This post provides an overview of what agent-based modelling is.Recently, I attended the "Introduction to Agent-Based Modelling for Public Health Research" workshop, organised by the [National Centre for Research Methods](https://www.ncrm.ac.uk/) and held at the University of Glasgow. The workshop covered the principles, concepts, and steps involved in building and analysing agent-based models using the software [NetLogo](https://github.com/NetLogo/NetLogo). This post provides an overview of what agent-based modelling is.
@@ -14,7 +16,7 @@ Recently, I attended the "Introduction to Agent-Based Modelling for Public Healt
 
 Agent-based models are computer simulations used to study the interactions between individuals, entities, environments, and time. These stochastic models are built from the bottom up, meaning individual agents (oftentimes representing people) are assigned specific attributes. The agents are programmed to behave and interact with other agents and their environment in predetermined ways, producing emergent effects that differ from the effects observed at the individual level.
 
-![](./ABMs.png){.lightbox} 
+![](./ABMs.png){.lightbox}
 
 Agent-based models differ from the traditional regression-based methods in several key ways. For starters, regression-based methods focus on dependent and independent variables. Researchers often ask themselves *What variables do I need to consider in my model?*. In contrast, agent-based models shift the focus to **dynamic processes**, prompting the question *What processes do I need to consider?*.
 

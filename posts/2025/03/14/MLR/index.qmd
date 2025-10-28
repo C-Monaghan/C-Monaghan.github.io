@@ -12,11 +12,10 @@ categories:
   - regression
   - r
 image: "../../../thumbnails/regression_mlr_thumb.png"
-citation:
-  url: "https://c-monaghan.github.io/posts/2025/03/14/MLR/"
+doi: 10.59350/63ca3-q4n51
+citation: true
 execute:
   warning: false
-editor: source
 ---
 
 In my last post I showed how to do [simple linear regression by hand](https://c-monaghan.github.io/posts/2025/03/12/Linear-Regression/). However, naturally, in most cases with statistics, you never have just one predictor variable, but rather multiple. As such, in this post, I will show how to do multiple linear regression by hand. Multiple linear regression is an extension of simple linear regression that allows for more than one predictor variable. It’s a powerful tool for understanding the relationship between several independent variables and a single dependent variable.

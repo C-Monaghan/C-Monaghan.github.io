@@ -24,6 +24,16 @@
     ]
   },
   {
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/2025/03/14/MLR/index.html",
+      "/posts/2025/03/12/Linear-Regression/index.html",
+      "/posts/2024/10/07/TT-W41/index.html",
+      "/posts/2024/09/28/TT-W40/index.html",
+      "/posts/2024/09/27/ABM/index.html"
+    ]
+  },
+  {
     "listing": "/atom.html",
     "items": [
       "/posts/2025/03/14/MLR/index.html",
