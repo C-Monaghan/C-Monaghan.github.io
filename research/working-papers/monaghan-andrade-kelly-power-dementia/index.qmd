@@ -26,7 +26,6 @@ pub-info:
     - name: Preprint
       url: https://c-monaghan.github.io/crisp-clam/analysis/manuscript.html
       icon: fa-solid fa-file-pdf
-      local: true
     - name: Code
       url: https://github.com/C-Monaghan/crisp-clam
       icon: fa-brands fa-github
