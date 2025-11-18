@@ -9,19 +9,19 @@
     - name: Github Repository
       url: https://github.com/C-Monaghan/Zotero
       icon: fa-brands fa-github
-      
+
 - title: "Procrastination and Dementia"
   date: 2025-04-23
   description: "Talk presented at the Stats4Grads seminar series at Durham University"
   location: "Durham, United Kingdom"
-  links: 
+  links:
     - name: Slides
       url: https://c-monaghan.github.io/talks/stats-4-grads.html#/title-slide
       icon: fa-solid fa-chalkboard-user
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-04-23-stats4grads
       icon: fa-brands fa-github
-      
+
 - title: "Procrastination and Cognitive Decline"
   date: 2025-06-12
   description: "Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University"
@@ -33,7 +33,7 @@
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-06-12-TSE
       icon: fa-brands fa-github
-      
+
 - title: "The Role of Temporal Orientation and Subjective Remaining Life in Procrastination"
   date: 2025-07-11
   description: "Talk presented at the 12th International Conference on Procrastination Research in Utrecht"
@@ -46,7 +46,7 @@
       url: https://github.com/C-Monaghan/talks/tree/main/2025-07-11-PRC
       icon: fa-brands fa-github
 
-  
+
 - title: "My Summer Holiday"
   date: 2025-10-22
   description: "Talk presented at Research Week (2025) at Maynooth University"
@@ -57,4 +57,16 @@
       icon: fa-solid fa-chalkboard-user
     - name: Github Repository
       url: https://github.com/C-Monaghan/talks/tree/main/2025-10-22-research-week
+      icon: fa-brands fa-github
+
+- title: "Goodness of fit diagnostics for Markov Models"
+  date: 2025-11-20
+  description: "Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University"
+  location: "Maynooth, Ireland"
+  links:
+    - name: Slides
+      url: https://c-monaghan.github.io/talks/2025-11-20-TSE.html#/title-slide
+      icon: fa-solid fa-chalkboard-user
+    - name: Github Repository
+      url: https://github.com/C-Monaghan/talks/tree/main/2025-11-20-TSE
       icon: fa-brands fa-github
