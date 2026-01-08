@@ -69,23 +69,36 @@ website:
       # text: PhD Resources
 
     right:
+    # RSS Reader
       - text: "{{< iconify bi rss size=1.1em title='RSS' >}}"
         href: atom.xml
-    # Socials
-      - icon: envelope
+    # Email
+      - text: "{{< iconify bi envelope size=1.1em title='E-mail' >}}"
         href: mailto:cormacmonaghan@protonmail.com
-      - icon: linkedin
+    # Linkedin
+      - text: "{{< iconify bi linkedin size=1.1em title='LinkedIn' >}}"
         href: https://www.linkedin.com/in/cormac-monaghan/
+        rel: me
         target: _blank
-      - text: "{{< fa brands orcid >}}"
+    # Orcid
+      - text: "{{< iconify fa6-brands orcid size=1.1em title='Orcid' >}}"
         href: https://orcid.org/0000-0001-9012-3060
+        rel: me
         target: _blank
-      - icon: github
+    # Github
+      - text: "{{< iconify bi github size=1.1em title='GitHub' >}}"
         href: https://github.com/C-Monaghan
+        rel: me
         target: _blank
-      - icon: twitter-x
-        href: https://twitter.com/CormacMonaghan1
+    # Bluesky
+      - text: "{{< iconify fa6-brands bluesky size=1.1em title='Bluesky' >}}"
+        href: https://bsky.app/profile/c-monaghan.bsky.social
+        rel: me
         target: _blank
+    # Twitter (I'm not calling it X)
+      # - icon: twitter-x
+      #   href: https://twitter.com/CormacMonaghan1
+      #   target: _blank
   page-footer:
     background: light
     left: |
