@@ -40,7 +40,7 @@ pub-info:
       url: https://www.zotero.org/save?type=doi&q=10.1002/dad2.70245
       icon: ai ai-zotero
   reference: >-
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, Kelly, M, & McHugh Power, J. (2026). Procrastination as a Marker of Cognitive Decline: Evidence from Longitudinal Transitions in the Older Adult Population. <em>Alzheimer's & Dementia: Diagnosis, Assessment & Disease Monitoring, 18</em>(1), e70245. <a href=https://doi.org/10.1002/dad2.70245><code>10.1002/dad2.70245</code></a>
+    <strong>Monaghan, C</strong>, <a href="https://rafamoral.github.io/">de Andrade Moral R</a>, <a href="https://www.ncirl.ie/About/A-Z-Staff-Directory/Staff/346">Kelly, M</a>, & <a href="https://www.maynoothuniversity.ie/people/joanna-mchugh-power">McHugh Power, J</a>. (2026). Procrastination as a Marker of Cognitive Decline: Evidence from Longitudinal Transitions in the Older Adult Population. <em>Alzheimer's & Dementia: Diagnosis, Assessment & Disease Monitoring, 18</em>(1), e70245. <a href=https://doi.org/10.1002/dad2.70245><code>10.1002/dad2.70245</code></a>
 ---
 
 ## Important links

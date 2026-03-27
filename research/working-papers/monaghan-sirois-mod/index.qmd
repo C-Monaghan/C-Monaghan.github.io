@@ -1,7 +1,7 @@
 ---
 title: "Procrastination, stress, and self-rated health: A multi-sample meta-analysis"
 date: 2025-08-13
-author: 
+author:
   - name: "Cormac Monaghan"
     url: "https://c-monaghan.github.io/"
     orcid: "https://orcid.org/0000-0001-9012-3060"
@@ -18,10 +18,9 @@ categories:
   - meta analysis
 pub-info:
   reference: >-
-    Sirois, F, M and <a href="https://github.com/C-Monaghan">Monaghan, C.</a>. Procrastination, stress, and self-rated health: A multi-sample meta-analysis.
+     <a href="https://www.durham.ac.uk/staff/fuschia-sirois/">Sirois, F</a> & <strong>Monaghan, C</strong>. Procrastination, stress, and self-rated health: A multi-sample meta-analysis.
 pub-status:
   status: Writing
   class: warning
   icon: fa-solid fa-pencil
 ---
-

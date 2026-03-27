@@ -6,20 +6,20 @@ author:
     url: https://c-monaghan.github.io/
     orcid: 0000-0001-9012-3060
     github: https://github.com/C-Monaghan/Procrastination_Predictors
-    affiliation: 
+    affiliation:
       - Hamilton Institute, Maynooth University, Ireland
       - Department of Psychology, Maynooth University, Ireland
   - name: Ione Avila-Palencia
     orcid: 0000-0002-4353-2256
-    affiliation: 
+    affiliation:
       - Centre for Public Health, Queens University, Ireland
   - name: S. Duke Han
     orcid: 0000-0003-2453-9230
-    affiliation: 
+    affiliation:
       - Department of Psychology, University of Southern California, CA, USA
   - name: Joanna McHugh Power
     orcid: 0000-0002-7387-3107
-    affiliation: 
+    affiliation:
       - Department of Psychology, Maynooth University, Ireland
 doi: "10.1080/13607863.2024.2345781"
 categories:
@@ -28,7 +28,7 @@ categories:
   - journal article
 pub-info:
   reference: >-
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Avila-Palencia, I., Han, S. D., & McHugh Power, J. (2024). Procrastination, depressive symptomatology, and loneliness in later life. <em>Aging & Mental Health, 28</em>(9), 1270–1277. <a href=https://doi.org/10.1080/13607863.2024.2345781><code>10.1080/13607863.2024.2345781</code></a>
+    <strong>Monaghan, C</strong>, <a href="https://www.qub.ac.uk/research-centres/SECA/People/CentreFellows/IoneAvila-Palencia/">Avila-Palencia, I</a>, <a href="https://keck.usc.edu/faculty-search/duke-han/">Han, S. D</a>, & <a href="https://www.maynoothuniversity.ie/people/joanna-mchugh-power">McHugh Power, J</a>. (2024). Procrastination, depressive symptomatology, and loneliness in later life. <em>Aging & Mental Health, 28</em>(9), 1270–1277. <a href=https://doi.org/10.1080/13607863.2024.2345781><code>10.1080/13607863.2024.2345781</code></a>
   links:
     - name: Final version
       url: https://doi.org/10.1080/13607863.2024.2345781

@@ -5,7 +5,7 @@ author:
     - name: Cormac Monaghan
       url: https://c-monaghan.github.io/
       orcid: 0000-0001-9012-3060
-      affiliation: 
+      affiliation:
       - Department of Psychology, Maynooth University, Ireland
     - name: Deirdre Desmond
       affiliation:
@@ -17,7 +17,7 @@ categories:
   - conference
 pub-info:
   reference: >-
-    <a href="https://github.com/C-Monaghan">Monaghan, C.</a> & Deirdre Desmond. <em>Academic procrastination and perfectionism - the mediating role of temporal thought</em> [Poster Session]. Annual Student Psychology Conference 2022. Waterford Institute of Technology, Ireland. <a href=https://doi.org.10.13140/RG.2.2.19926.32329><code>10.13140/RG.2.2.19926.32329</code></a>
+    <strong>Monaghan, C</strong> & <a href="https://www.maynoothuniversity.ie/faculty-science-engineering/our-people/deirdre-desmond">Deirdre Desmond</a>. <em>Academic procrastination and perfectionism - the mediating role of temporal thought</em> [Poster Session]. Annual Student Psychology Conference 2022. Waterford Institute of Technology, Ireland. <a href=https://doi.org.10.13140/RG.2.2.19926.32329><code>10.13140/RG.2.2.19926.32329</code></a>
 ---
 
 ## Abstract

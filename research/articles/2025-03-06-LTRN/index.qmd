@@ -1,39 +1,39 @@
 ---
-title: "Loneliness Research in Ireland: What Should We Prioritise?" 
-date: 2025-03-05 
-author:   
-  - name: Joanna McHugh Power     
-    orcid: 0000-0002-7387-3107     
-    affiliation:        
+title: "Loneliness Research in Ireland: What Should We Prioritise?"
+date: 2025-03-05
+author:
+  - name: Joanna McHugh Power
+    orcid: 0000-0002-7387-3107
+    affiliation:
       - Department of Psychology, Maynooth University, Ireland
   - name: Robyn Homeniuk
     orcid: 0000-0002-5526-4113
     affiliation:
       - ALONE, Pleasants Street, Dublin 2, Ireland
-  - name: Cormac Monaghan     
-    url: https://c-monaghan.github.io/     
-    orcid: 0000-0001-9012-3060     
-    affiliation:        
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+    orcid: 0000-0001-9012-3060
+    affiliation:
       - Department of Psychology, Maynooth University, Ireland
   - name: Eleanor Bantry-White
     orcid: 0000-0002-7663-6836
-    affiliation: 
+    affiliation:
       - School of Applied Social Studies, University College Cork, Ireland.
   - name: Aileen O’Reilly
     orcid: 0000-0001-9965-575X
-    affiliation: 
+    affiliation:
       - ALONE, Pleasants Street, Dublin 2, Ireland
-categories:   
+categories:
   - loneliness
   - prioritisation
-  - journal article 
-pub-info:   
-  reference: >-     
-    McHugh Power, J, Homeniuk, R, <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, Bantry-White, E, &  O’Reilly, A. (2025). Loneliness Research in Ireland: What Should we Prioritise? <em>ALONE</em>
-  links:     
-    - name: Final version       
+  - journal article
+pub-info:
+  reference: >-
+    <a href="https://www.maynoothuniversity.ie/people/joanna-mchugh-power">McHugh Power, J</a>, <a href="https://orcid.org/0000-0002-5526-4113">Homeniuk, R</a>, <strong>Monaghan, C</strong>, <a href="https://research.ucc.ie/en/persons/eleanor-bantry-white/">Bantry-White, E</a>, & <a href="https://www.researchgate.net/profile/Aileen-Oreilly-2">O’Reilly, A</a>. (2025). Loneliness Research in Ireland: What Should we Prioritise? <em>ALONE</em>
+  links:
+    - name: Final version
       url: ./files/LTRN_2025.pdf
-      local: true      
+      local: true
       icon: fa-solid fa-scroll
 toc: true
 ---
@@ -55,11 +55,11 @@ toc: true
 ## Citation
 
 ``` bibtex
-@article{Power2025,   
-  title={Loneliness Research in Ireland: What Should we Prioritise},   
+@article{Power2025,
+  title={Loneliness Research in Ireland: What Should we Prioritise},
   author={Power, Joanna McHugh, Homeniuk, Robyn, Monaghan, Cormac, Bantry-White, Eleanor, and O’Reilly, Aileen},
-  year={2025},   
-  publisher={ALONE},   
+  year={2025},
+  publisher={ALONE},
   url={https://alone.ie/library/loneliness-research-in-ireland-what-should-we-prioritise/}
   }
 ```

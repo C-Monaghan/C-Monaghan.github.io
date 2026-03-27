@@ -1,11 +1,11 @@
 ---
 title: "Procrastination as a risk factor for poor health in older adults"
 date: 2024-09-06
-author: 
+author:
   - name: Cormac Monaghan
     url: https://c-monaghan.github.io/
     orcid: 0000-0001-9012-3060
-    affiliation: 
+    affiliation:
       - Hamilton Institute, Maynooth University, Ireland
       - Department of Psychology, Maynooth University, Ireland
   - name: Rafael de Andrade Moral
@@ -15,7 +15,7 @@ author:
       - Department of Mathematics and Statistics, Maynooth University, Ireland
   - name: Joanna McHugh Power
     orcid: 0000-0002-7387-3107
-    affiliation: 
+    affiliation:
       - Department of Psychology, Maynooth University, Ireland
 categories:
   - procrastination
@@ -24,7 +24,7 @@ categories:
   - conference
 pub-info:
   reference: >-
-   <a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, & McHugh Power, J. (2024). <em>Procrastination as a risk factor for poor health in older adults</em> [Poster Session]. 38th Annual Conference of the European Health Psychology Society. Cascais, Portugal.
+   <strong>Monaghan, C</strong>, <a href="https://rafamoral.github.io/">de Andrade Moral, R</a>, & <a href="https://www.maynoothuniversity.ie/people/joanna-mchugh-power">McHugh Power, J</a>. (2024). <em>Procrastination as a risk factor for poor health in older adults</em> [Poster Session]. 38th Annual Conference of the European Health Psychology Society. Cascais, Portugal.
   links:
     - name: Poster
       url: ./files/EHPS_2024.pdf
