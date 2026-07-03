@@ -1,6 +1,10 @@
 ---
 title: "Talks"
-listing: 
+listing:
+  - id: talks_2026
+    contents: "./talks_2026.yml"
+    sort: "date desc"
+    template: ../html/talks/listing.ejs
   - id: talks_2025
     contents: "./talks_2025.yml"
     sort: "date desc"
@@ -27,6 +31,11 @@ This section of my website contains the source code, links, and slides for vario
 ### Copyright
 
 Except where noted, all content is © Cormac Monaghan and licensed under [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/).
+:::
+
+## 2026
+
+:::{#talks_2026}
 :::
 
 ## 2025
