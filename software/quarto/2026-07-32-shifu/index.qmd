@@ -1,0 +1,11 @@
+---
+title: "Shifu"
+date: 2026-07-23
+author:
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+pub-info:
+  reference: >-
+    <a href="https://github.com/C-Monaghan">Monaghan, C.</a> (2026). Shifu – a modern Typst-based academic manuscript template <a href = "https://github.com/C-Monaghan/shifu-academic-quarto">https://github.com/C-Monaghan/shifu-academic-quarto</a>
+toc: true
+---
