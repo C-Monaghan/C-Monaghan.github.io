@@ -17,12 +17,13 @@ author:
       - Hamilton Institute, Maynooth University
       - Department of Psychology, Maynooth University
   - name: Eve Fitzgerald
+    url: https://www.durham.ac.uk/staff/eve-fitzgerald/
 categories:
   - procrastination
   - meta analysis
 pub-info:
   reference: >-
-    <a href="https://www.durham.ac.uk/staff/fuschia-sirois/">Sirois, F</a>, <a href="https://www.etsu.edu/com/psychiatry/bio/hirschj.php">Hirsch, J</a>, <strong>Monaghan, C</strong>, & Fitzgerald E. Is chronic procrastination increasing over time?
+    <a href="https://www.durham.ac.uk/staff/fuschia-sirois/">Sirois, F</a>, <a href="https://www.etsu.edu/com/psychiatry/bio/hirschj.php">Hirsch, J</a>, <strong>Monaghan, C</strong>, & <a href="https://www.durham.ac.uk/staff/eve-fitzgerald/">Fitzgerald E</a>. Is chronic procrastination increasing over time?
 pub-status:
   status: Writing
   class: warning
