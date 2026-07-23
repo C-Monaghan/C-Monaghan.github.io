@@ -256,7 +256,7 @@
     "href": "index.html",
     "title": "Cormac Monaghan",
     "section": "",
-    "text": "Welcome! I am a data scientist with a focus on applying advanced statistical analysis and causal inference techniques to the study of procrastination, particularly within older adult populations. My research aims to uncover the underlying patterns, causal relationships, and consequences of procrastination behaviors, ultimately providing insights that could inform interventions and improve quality of life of older adults.\nI am currently pursuing my PhD with the Research Ireland Center for Research Training in Foundations in Data Science. This program is a large-scale collaborative initiative between the University of Limerick (UL), Maynooth University (MU) and University College Dublin (UCD) which aims to train over 130 PhD students with world-class foundational understanding in Applied Mathematics, Statistics and Machine Learning. My research is being conducted in the Maynooth University Hamilton Institute."
+    "text": "Welcome! I am a data scientist with a focus on applying advanced statistical analysis and causal inference techniques to the study of procrastination, particularly within older adult populations. My research aims to uncover the underlying patterns, causal relationships, and consequences of procrastination behaviours, ultimately providing insights that could inform interventions and improve quality of life of older adults.\nI am currently pursuing my PhD with the Research Ireland Center for Research Training in Foundations in Data Science. This program is a large-scale collaborative initiative between the University of Limerick (UL), Maynooth University (MU) and University College Dublin (UCD) which aims to train over 130 PhD students with world-class foundational understanding in Applied Mathematics, Statistics and Machine Learning. My research is being conducted in the Maynooth University Hamilton Institute."
   },
   {
     "objectID": "posts/2024/09/27/ABM/index.html",
@@ -536,21 +536,21 @@
     "href": "software/index.html",
     "title": "Software",
     "section": "",
-    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. R package version 1.0.0. https://c-monaghan.github.io/lwc2022/      \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
+    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. https://c-monaghan.github.io/lwc2022/       \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
   },
   {
     "objectID": "software/index.html#r-packages",
     "href": "software/index.html#r-packages",
     "title": "Software",
     "section": "",
-    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. R package version 1.0.0. https://c-monaghan.github.io/lwc2022/      \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
+    "text": "Monaghan, C., de Andrade Moral, R, & McHugh Power, J. (2024). LWC2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data. https://c-monaghan.github.io/lwc2022/       \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
   },
   {
     "objectID": "software/index.html#quarto-extensions",
     "href": "software/index.html#quarto-extensions",
     "title": "Software",
     "section": "Quarto Extensions",
-    "text": "Quarto Extensions\n\n\n\n    \n        \n            \n                Monaghan, C., (2025). 🧁 Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js (Version 0.0.9).  https://github.com/C-Monaghan/mocha \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
+    "text": "Quarto Extensions\n\n\n\n    \n        \n            \n                Monaghan, C., (2025). 🧁 Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js  https://github.com/C-Monaghan/mocha \n            \n\n            \n\n            \n            \n        \n        \n\n\nNo matching items"
   },
   {
     "objectID": "research/working-papers/monaghan-lara-andrade-residuals/index.html",
