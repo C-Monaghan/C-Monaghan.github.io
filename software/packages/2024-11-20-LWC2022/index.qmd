@@ -20,6 +20,8 @@ doi: 10.32614/CRAN.package.lwc2022
 description: |
   Langa-Weir classification of cognitive function.
 image: lwc.png
+github: https://github.com/C-Monaghan/lwc2022
+website: https://c-monaghan.github.io/lwc2022
 categories:
   - R
   - Package

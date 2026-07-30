@@ -5,10 +5,8 @@ date-format: "MMMM YYYY"
 title-block-banner: "#7287fd"
 
 # Default for table of contents
-toc: true
-toc-title: Contents
-toc-location: right
-anchor-sections: true	
+toc: false
+anchor-sections: true
 
 format:
   html:

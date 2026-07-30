@@ -12,10 +12,9 @@ listing:
     type: grid
     fields: [title, image, description]
 page-layout: full
-toc: false
 ---
 
-## R Packages
+## Software Packages
 
 ::: {#packages}
 :::
