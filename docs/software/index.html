@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-9de9f6925d305bcf5b7eb9351f368d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-729457df9558bc31a15d2140e14520e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-18d2f635bd9ac6449f3c6ad5bb51ddaf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
@@ -86,9 +86,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-freeze','listing-pagetitle','listing-author-meta','listing-website','listing-format','listing-engines','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-anchor-sections','listing-title','listing-date','listing-author','listing-doi','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-title','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-freeze","listing-pagetitle","listing-author-meta","listing-website","listing-format","listing-engines","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-anchor-sections","listing-title","listing-date","listing-author","listing-doi","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -114,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-project','listing-freeze','listing-pagetitle','listing-author-meta','listing-website','listing-format','listing-engines','listing-_quarto-vars','listing-language','listing-date-format','listing-title-block-banner','listing-toc','listing-toc-title','listing-toc-location','listing-anchor-sections','listing-title','listing-date','listing-author','listing-pub-info','listing-path','listing-outputHref','listing-date-modified','listing-description','listing-filename','listing-file-modified','listing-reading-time','listing-word-count',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      valueNames: ['listing-title','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-project","listing-freeze","listing-pagetitle","listing-author-meta","listing-website","listing-format","listing-engines","listing-_quarto-vars","listing-language","listing-date-format","listing-title-block-banner","listing-toc","listing-toc-title","listing-toc-location","listing-anchor-sections","listing-title","listing-date","listing-author","listing-pub-info","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -256,7 +256,7 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block research default page-columns page-full">
     <div class="quarto-title-banner page-columns page-full">
-                <div class="quarto-title column-page-left">
+                <div class="quarto-title column-page">
             <h1 class="title">Software</h1>
 
             
@@ -267,7 +267,7 @@ window.Quarto = {
     
     
     
-    <div class="quarto-title-meta column-page-left">
+    <div class="quarto-title-meta column-page">
 
         
       
@@ -279,73 +279,73 @@ window.Quarto = {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Contents</h2>
-   
-  <ul>
-  <li><a href="#r-packages" id="toc-r-packages" class="nav-link active" data-scroll-target="#r-packages">R Packages</a></li>
-  <li><a href="#quarto-extensions" id="toc-quarto-extensions" class="nav-link" data-scroll-target="#quarto-extensions">Quarto Extensions</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
 <section id="r-packages" class="level2">
 <h2 class="anchored" data-anchor-id="r-packages">R Packages</h2>
-<div id="listing-packages" class="quarto-listing quarto-listing-container-custom">
-<div class="research project-list">
-<ul class="list">
-    
-        <li class="project" data-index="0" data-listing-date-sort="1732060800000" data-listing-file-modified-sort="1784837992284" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-            <div class="project-content listing-pub-info">
-                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a>, de Andrade Moral, R, &amp; McHugh Power, J. (2024). <code>LWC2022:</code> Langa-Weir Classification of Cognitive Function for 2022 HRS Data. <a href="https://c-monaghan.github.io/lwc2022/">https://c-monaghan.github.io/lwc2022/</a> <br> <a href="https://cran.r-project.org/package=lwc2022" target="_blank"><img src="https://www.r-pkg.org/badges/version/lwc2022" alt="CRAN"> </a> <a href="https://lifecycle.r-lib.org/articles/stages.html#stable" target="_blank"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Life Cycle"> </a> <a href="https://cran.r-project.org/web/packages/lwc2022/index.html" target="_blank"><img src="https://cranlogs.r-pkg.org/badges/grand-total/lwc2022?color=blue" alt="Downloads"> </a></p>
-            </div>
-
-            
-
-            
-            
-        </li>
-        
-</ul>
+<div id="listing-packages" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UiUyQ1BhY2thZ2U=" data-listing-date-sort="1732060800000" data-listing-file-modified-sort="1785435553714" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../software/packages/2024-11-20-LWC2022/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../software/packages/2024-11-20-LWC2022/lwc.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+lwc2022
+</h5>
+<div class="card-text listing-description delink">
+<p>Langa-Weir classification of cognitive function.</p>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
 </section>
 <section id="quarto-extensions" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-extensions">Quarto Extensions</h2>
-<div id="listing-quarto" class="quarto-listing quarto-listing-container-custom">
-<div class="research project-list">
-<ul class="list">
-    
-        <li class="project" data-index="0" data-listing-date-sort="1784761200000" data-listing-file-modified-sort="1784839618472" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-            <div class="project-content listing-pub-info">
-                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a> (2026). Shifu – a modern Typst-based academic manuscript template <a href="https://github.com/C-Monaghan/shifu-academic-quarto">https://github.com/C-Monaghan/shifu-academic-quarto</a></p>
-            </div>
-
-            
-
-            
-            
-        </li>
-        
-        <li class="project" data-index="1" data-listing-date-sort="1753225200000" data-listing-file-modified-sort="1784839627875" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-            <div class="project-content listing-pub-info">
-                <p><a href="https://github.com/C-Monaghan">Monaghan, C.</a> (2025). Mocha – A Catppuccin-Inspired Theme for Quarto Reveal.js <a href="https://github.com/C-Monaghan/mocha"> https://github.com/C-Monaghan/mocha </a></p>
-            </div>
-
-            
-
-            
-            
-        </li>
-        
-</ul>
+<div id="listing-quarto" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="UXVhcnRvJTJDVHlwc3Q=" data-listing-date-sort="1784761200000" data-listing-file-modified-sort="1785433840244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../software/quarto/2026-07-32-shifu/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../software/quarto/2026-07-32-shifu/shifu.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Shifu
+</h5>
+<div class="card-text listing-description delink">
+<p>A Typst-based Quarto extension for producing modern academic manuscripts.</p>
+</div>
+</div>
+</div></a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="UXVhcnRv" data-listing-date-sort="1753225200000" data-listing-file-modified-sort="1785432989655" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="../software/quarto/2025-07-23-mocha/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="../software/quarto/2025-07-23-mocha/mocha.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Mocha
+</h5>
+<div class="card-text listing-description delink">
+<p>A Catppuccin-Inspired Theme for Quarto Reveal.js</p>
+</div>
+</div>
+</div></a>
+</div>
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
