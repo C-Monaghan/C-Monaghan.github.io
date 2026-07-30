@@ -4,6 +4,14 @@
     "items": []
   },
   {
+    "listing": "/software/index.html",
+    "items": [
+      "/software/packages/2024-11-20-LWC2022/index.html",
+      "/software/quarto/2026-07-32-shifu/index.html",
+      "/software/quarto/2025-07-23-mocha/index.html"
+    ]
+  },
+  {
     "listing": "/posts/index.html",
     "items": [
       "/posts/2025/03/14/MLR/index.html",
@@ -41,14 +49,6 @@
       "/research/conferences/2024-09-06-EHPS/index.html",
       "/research/conferences/2023-09-13-IGS/index.html",
       "/research/conferences/2022-04-01-WIT/index.html"
-    ]
-  },
-  {
-    "listing": "/software/index.html",
-    "items": [
-      "/software/packages/2024-11-20-LWC2022/index.html",
-      "/software/quarto/2026-07-32-shifu/index.html",
-      "/software/quarto/2025-07-23-mocha/index.html"
     ]
   }
 ]

@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cormac Monaghan">
+<meta name="description" content="Langa-Weir classification of cognitive function.">
 
-<title>lwc2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data | Cormac Monaghan – Cormac Monaghan</title>
+<title>lwc2022 | Cormac Monaghan – Cormac Monaghan</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -43,7 +44,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-9de9f6925d305bcf5b7eb9351f368d06.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-729457df9558bc31a15d2140e14520e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-cd2aad912aa04428a0e274f3b5559e73.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-contrib/iconify-2.1.0/iconify-icon.min.js"></script>
@@ -169,12 +170,21 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block research default page-columns page-full">
     <div class="quarto-title-banner page-columns page-full">
                 <div class="quarto-title column-page">
-            <h1 class="title">lwc2022: Langa-Weir Classification of Cognitive Function for 2022 HRS Data</h1>
+            <h1 class="title">lwc2022</h1>
 
             
+                        <div>
+                <div class="description">
+                    <p>Langa-Weir classification of cognitive function.</p>
+                </div>
+            </div>
             
             
-                    </div>
+                                    <div class="quarto-categories">
+                                <div class="quarto-category">R</div>
+                                <div class="quarto-category">Package</div>
+                            </div>
+                                </div>
     </div>
     
         <div class="project-details">
@@ -243,9 +253,7 @@ ul.task-list li input[type="checkbox"] {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
@@ -329,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/c-monaghan\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
