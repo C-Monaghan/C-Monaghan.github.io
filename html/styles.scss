@@ -1,11 +1,15 @@
+////////////////////////////////////////////////////////////////////////////////
+/// Quarto Theme Customisation
+////////////////////////////////////////////////////////////////////////////////
+///
 /*-- scss:defaults --*/
-
 $theme: "ath" !default;
 
-//
-// Color system
-//
+////////////////////////////////////////////////////////////////////////////////
+// Colour system
+////////////////////////////////////////////////////////////////////////////////
 
+// Base colour palette
 $white:    #ffffff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
@@ -18,6 +22,7 @@ $gray-800: #373a3c !default;
 $gray-900: #212529 !default;
 $black:    #000000 !default;
 
+// Brand colours
 $blue:    #2780e3 !default;
 $indigo:  #6610f2 !default;
 $purple:  #170C3A !default;
@@ -30,6 +35,7 @@ $green:   #118230 !default;
 $teal:    #20c997 !default;
 $cyan:    #3093CF !default;
 
+// Semantic colours
 $primary:   $pink !default;
 $secondary: $gray-700 !default;
 $success:   $green !default;
@@ -39,11 +45,9 @@ $danger:    $red !default;
 $light:     $gray-400 !default;
 $dark:      $black !default;
 
-// $min-contrast-ratio: 2.6 !default;
-
-// Fonts
-
-
+////////////////////////////////////////////////////////////////////////////////
+/// Typography
+////////////////////////////////////////////////////////////////////////////////
 $font-family-sans-serif: "Libre Franklin" !default;
 
 $headings-font-family: "Jost" !default;
@@ -53,9 +57,9 @@ $navbar-font-family: "Jost" !default;
 $toc-font-family: "Jost" !default;
 $footer-font-family: "Jost" !default;
 
-// $font-size-base: 1.1rem !default; // Assumes the browser default, typically `16px`
-// $font-size-sm: $font-size-base * .875 !default;
-
+////////////////////////////////////////////////////////////////////////////////
+/// Global Elements
+////////////////////////////////////////////////////////////////////////////////
 
 // Body
 $body-color: $gray-900 !default;
@@ -69,20 +73,18 @@ $link-hover-decoration: underline !default;
 // Inline code
 $code-bg: $gray-200 !default;
 $code-color: $gray-900 !default;
-
-// Code copy
 $btn-code-copy-color-active: $orange !default;
 
-// TOC
+////////////////////////////////////////////////////////////////////////////////
+/// Navigation
+////////////////////////////////////////////////////////////////////////////////
 $toc-color: $orange;
 $toc-font-size: 1em;
 
-// Navbar
 $navbar-bg: $purple !default;
 $navbar-fg: $white !default;
 $navbar-hl: $light-orange !default;
 
-// Footer
 $footer-bg: $gray-900 !default;
 $footer-fg: $gray-300 !default;
 
@@ -93,57 +95,35 @@ $footer-fg: $gray-300 !default;
   margin: 0 auto;
 }
 
+////////////////////////////////////////////////////////////////////////////////
+/// Fonts
+////////////////////////////////////////////////////////////////////////////////
 $web-font-path: "https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" !default;
 
 @if $web-font-path {
     @import url($web-font-path);
 }
 
-body {
-    -webkit-font-smoothing: antialiased;
-}
+////////////////////////////////////////////////////////////////////////////////
+/// Global syling
+////////////////////////////////////////////////////////////////////////////////
 
-.rtl {
-    direction: rtl;
-}
-
-
-.home {
-    .quarto-title-banner {
-        margin-bottom: 0;
-    }
-}
-
-#title-block-header {
-    &.home {
-        margin-block-end: 0.5rem;
-    }
-}
-
-.home {
-    .quarto-title-banner {
-        margin-bottom: 0;
-    }
-
-    #title-block-header {
-        margin-block-end: 0;
-    }
-}
-
-// Shrink blocks of code
+// Shrink blocks of code -------------------------------------------------------
 pre.text, pre.sourceCode, .cell-output pre {
     font-size: 0.775em;
 }
 
+// Customise nav bar -----------------------------------------------------------
 .navbar {
     font-family: $navbar-font-family;
 }
 
-// Put all the icons in a single row in the hamburger menu
+// Put all the icons in a single row in the hamburger menu ---------------------
 .navbar-nav.navbar-nav-scroll.ms-auto {
     flex-direction: row;
 }
 
+// Customise TOC ---------------------------------------------------------------
 #TOC {
     font-family: $toc-font-family;
     padding-bottom: 0.1em;
@@ -163,38 +143,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     padding-bottom: 0.25rem;
 }
 
-// Blog categories
-#quarto-margin-sidebar {
-    .quarto-listing-category-title {
-        margin-left: 0.5em;
-    }
-
-    .quarto-listing-category {
-        font-family: $toc-font-family;
-        font-weight: 300;
-        font-size: 1em;
-        line-height: 1.1;
-        padding-left: 0.6rem;
-        margin-left: 0.5em;
-        border-left: 1px solid $gray-200;
-
-        .category {
-            padding-bottom: 0.5rem;
-        }
-
-        .active {
-            font-weight: 400;
-            color: $orange;
-        }
-
-        .quarto-category-count {
-            font-weight: 200;
-            font-size: 0.8em;
-            color: $gray-600;
-        }
-    }
-}
-
+// Customise footer ------------------------------------------------------------
 .nav-footer {
     align-items: flex-start;  // Align all flex items to the top
     flex-wrap: wrap;
@@ -268,7 +217,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
-// Blog
+// Customising blog ------------------------------------------------------------
 .blog {
     .blog-entry {
         display: flex;
@@ -380,8 +329,39 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
+// Blog categories -------------------------------------------------------------
+#quarto-margin-sidebar {
+    .quarto-listing-category-title {
+        margin-left: 0.5em;
+    }
 
-// Research
+    .quarto-listing-category {
+        font-family: $toc-font-family;
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.1;
+        padding-left: 0.6rem;
+        margin-left: 0.5em;
+        border-left: 1px solid $gray-200;
+
+        .category {
+            padding-bottom: 0.5rem;
+        }
+
+        .active {
+            font-weight: 400;
+            color: $orange;
+        }
+
+        .quarto-category-count {
+            font-weight: 200;
+            font-size: 0.8em;
+            color: $gray-600;
+        }
+    }
+}
+
+// Customising research --------------------------------------------------------
 .quarto-title-block {
     .haiku {
         text-align: right;
@@ -528,6 +508,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
+// Customising teaching --------------------------------------------------------
 .teaching {
     .course-entry {
         display: flex;
@@ -599,6 +580,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
+// Customising talks -----------------------------------------------------------
 .talks {
     .talk-entry {
         display: flex;
@@ -652,19 +634,27 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 }
 
-.cv-download {
-    font-family: $headings-font-family;
-    background-color: #771C6D;
-    border-color: #771C6D;
-    color: $white;
+// Customising software --------------------------------------------------------
 
-    &:hover {
-        background-color: $red;
-        border-color: $red;
-        color: $white;
-    }
+// Make my software grid items change when you hover over them
+.quarto-grid-item {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    transition: all .2s;
+    overflow: hidden;
 }
 
+.quarto-grid-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.quarto-grid-item img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+// Not sure what this does -----------------------------------------------------
 .code-tools-button {
     position: relative;
     left: 5em;
