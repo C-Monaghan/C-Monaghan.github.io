@@ -654,6 +654,43 @@ pre.text, pre.sourceCode, .cell-output pre {
     object-fit: cover;
 }
 
+// Thesis button customisation -------------------------------------------------
+.thesis-button {
+    background: linear-gradient(135deg, $pink, $red);
+    border: none;
+    color: $white;
+    font-family: $headings-font-family;
+    font-weight: 500;
+    font-size: 1rem;
+
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+
+    box-shadow: 0 4px 12px rgba($red, 0.25);
+    transition: all 0.25s ease;
+
+    i {
+        margin-right: 0.35rem;
+    }
+
+    &:hover,
+    &:focus {
+        background: linear-gradient(
+            135deg,
+            lighten($pink, 5%),
+            lighten($red, 5%)
+        );
+        color: $white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba($red, 0.35);
+        text-decoration: none;
+    }
+
+    &:active {
+    transform: translateY(0);
+  }
+}
+
 // Not sure what this does -----------------------------------------------------
 .code-tools-button {
     position: relative;

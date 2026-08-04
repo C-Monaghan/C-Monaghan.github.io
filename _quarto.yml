@@ -106,7 +106,8 @@ website:
     center: |
       <span class="faux-block">{{< fa brands orcid >}} <strong>ORCID</strong> [{{< var orcid >}}](https://orcid.org/{{< var orcid >}})</span>
     right: |
-      <span class="faux-block">This website was built with [{{< fa brands github title="GitHub octocat logo" >}}]({{< var github-url >}}){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}</span>
+      <span class="faux-block">This website was built with [{{< fa brands github title="GitHub octocat logo" >}}]({{< var source.project_url >}}){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}</span>
+      [View the source at GitHub]({{< var source.project_source >}})
 
 format:
   html:
