@@ -1,0 +1,96 @@
+---
+title: "Procrastination, stress, and self-rated health: A multi-sample meta-analysis"
+date: 2026-08-08
+author:
+  - name: Fuschia Sirois
+    url: https://fuschiasirois.com/
+    orcid: https://orcid.org/0000-0002-0927-277X
+    affiliation: Department of Psychology, Durham University
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+    orcid: https://orcid.org/0000-0001-9012-3060
+    affiliation:
+      - Hamilton Institute, Maynooth University
+      - Department of Psychology, Maynooth University
+categories:
+  - procrastination
+  - stress
+  - health status
+  - self-rated health
+  - meta-analysis
+pub-info:
+  links:
+    - name: Preprint
+      url: https://c-monaghan.github.io/marigold-mailbox/analysis/manuscript.html
+      icon: fa-solid fa-file-pdf
+    - name: Final version
+      url:   https://doi.org/10.1111/bjhp.70099
+      icon: fa-solid fa-scroll
+    - name: Code
+      url: https://github.com/C-Monaghan/marigold-mailbox
+      icon: fa-brands fa-github
+    - name: Analysis notebook
+      url: https://c-monaghan.github.io/marigold-mailbox
+      icon: fa-solid fa-chart-simple
+    - name: Add to Zotero
+      url: https://www.zotero.org/save?type=doi&q=10.1111/bjhp.70099
+      icon: ai ai-zotero
+  reference: >-
+     <a href="https://www.durham.ac.uk/staff/fuschia-sirois/">Sirois, F</a> & <strong>Monaghan, C</strong> (2026). Procrastination, stress, and self-rated health: A multi-sample meta-analysis. <em>British Journal of Health Psychology, 31</em>, e70099. <a href="https://doi.org/10.1111/bjhp.70099"><code>10.1111/bjhp.70099</code></a>
+---
+
+![Preregistered](open-source/preregistered.png) &emsp; ![Open materials](open-source/open_materials.png)
+
+## Important links
+
+- [Paper (preprint)](https://c-monaghan.github.io/marigold-mailbox/analysis/manuscript.html){target="_blank"}
+- [Statistical analysis notebook](https://c-monaghan.github.io/marigold-mailbox/){target="_blank"}
+- [GitHub repository](https://github.com/C-Monaghan/marigold-mailbox){target="_blank"}
+- [Preregistration](https://doi.org/10.17605/OSF.IO/3APFG){target="_blank"}
+
+## Abstract
+
+Despite a growing evidence base indicating that trait procrastination increases
+risk for specific outcomes reflecting poor health, there is less evidence
+examining the implications of procrastination for overall health status, or
+investigating the contributing factors involved. Guided by the cognitive
+process model of self-rated health (SRH), and the procrastination-health model,
+the current study extended previous research and theory by quantifying the link
+between trait procrastination and SRH across multiple samples and testing the
+contributions of stress. Additionally, we explored the link between chronic
+procrastination and the SRH–future SRH discrepancy. Thirty-six cross-sectional
+samples $(N  =  8603)$ completed measures of trait procrastination, current and
+future SRH. A subset completed measures of perceived stress. Random effects
+meta-analyses were conducted on the raw and semi-partial correlations of
+procrastination with SRH and FSRH, controlling for perceived stress. Moderator
+analyses were conducted where warranted. Procrastination scores were examined
+in relation to the discrepancy between current and future SRH. Trait
+procrastination was significantly associated with poor SRH
+($r_{avg } =  .21; 95\% \; \text{CIs} \; [.19, .23]$), and to a lesser extent,
+poor future SRH ($r_{avg } =  .13; 95\% \; \text{CIs} \; [.09, .18]$). The
+semi-partial effects were reduced but significant for SRH, and non-significant
+for future SRH. Procrastination was modestly associated with the discrepancy
+between current and future SRH, reflecting an expectation that health would
+improve slightly over the next 10 years. The current findings indicate that
+chronic procrastination is associated with poor overall health status that can
+be explained in part by higher levels of stress.
+
+## Citation
+
+<p class="buttons" style="text-align:center;">
+<a class="btn btn-danger" target="_blank" href="https://www.zotero.org/save?type=doi&q=10.1111/bjhp.70099">{{< ai zotero >}}&emsp;Add to Zotero {{< fa square-arrow-up-right >}}</a>
+</p>
+
+``` bibtex
+@article{sirois2026,
+  title = {Procrastination, Stress, and Self-Rated Health: {{A}} Multi-Sample Meta-Analysis},
+  author = {Sirois, Fuschia M. and Monaghan, Cormac},
+  date = {2026},
+  journaltitle = {British Journal of Health Psychology},
+  shortjournal = {Br. J. Health Psychol.},
+  volume = {31},
+  number = {3},
+  pages = {e70099},
+  doi = {10.1111/bjhp.70099}
+}
+```
