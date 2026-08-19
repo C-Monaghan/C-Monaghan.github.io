@@ -1,0 +1,26 @@
+---
+title: A mixed meta-analysis of future self-continuity and health behaviours
+date: 2026-08-19
+author:
+  - name: Fuschia Sirois
+    url: https://fuschiasirois.com/
+    orcid: https://orcid.org/0000-0002-0927-277X
+    affiliation: Department of Psychology, Durham University
+  - name: Cormac Monaghan
+    url: https://c-monaghan.github.io/
+    orcid: https://orcid.org/0000-0001-9012-3060
+    affiliation:
+      - Hamilton Institute, Maynooth University
+      - Department of Psychology, Maynooth University
+categories:
+  - meta-analysis
+  - health
+  - self-continuity
+pub-info:
+  reference: >-
+    <a href="https://www.durham.ac.uk/staff/fuschia-sirois/">Sirois, F</a> & <strong>Monaghan, C</strong>. A mixed meta-analysis of future self-continuity and health behaviours
+pub-status:
+  status: Writing
+  class: warning
+  icon: fa-solid fa-pencil
+---
