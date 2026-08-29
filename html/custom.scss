@@ -1,9 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// Quarto Theme Customisation
 ////////////////////////////////////////////////////////////////////////////////
-///
+
 /*-- scss:defaults --*/
-$theme: "ath" !default;
+
+////////////////////////////////////////////////////////////////////////////////
+// Fonts
+////////////////////////////////////////////////////////////////////////////////
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 ////////////////////////////////////////////////////////////////////////////////
 // Colour system
@@ -22,40 +28,40 @@ $gray-800: #373a3c !default;
 $gray-900: #212529 !default;
 $black:    #000000 !default;
 
-// Brand colours
-$blue:    #2780e3 !default;
-$indigo:  #6610f2 !default;
-$purple:  #170C3A !default;
-$pink:    #A52C60 !default;
-$red:     #CF4446 !default;
-$orange:  #EE6A24 !default;
-$light-orange:  #FB9E07 !default;
-$yellow:  #F6D645 !default;
-$green:   #118230 !default;
-$teal:    #20c997 !default;
-$cyan:    #3093CF !default;
+// Monument Valley Inspired Theme
+$indigo: #272652 !default;
+$night: #171735 !default;
+
+$blue: #4c81b4 !default;
+$teal: #75b8a9 !default;
+$sage: #aac47c !default;
+$coral: #d96c62 !default;
+$peach: #efa07a !default;
+$sand: #f2d7b5 !default;
+
+$cream: #faf4e8 !default;
 
 // Semantic colours
-$primary:   $pink !default;
-$secondary: $gray-700 !default;
-$success:   $green !default;
-$info:      $cyan !default;
-$warning:   $orange !default;
-$danger:    $red !default;
-$light:     $gray-400 !default;
-$dark:      $black !default;
+$primary:   $blue !default;
+$secondary: $indigo !default;
+$success:   $sage !default;
+$info:      $teal !default;
+$warning:   $peach !default;
+$danger:    $coral !default;
+$light:     $gray-200 !default;
+$dark:      $indigo !default;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Typography
 ////////////////////////////////////////////////////////////////////////////////
-$font-family-sans-serif: "Libre Franklin" !default;
+$font-family-sans-serif: "Source Sans 3" !default;
 
-$headings-font-family: "Jost" !default;
+$headings-font-family: "Outfit" !default;
 $headings-font-weight: 600 !default;
 
-$navbar-font-family: "Jost" !default;
-$toc-font-family: "Jost" !default;
-$footer-font-family: "Jost" !default;
+$navbar-font-family: "Outfit" !default;
+$toc-font-family: "Outfit" !default;
+$footer-font-family: "Outfit" !default;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Global Elements
@@ -65,53 +71,63 @@ $footer-font-family: "Jost" !default;
 $body-color: $gray-900 !default;
 
 // Links
-$link-color: $orange !default;
+$link-color: $blue !default;
 $link-decoration: none !default;
-$link-hover-color: $red !default;
+$link-hover-color: $indigo !default;
 $link-hover-decoration: underline !default;
 
 // Inline code
 $code-bg: $gray-200 !default;
 $code-color: $gray-900 !default;
-$btn-code-copy-color-active: $orange !default;
+$btn-code-copy-color-active: $coral !default;
 
 ////////////////////////////////////////////////////////////////////////////////
 /// Navigation
 ////////////////////////////////////////////////////////////////////////////////
-$toc-color: $orange;
+$toc-color: $blue;
 $toc-font-size: 1em;
 
-$navbar-bg: $purple !default;
+$navbar-bg: $night !default;
 $navbar-fg: $white !default;
-$navbar-hl: $light-orange !default;
+$navbar-hl: $sage !default;
 
-$footer-bg: $gray-900 !default;
+$footer-bg: $night !default;
 $footer-fg: $gray-300 !default;
+
+////////////////////////////////////////////////////////////////////////////////
+// Spacing + Font size
+////////////////////////////////////////////////////////////////////////////////
+$radius-sm: 0.25rem;
+$radius-md: 0.5rem;
+$radius-lg: 0.75rem;
+$radius-xl: 1rem;
+$radius-pill: 999px;
+
+$font-size-xs:   0.75rem;
+$font-size-sm:   0.875rem;
+$font-size-base: 1rem;
+$font-size-lg:   1.125rem;
+$font-size-xl:   1.375rem;
+$font-size-2xl:  1.75rem;
+$font-size-3xl:  2.25rem;
+$font-size-4xl:  3rem;
 
 /*-- scss:rules --*/
 
-.navbar > .container-xxl, .navbar > .container-xl, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container, .navbar > .container-fluid {
+.navbar > .container-xxl,
+.navbar > .container-xl,
+.navbar > .container-lg,
+.navbar > .container-md,
+.navbar > .container-sm,
+.navbar > .container,
+.navbar > .container-fluid {
   max-width: 1145px;
   margin: 0 auto;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-/// Fonts
-////////////////////////////////////////////////////////////////////////////////
-$web-font-path: "https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" !default;
-
-@if $web-font-path {
-    @import url($web-font-path);
-}
-
-////////////////////////////////////////////////////////////////////////////////
 /// Global syling
 ////////////////////////////////////////////////////////////////////////////////
-
-// Shrink blocks of code -------------------------------------------------------
-pre.text, pre.sourceCode, .cell-output pre {
-    font-size: 0.775em;
-}
 
 // Customise nav bar -----------------------------------------------------------
 .navbar {
@@ -139,8 +155,8 @@ pre.text, pre.sourceCode, .cell-output pre {
 }
 
 .sidebar nav[role="doc-toc"]>ul li a {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding-top: $radius-sm;
+    padding-bottom: $radius-sm;
 }
 
 // Customise footer ------------------------------------------------------------
@@ -152,7 +168,7 @@ pre.text, pre.sourceCode, .cell-output pre {
     font-family: $footer-font-family;
 
     a {
-        color: $light-orange;
+        color: $sage;
     }
 
     .faux-block {
@@ -162,7 +178,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
     .fingerprint {
         font-family: $font-family-monospace;
-        font-size: 0.8em;
+        font-size: $font-size-sm;
     }
 
     // In the default Quarto template, .nav-footer-center has position: absolute
@@ -211,7 +227,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         font-family: $headings-font-family;
 
         .description {
-            font-size: 1.1em;
+            font-size: $font-size-lg;
             margin-top: 1em !important;
         }
     }
@@ -247,20 +263,20 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .title {
             font-weight: 500;
-            font-size: 1.3em;
+            font-size: $font-size-xl;
             margin-bottom: 0.2em;
             line-height: 1.2;
         }
 
         .description {
             font-weight: 300;
-            font-size: 1em;
+            font-size: $font-size-base;
             margin-bottom: 0.3em;
         }
 
         .date {
             font-weight: 300;
-            font-size: 0.85em;
+            font-size: $font-size-sm;
             margin-top: 0.3em;
             text-align: right;
         }
@@ -275,9 +291,9 @@ pre.text, pre.sourceCode, .cell-output pre {
             .post-category {
                 color: $gray-600;
                 border: 1px solid $gray-500;
-                border-radius: 0.25rem;
+                border-radius: $radius-sm;
                 text-transform: uppercase;
-                font-size: 0.65em;
+                font-size: $font-size-xs;
                 padding: 0.15em 0.5em;
                 cursor: pointer;
             }
@@ -285,7 +301,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .post-doi {
             font-weight: 300;
-            font-size: 0.85em;
+            font-size: $font-size-sm;
             margin: 0.5em 0;
             text-align: right;
 
@@ -306,10 +322,10 @@ pre.text, pre.sourceCode, .cell-output pre {
         margin-top: 1.5em;
 
         .quarto-category {
-            background-color: shift-color($purple, -25%);
-            border-color: shift-color($purple, -45%);
-            color: $white;
-            font-size: 0.65em;
+            background-color: shift-color($blue, -25%);
+            border-color: $blue;
+            color: $indigo;
+            font-size: $font-size-xs;
             opacity: 1;
         }
     }
@@ -338,24 +354,24 @@ pre.text, pre.sourceCode, .cell-output pre {
     .quarto-listing-category {
         font-family: $toc-font-family;
         font-weight: 300;
-        font-size: 1em;
+        font-size: $font-size-base;
         line-height: 1.1;
         padding-left: 0.6rem;
         margin-left: 0.5em;
         border-left: 1px solid $gray-200;
 
         .category {
-            padding-bottom: 0.5rem;
+            padding-bottom: $radius-md;
         }
 
         .active {
             font-weight: 400;
-            color: $orange;
+            color: $blue;
         }
 
         .quarto-category-count {
             font-weight: 200;
-            font-size: 0.8em;
+            font-size: $font-size-sm;
             color: $gray-600;
         }
     }
@@ -367,7 +383,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         text-align: right;
         font-family: $headings-font-family;
         margin: 1.3em 0;
-        font-size: 1.6em;
+        font-size: $font-size-2xl;
         font-weight: 300;
         font-style: italic;
     }
@@ -379,9 +395,10 @@ pre.text, pre.sourceCode, .cell-output pre {
     }
 
     .project-details {
-        background-color: rgba($red, 0.1);
-        padding: 0.75em;
+        background-color: rgba($night, 0.1);
+        padding: $radius-lg;
         margin: 1em 0;
+        border-left: 4px solid $night;
     }
 
     .quarto-title-meta-heading.manual {
@@ -408,13 +425,14 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 .research {
     .back-nav a {
-        color: shift-color($red, -50%);
+        color: shift-color($indigo, -50%);
     }
 
     .quarto-title .quarto-categories .quarto-category {
-        background-color: shift-color($red, -75%);
-        color: $red;
-        font-size: 0.65em;
+        background-color: shift-color($night, -75%);
+        border: 1px solid rgba($night, 0.4);
+        color: $night;
+        font-size: $font-size-xs;
         opacity: 1;
     }
 
@@ -431,7 +449,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .project-category {
             padding: 0.25em 0.75em 0.25em 0em;
-            font-size: 0.7em;
+            font-size: $font-size-xs;
             text-transform: uppercase;
         }
     }
@@ -445,7 +463,7 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         li.project {
             margin-bottom: 2.5em;
-            border-left: 6px solid shift-color($red, -90%);
+            border-left: 6px solid shift-color($night, -90%);
 
             p {
                 margin: 0;
@@ -457,7 +475,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         padding-left: 0.5em;
 
         .status {
-            font-size: 1rem;
+            font-size: $font-size-xs;
             font-weight: 250;
             padding: 0.2em;
             margin-right: 0.5em;
@@ -474,7 +492,7 @@ pre.text, pre.sourceCode, .cell-output pre {
         font-size: 1.1em;
 
         @media (max-width: map-get($grid-breakpoints, md)) {
-            font-size: 0.95rem;
+            font-size: $font-size-xs;
         }
     }
 
@@ -484,11 +502,11 @@ pre.text, pre.sourceCode, .cell-output pre {
 
     .project-details-listing {
         margin-top: 0.8em;
-        background-color: shift-color($red, -90%);
-        font-size: 0.9rem;
+        background-color: shift-color($night, -90%);
+        font-size: $font-size-sm;
 
         @media (max-width: map-get($grid-breakpoints, md)) {
-            font-size: 0.95rem;
+            font-size: $font-size-sm;
         }
 
         .project-link {
@@ -498,11 +516,11 @@ pre.text, pre.sourceCode, .cell-output pre {
         }
 
         .details {
-            background-color: $red;
+            background-color: $night;
             padding-right: 1.5em;
 
             a {
-                color: #FFFFFF;
+                color: $white;
             }
         }
     }
@@ -532,20 +550,20 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .course-title {
             font-weight: 500;
-            font-size: 1.25em;
+            font-size: $font-size-lg;
             margin-bottom: 0.2em;
         }
 
         .course-details {
             font-weight: 300;
-            font-size: 0.9em;
+            font-size: $font-size-sm;
             margin-bottom: 0.5em;
             color: $gray-800;
         }
 
         .course-description {
             font-weight: 300;
-            font-size: 1.1em;
+            font-size: $font-size-lg;
             margin-bottom: 0.5em;
         }
 
@@ -561,19 +579,19 @@ pre.text, pre.sourceCode, .cell-output pre {
             li {
                 display: inline-block;
                 white-space: nowrap;
-                background-color: $orange;
+                background-color: $teal;
                 margin: 0 0.2em 0.4em 0;
                 padding: 0.2em 0.4em;
-                font-size: 0.85em;
-                border-radius: 0.25rem;
+                font-size: $font-size-sm;
+                border-radius: $radius-sm;
 
                 &.no-link {
                     background-color: $white;
-                    border: 1px solid $black;
+                    border: 1px solid $teal;
                 }
 
                 a {
-                    color: $white;
+                    color: $teal;
                 }
             }
         }
@@ -600,27 +618,27 @@ pre.text, pre.sourceCode, .cell-output pre {
 
         .title {
             font-weight: 500;
-            font-size: 1.2em;
+            font-size: $font-size-lg;
             margin-bottom: 0.2em;
             line-height: 1.2;
         }
 
         .description {
             font-weight: 300;
-            font-size: 1em;
+            font-size: $font-size-base;
             margin-bottom: 0.3em;
         }
 
         .date {
             font-weight: 300;
-            font-size: 0.85em;
+            font-size: $font-size-sm;
             margin-top: 0.3em;
             text-align: right;
         }
 
         ul.talk-links {
             padding: 0 0.5em;
-            background-color: shift-color($light-orange, -91%);
+            background-color: shift-color($night, -91%);
             margin-bottom: 0;
 
             .talk-link {
@@ -628,7 +646,7 @@ pre.text, pre.sourceCode, .cell-output pre {
                 white-space: nowrap;
                 margin: 0;
                 padding: 0.5em 1em 0.5em 0;
-                font-size: 0.85em;
+                font-size: $font-size-sm;
             }
         }
     }
@@ -638,57 +656,64 @@ pre.text, pre.sourceCode, .cell-output pre {
 
 // Make my software grid items change when you hover over them
 .quarto-grid-item {
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    transition: all .2s;
-    overflow: hidden;
+
+  background: $white;
+  border: 1px solid $gray-200;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow:
+    0 2px 4px rgba($indigo, 0.04),
+    0 8px 24px rgba($indigo, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .quarto-grid-item:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0,0,0,.12);
-}
-
-.quarto-grid-item img {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+  transform: translateY(-5px);
+  border-color: rgba($blue, 0.35);
+  box-shadow:
+    0 4px 8px rgba($indigo, 0.06),
+    0 16px 35px rgba($indigo, 0.12);
 }
 
 // Thesis button customisation -------------------------------------------------
 .thesis-button {
-    background: linear-gradient(135deg, $pink, $red);
-    border: none;
+
+  background: $indigo;
+  color: $white;
+
+  border: none;
+  border-radius: $radius-pill;
+
+  padding: 0.7rem 1.4rem;
+
+  font-family: $headings-font-family;
+  font-weight: 500;
+
+  box-shadow:
+    0 4px 10px rgba($coral, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus {
+
+    background: $night;
+
     color: $white;
-    font-family: $headings-font-family;
-    font-weight: 500;
-    font-size: 1rem;
 
-    padding: 0.7rem 1.4rem;
-    border-radius: 999px;
+    transform: translateY(-2px);
 
-    box-shadow: 0 4px 12px rgba($red, 0.25);
-    transition: all 0.25s ease;
+    box-shadow:
+      0 8px 18px rgba($night, 0.2);
 
-    i {
-        margin-right: 0.35rem;
-    }
-
-    &:hover,
-    &:focus {
-        background: linear-gradient(
-            135deg,
-            lighten($pink, 5%),
-            lighten($red, 5%)
-        );
-        color: $white;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba($red, 0.35);
-        text-decoration: none;
-    }
-
-    &:active {
-    transform: translateY(0);
   }
+
 }
 
 // Not sure what this does -----------------------------------------------------
@@ -699,4 +724,9 @@ pre.text, pre.sourceCode, .cell-output pre {
     @media (max-width: map-get($grid-breakpoints, md)) {
         left: 0;
     }
+}
+
+// Shrink blocks of code -------------------------------------------------------
+pre.text, pre.sourceCode, .cell-output pre {
+    font-size: $font-size-xs;
 }
