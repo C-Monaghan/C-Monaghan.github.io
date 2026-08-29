@@ -1,6 +1,6 @@
 ---
 title: Cormac Monaghan
-subtitle: PhD Researcher
+subtitle: Postdoctoral Researcher
 image: files/images/profile.jpg
 toc: false
 about:
@@ -9,9 +9,20 @@ about:
   image-width: 17em
 ---
 
-Welcome! I am a data scientist with a focus on applying advanced statistical analysis and causal inference techniques to the **study of procrastination**, particularly within older adult populations. My [research](https://c-monaghan.github.io/research/) aims to uncover the underlying patterns, causal relationships, and consequences of procrastination behaviours, ultimately providing insights that could inform interventions and improve quality of life of older adults.
+Hey there! I am a two thirds data science, one third psychology researcher. My
+[research](https://c-monaghan.github.io/research/) is particularly focused on
+studying the reasons behind why older adults may procrastination and the
+consequences of such procrastination.
 
-I am currently pursuing my PhD with the [Research Ireland Center for Research Training in Foundations in Data Science](https://www.data-science.ie/the-crt-programme/). This program is a large-scale collaborative initiative between the University of Limerick (UL), Maynooth University (MU) and University College Dublin (UCD) which aims to train over 130 PhD students with world-class foundational understanding in Applied Mathematics, Statistics and Machine Learning. My research is being conducted in the [Maynooth University Hamilton Institute](https://www.maynoothuniversity.ie/hamilton).
+At the moment I am a postdoctoral researcher at the
+[School of Allied Health](https://www.ul.ie/ehs/school-allied-health) in the
+[University of Limerick](https://www.ul.ie/) working with the
+[ISCycle](https://www.iscycle.ie/) team to investigate the impact of electric
+bikes on transport behavior, physical activity, and the environment (slightly
+different from procrastination I know!).
+
+In addition, I am a part time lecturer at the [Department of Mathematics and Statistics](https://www.maynoothuniversity.ie/mathematics-and-statistics)
+in [Maynooth University](https://www.maynoothuniversity.ie/).
 
 <br>
 
