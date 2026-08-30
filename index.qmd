@@ -7,11 +7,21 @@ about:
   template: trestles
   image-shape: round
   image-width: 17em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/c-monaghan
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/cormac-monaghan/
+    - icon: envelope
+      text: Email
+      href: mailto:cormacmonaghan@protonmail.com
 ---
 
 Hey there! I am a two thirds data science, one third psychology researcher. My
 [research](https://c-monaghan.github.io/research/) is particularly focused on
-studying the reasons behind why older adults may procrastination and the
+studying the reasons behind why older adults may procrastinate and the
 consequences of such procrastination.
 
 At the moment I am a postdoctoral researcher at the
