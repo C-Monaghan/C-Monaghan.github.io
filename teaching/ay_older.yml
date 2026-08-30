@@ -1,0 +1,44 @@
+- title: Linear Algebra
+  university: Maynooth University
+  role: TA, as PhD student
+  number: MT112
+  logo: logos/mu_generic.png
+  semester:
+    - name: Spring 2025
+
+- title: Introduction to Statistics
+  university: Maynooth University
+  role: TA, as PhD student
+  number: ST122
+  logo: logos/mu_generic.png
+  semester:
+    - name: Spring 2025
+
+- title: Advanced Research Methods for Psychology
+  university: Maynooth University
+  role: TA, as PhD student
+  number: PS652
+  logo: logos/mu_generic.png
+  semester:
+    - name: Spring 2024
+    - name: Spring 2025
+    - name: Spring 2026
+
+- title: Statistical and Quantiative Approaches for Psychology
+  university: Maynooth University
+  role: TA, as PhD student
+  number: PS652
+  logo: logos/mu_generic.png
+  semester:
+    - name: Autumn 2023 and Winter 2023
+    - name: Autumn 2024 and Winter 2024
+    - name: Autumn 2025 and Winter 2025
+
+- title: Statistical and Quantiative Approaches for Psychology
+  university: Maynooth University
+  role: TA, as PhD student
+  number: PS257
+  logo: logos/mu_generic.png
+  semester:
+    - name: Autumn 2023
+    - name: Winter 2023

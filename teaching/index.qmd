@@ -1,0 +1,32 @@
+---
+title: Teaching
+listing:
+  - id: ay_old
+    contents: ay_older.yml
+    sort: "date desc"
+    template: ../html/teaching/listing.ejs
+title-block-banner: "#272652" # Indigo
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Contents
+toc-expand: 3
+format:
+  html:
+    include-in-header:
+      - text: |
+          <style>
+          .card-description {
+            font-size: 0.85em;
+            font-weight: 300;
+            color: #343a40;
+          }
+          </style>
+---
+
+## Courses
+
+### 2023 - 2026
+
+::: {#ay_older}
+:::

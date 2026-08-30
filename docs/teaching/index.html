@@ -8,7 +8,7 @@
 
 <meta name="author" content="Cormac Monaghan">
 
-<title>Talks | Cormac Monaghan – Cormac Monaghan</title>
+<title>Teaching | Cormac Monaghan – Cormac Monaghan</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -82,104 +82,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2026 .list');
+    const listingTargetEl = window.document.querySelector('#listing-ay_old .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      valueNames: ['listing-title','listing-university','listing-role','listing-number','listing-logo','listing-semester',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
+      searchColumns: ["listing-title","listing-university","listing-role","listing-number","listing-logo","listing-semester"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2026'] = new List('listing-talks_2026', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2025 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2025'] = new List('listing-talks_2025', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2024 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2024'] = new List('listing-talks_2024', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-talks_2023 .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date','listing-description','listing-location','listing-links',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
-      
-      searchColumns: ["listing-title","listing-date","listing-description","listing-location","listing-links"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-talks_2023'] = new List('listing-talks_2023', options);
+    window['quarto-listings']['listing-ay_old'] = new List('listing-ay_old', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -197,6 +113,13 @@ ul.task-list li input[type="checkbox"] {
       .quarto-title-block .quarto-title-banner {
         background: #272652;
       }
+</style>
+<style>
+.card-description {
+  font-size: 0.85em;
+  font-weight: 300;
+  color: #343a40;
+}
 </style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
@@ -265,7 +188,12 @@ window.Quarto = {
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../talks/index.html" aria-current="page"> <i class="bi bi-mic-fill" role="img">
+    <a class="nav-link active" href="../teaching/index.html" aria-current="page"> <i class="bi bi-briefcase-fill" role="img">
+</i> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../talks/index.html"> <i class="bi bi-mic-fill" role="img">
 </i> 
 <span class="menu-text">Talks</span></a>
   </li>  
@@ -316,7 +244,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page-left">
-      <h1 class="title">Talks</h1>
+      <h1 class="title">Teaching</h1>
                       </div>
   </div>
     
@@ -333,14 +261,14 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Year</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
+    <h2 id="toc-title">Contents</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">2026</a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2025</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">2024</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">2023</a></li>
+  <li><a href="#courses" id="toc-courses" class="nav-link active" data-scroll-target="#courses">Courses</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2023 - 2026</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -351,353 +279,200 @@ window.Quarto = {
 
 
 
-<p>This section of my website contains the source code, links, and slides for various workshops, talks, and presentations I’ve given. Conference presentations are typically stored in their respective repositories on GitHub; one-off workshops and talks can all be found in the <a href="https://github.com/C-Monaghan/Talks">following repository</a></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Copyright
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Except where noted, all content is © Cormac Monaghan and licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons</a>.</p>
-</div>
-</div>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">2026</h2>
-<div id="listing-talks_2026" class="quarto-listing quarto-listing-container-custom">
+<section id="courses" class="level2">
+<h2 class="anchored" data-anchor-id="courses">Courses</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">2023 - 2026</h3>
+<div id="ay_older">
 
-<div class="talks">
+</div>
+
+
+
+</section>
+</section>
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-ay_old">
+<div class="teaching">
     
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 7, 2026</p>
+    <div class="course-entry">
+        <div class="logo">
+            
+            <img src="logos/mu_generic.png" alt="Linear Algebra" title="Linear Algebra">
+            
         </div>
         <div class="body">
-            <p class="title">Markov Man</p>
-            <p class="description">Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University | Maynooth, Ireland</p>
+            <p class="course-title">
+                
+                Linear Algebra
+                
+            </p>
+            <p class="course-details">
+                <span class="course-number">MT112</span> |
+                <span class="course-university">Maynooth University</span>
+                
+                | <span class="course-role">TA, as PhD student</span>
+                
+            </p>
+            <p class="course-description"></p>
 
+            <ul class="course-semesters">
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Spring 2025</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="course-entry">
+        <div class="logo">
             
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/talks/2026-07-07-TSE.html#/title-slide">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2026-07-07-TSE">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
+            <img src="logos/mu_generic.png" alt="Introduction to Statistics" title="Introduction to Statistics">
             
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                Introduction to Statistics
+                
+            </p>
+            <p class="course-details">
+                <span class="course-number">ST122</span> |
+                <span class="course-university">Maynooth University</span>
+                
+                | <span class="course-role">TA, as PhD student</span>
+                
+            </p>
+            <p class="course-description"></p>
+
+            <ul class="course-semesters">
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Spring 2025</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="course-entry">
+        <div class="logo">
+            
+            <img src="logos/mu_generic.png" alt="Advanced Research Methods for Psychology" title="Advanced Research Methods for Psychology">
+            
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                Advanced Research Methods for Psychology
+                
+            </p>
+            <p class="course-details">
+                <span class="course-number">PS652</span> |
+                <span class="course-university">Maynooth University</span>
+                
+                | <span class="course-role">TA, as PhD student</span>
+                
+            </p>
+            <p class="course-description"></p>
+
+            <ul class="course-semesters">
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Spring 2024</li>
+                
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Spring 2025</li>
+                
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Spring 2026</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="course-entry">
+        <div class="logo">
+            
+            <img src="logos/mu_generic.png" alt="Statistical and Quantiative Approaches for Psychology" title="Statistical and Quantiative Approaches for Psychology">
+            
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                Statistical and Quantiative Approaches for Psychology
+                
+            </p>
+            <p class="course-details">
+                <span class="course-number">PS652</span> |
+                <span class="course-university">Maynooth University</span>
+                
+                | <span class="course-role">TA, as PhD student</span>
+                
+            </p>
+            <p class="course-description"></p>
+
+            <ul class="course-semesters">
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Autumn 2023 and Winter 2023</li>
+                
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Autumn 2024 and Winter 2024</li>
+                
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Autumn 2025 and Winter 2025</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="course-entry">
+        <div class="logo">
+            
+            <img src="logos/mu_generic.png" alt="Statistical and Quantiative Approaches for Psychology" title="Statistical and Quantiative Approaches for Psychology">
+            
+        </div>
+        <div class="body">
+            <p class="course-title">
+                
+                Statistical and Quantiative Approaches for Psychology
+                
+            </p>
+            <p class="course-details">
+                <span class="course-number">PS257</span> |
+                <span class="course-university">Maynooth University</span>
+                
+                | <span class="course-role">TA, as PhD student</span>
+                
+            </p>
+            <p class="course-description"></p>
+
+            <ul class="course-semesters">
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Autumn 2023</li>
+                
+                
+                
+                <li class="no-link"><i class="fa-solid fa-building-columns"></i> Winter 2023</li>
+                
+                
             </ul>
         </div>
     </div>
     
 </div>
 <div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="section-1" class="level2">
-<h2 class="anchored" data-anchor-id="section-1">2025</h2>
-<div id="listing-talks_2025" class="quarto-listing quarto-listing-container-custom">
-
-<div class="talks">
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">November 20, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">Goodness of fit diagnostics for Markov Models</p>
-            <p class="description">Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/talks/2025-11-20-TSE.html#/title-slide">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2025-11-20-TSE">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 22, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">My Summer Holiday</p>
-            <p class="description">Talk presented at Research Week (2025) at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/talks/2025_research_week.html#/title-slide">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2025-10-22-research-week">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">July 11, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">The Role of Temporal Orientation and Subjective Remaining Life in Procrastination</p>
-            <p class="description">Talk presented at the 12th International Conference on Procrastination Research in Utrecht | Utrecht, The Netherlands</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/blob/main/2025-07-11-PRC/slides.pdf">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2025-07-11-PRC">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">June 12, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">Procrastination and Cognitive Decline</p>
-            <p class="description">Talk presented at the Theoretical and Statistical Ecology mini symposium at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/talks/TSE.html#/title-slide">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2025-06-12-TSE">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">April 23, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">Procrastination and Dementia</p>
-            <p class="description">Talk presented at the Stats4Grads seminar series at Durham University | Durham, United Kingdom</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/talks/stats-4-grads.html#/title-slide">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2025-04-23-stats4grads">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">March 27, 2025</p>
-        </div>
-        <div class="body">
-            <p class="title">Managing Literature: Zotero (and other cool stuff)</p>
-            <p class="description">Workshop for MSc psychology students at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://c-monaghan.github.io/Zotero/#1">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/Zotero">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="section-2" class="level2">
-<h2 class="anchored" data-anchor-id="section-2">2024</h2>
-<div id="listing-talks_2024" class="quarto-listing quarto-listing-container-custom">
-
-<div class="talks">
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">March 20, 2024</p>
-        </div>
-        <div class="body">
-            <p class="title">The health risks of procrastination</p>
-            <p class="description">Talk presented at the Hamilton Student Seminar Series (2024) at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/blob/main/2024-03-20-student-seminar/slides.pdf">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2024-03-20-student-seminar">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-</section>
-<section id="section-3" class="level2">
-<h2 class="anchored" data-anchor-id="section-3">2023</h2>
-<div id="listing-talks_2023" class="quarto-listing quarto-listing-container-custom">
-
-<div class="talks">
-    
-    <div class="talk-entry">
-        <div class="metadata">          
-            <p class="date">October 24, 2023</p>
-        </div>
-        <div class="body">
-            <p class="title">Procrastination in older adults</p>
-            <p class="description">Talk presented at Research Week (2023) at Maynooth University | Maynooth, Ireland</p>
-
-            
-            <ul class="talk-links">
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/blob/main/2023-10-24-research-week/slides.pdf">
-                    
-                        <i class="fa-solid fa-chalkboard-user"></i> Slides
-                    </a>
-                </li>
-                
-                <li class="talk-link">
-                    
-                    <a href="https://github.com/C-Monaghan/talks/tree/main/2023-10-24-research-week">
-                    
-                        <i class="fa-brands fa-github"></i> Github Repository
-                    </a>
-                </li>
-                
-            
-            </ul>
-        </div>
-    </div>
-    
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
-
-
-</section>
-
-</main> <!-- /main -->
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

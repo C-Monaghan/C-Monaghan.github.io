@@ -49,6 +49,11 @@ website:
         icon: book-half
         href: research/index.qmd
 
+      # Teaching
+      - text: Teaching
+        icon: briefcase-fill
+        href: teaching\index.qmd
+
       # Talks
       - text: Talks
         icon: mic-fill
