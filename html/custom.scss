@@ -700,7 +700,8 @@ html {
             li {
                 display: inline-block;
                 white-space: nowrap;
-                background-color: $teal;
+                background-color: $white;
+                border: 1px solid $white;
                 margin: 0 0.2em 0.4em 0;
                 padding: 0.2em 0.4em;
                 font-size: $font-size-sm;
@@ -712,7 +713,7 @@ html {
                 }
 
                 a {
-                    color: $teal;
+                    color: $blue;
                 }
             }
         }
