@@ -5,9 +5,7 @@
   url: https://c-monaghan.github.io/ST303/
   logo: logos/st303.png
   semester:
-  - name: Autumn 2026
-    url: https://c-monaghan.github.io/ST303/
-  - name: Winter 2026
+  - name: First Semester 2026
     url: https://c-monaghan.github.io/ST303/
 
 - title: Data Analysis
@@ -18,7 +16,5 @@
   url: https://c-monaghan.github.io/ST201/
   logo: logos/st201.png
   semester:
-  - name: Autumn 2026
-    url: https://c-monaghan.github.io/ST201/
-  - name: Winter 2026
+  - name: First Semester 2026
     url: https://c-monaghan.github.io/ST201/

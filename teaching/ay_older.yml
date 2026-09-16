@@ -4,7 +4,7 @@
   number: MT112
   logo: logos/mu_generic.png
   semester:
-    - name: Spring 2025
+    - name: Second Semester 2025
 
 - title: Introduction to Statistics
   university: Maynooth University
@@ -12,7 +12,7 @@
   number: ST122
   logo: logos/mu_generic.png
   semester:
-    - name: Spring 2025
+    - name: Second Semester 2025
 
 - title: Advanced Research Methods for Psychology
   university: Maynooth University
@@ -20,9 +20,9 @@
   number: PS655
   logo: logos/mu_generic.png
   semester:
-    - name: Spring 2024
-    - name: Spring 2025
-    - name: Spring 2026
+    - name: Second Semester 2024
+    - name: Second Semester 2025
+    - name: Second Semester 2026
 
 - title: Statistical and Quantiative Approaches for Psychology
   university: Maynooth University
@@ -30,9 +30,9 @@
   number: PS652
   logo: logos/mu_generic.png
   semester:
-    - name: Autumn 2023 and Winter 2023
-    - name: Autumn 2024 and Winter 2024
-    - name: Autumn 2025 and Winter 2025
+    - name: First Semester 2023
+    - name: First Semester 2024
+    - name: First Semester 2025
 
 - title: Statistical and Quantiative Approaches for Psychology
   university: Maynooth University
@@ -40,5 +40,4 @@
   number: PS257
   logo: logos/mu_generic.png
   semester:
-    - name: Autumn 2023
-    - name: Winter 2023
+    - name: First Semester 2023
